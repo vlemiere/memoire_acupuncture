@@ -1,2 +1,8 @@
 
 *.tex~
+*.aux
+*.bbl
+*.log
+*.gz
+*.toc
+*.blg
