@@ -1,0 +1,95 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts,amssymb,verbatim}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{colortbl,hhline}
+\usepackage{fullpage}
+\usepackage{calc}
+\usepackage[francais]{babel}
+\usepackage{fancyhdr}
+\usepackage{dsfont}
+\usepackage[latin1]{inputenc}
+\usepackage{xcolor}
+\usepackage{xcolor,rotating,epic,eepic}
+\usepackage{tikz-qtree}
+\usetikzlibrary{matrix}
+
+\usepackage{fancyhdr}
+\usepackage{xcolor,rotating,epic,eepic}
+\usepackage{tikz}
+\usepackage[babel=true,kerning=true]{microtype}
+
+\usetikzlibrary{%
+  arrows,%
+  calc,%
+  shapes.geometric,%
+  shapes.misc,%
+  shapes.symbols,%
+  shapes.arrows,%
+  automata,%
+  through,%
+  positioning,%
+  scopes,%
+  decorations.shapes,%
+  decorations.text,%
+  decorations.pathmorphing,%
+  shadows}
+
+\begin{document}
+
+\begin{figure}[h]
+   \centering
+\begin{tikzpicture}[>=stealth,sloped]
+
+    \matrix (tree) [%
+      matrix of nodes,
+      minimum size=0.25cm,
+      column sep=0.25cm,
+      row sep=1.5cm,
+    ]
+    {                                                                                                    
+                                                                                           
+1&2 &3 &\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Vide de \textsc{rein}\end{center} \end{minipage}}&5 &6\\       
+1&\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Vide de \textsc{qi} du \textsc{rein}\end{center} \end{minipage}} 
+&3&\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Vide de \textsc{yang} de \textsc{rein}\end{center} \end{minipage}} 
+&5&\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Vide de \textsc{yin} de \textsc{rein}\end{center} \end{minipage}}\\         
+\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Diminution de la PO2\end{center} \end{minipage}}
+&\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Stase de \textsc{sang}\end{center} \end{minipage}}
+&\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Vide de \textsc{yang} de \textsc{rate}\end{center} \end{minipage}}
+&\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Absence d'augmentation du débit et de la fréquence cardiaque\end{center} \end{minipage}}
+&\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Absence d'augmentation de la volémie\end{center} \end{minipage}}
+&\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Augmentation de la chaleur\end{center} \end{minipage}}\\
+\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Vide de \textsc{qi} du \textsc{poumon}\end{center} \end{minipage}}&2&3&4&5&6\\
+1&\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Vide de \textsc{sang}\end{center} \end{minipage}}
+&3&4&\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Hypoperfusion placentaire\end{center} \end{minipage}}&6\\
+    };
+   
+\draw[->] (tree-1-4) -- (tree-2-2) node [midway,above]{}; %{$P$};
+\draw[->] (tree-1-4) -- (tree-2-4) node [midway,above]{}; %{$P$};     
+\draw[->] (tree-1-4) -- (tree-2-6) node [midway,above]{}; %{$P$};
+    
+\draw[->] (tree-2-2) -- (tree-3-1) node [midway,below]{}; %{$(1-p)$};
+\draw[->] (tree-2-2) -- (tree-3-2) node [midway,below]{}; %{$(1-p)$};
+\draw[->] (tree-2-4) -- (tree-3-3) node [midway,below]{}; %{$(1-p)$};
+\draw[->] (tree-2-4) -- (tree-3-4) node [midway,below]{}; %{$(1-p)$};
+\draw[->] (tree-2-6) -- (tree-3-5) node [midway,below]{}; %{$(1-p)$};
+\draw[->] (tree-2-6) -- (tree-3-6) node [midway,below]{}; %{$(1-p)$};
+
+\draw[->] (tree-4-1) -- (tree-3-1) node [midway,below]{}; %{$(1-p)$};
+\draw[->] (tree-4-1) -- (tree-3-2) node [midway,below]{}; %{$(1-p)$};
+
+\draw[->] (tree-3-1) -- (tree-5-2) node [midway,below]{}; %{$(1-p)$};
+\draw[->] (tree-3-2) -- (tree-5-2) node [midway,below]{}; %{$(1-p)$};
+\draw[->] (tree-3-3) -- (tree-5-2) node [midway,below]{}; %{$(1-p)$};
+\draw[->] (tree-3-4) -- (tree-5-5) node [midway,below]{}; %{$(1-p)$};
+\draw[->] (tree-3-5) -- (tree-5-5) node [midway,below]{}; %{$(1-p)$};
+
+
+
+    
+\end{tikzpicture}
+\caption{\textbf{\label {}Relation entre vide de \textsc{rein} et vide de \textsc{sang}}} 
+\end{figure}
+\end{document}
