@@ -2,6 +2,10 @@
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
+
+\usepackage{glossaries} 
+\makeglossaries
+
 \usepackage{graphicx}
 %%\usepackage[nottoc, notlof, notlot]{tocbibind}
 \usepackage{bold-extra}
@@ -13,24 +17,46 @@
 \author{VANNESTE épouse LEMIERE Virginie}
 \date{} % Delete this line to display the current date
 %
+\newglossaryentry{HTA}{name=hta,description={hypertension artérielle}}
+
+%%\newacronym{hta}{HTA}{hypertension artérielle}
+\newacronym{htag}{HTAG}{hypertension artérielle gravidique}
+\newacronym{sa}{SA}{semaines d'amménorrhées}
+\newacronym{fc}{FC}{fausse couche}
+\newacronym{ia}{IA}{index amniotique}
+\newacronym{gc}{GC}{grande citerne}
+\newacronym{rciu}{RCIU}{retard de croissance intra-utérin}
+\newacronym{tr}{TR}{Triple Réchauffeur}
+\newacronym{trs}{TRS}{Triple Réchauffeur Supérieur}
+\newacronym{trm}{TRM}{Triple Réchauffeur Moyen}
+\newacronym{tri}{TRI}{Triple Réchauffeur Inférieur}
+\newacronym{mtc}{MTC}{Médecine Traditionnelle Chinoise}
+\newacronym{lcr}{LCR}{liquide céphalo-rachidien}
+\newacronym{map}{MAP}{menace d'accouchement prématuré}
+\newacronym{cu}{CU}{contractions utérines}
+\newacronym{diu}{DIU}{dispositif intra-utérin (anciennement appelé stérilet)}
+\newacronym{mi}{MI}{membres inférieurs}
+\newacronym{la}{LA}{liquide amniotique}
+
+
 \begin{document}
 %
 \maketitle
 \tableofcontents
 %
-
 \part{Introduction}
 
 \part{Le liquide amniotique en médecine occidentale}
 
 \chapter{Définition}
 
-Le liquide amniotique (LA) est un liquide clair et transparent contenu dans la cavité amniotique. Il représente un compartiment dynamique en étroite relation avec le f\oe{}tus et les membranes amniochoriales. Son rôle est essentiel pour le développement et la maturation du foetus pendant la grossesse. 
+
+Le \gls{la} est un liquide clair et transparent contenu dans la cavité amniotique. Il représente un compartiment dynamique en étroite relation avec le f\oe{}tus et les membranes amniochoriales. Son rôle est essentiel pour le développement et la maturation du foetus pendant la grossesse. 
 
 Son Ph est compris entre 6.9 et 7.2 \cite{MER2008}.
 
-Le volume de LA est un indicateur de bien être f\oe{}tal, il est corrélé au poids du f\oe{}tus jusqu'à 20 SA, on observe ensuite un tassement de l'augmentation du volume du LA (volume maximum entre 32 et 36 SA) \cite{COD1991}. \\
-A terme, le volume du liquide amniotique varie entre 500ml et 1000ml \cite{MER2008} (index amniotique -IA- compris entre 8 et 18cm \cite{CODemc1996}). On parle d'oligoamnios si le volume est inférieur à 200ml et d'hydramnios si le volume est supérieur à 2000ml \cite{MADemc2016}.
+Le volume de \gls{la} est un indicateur de bien être f\oe{}tal, il est corrélé au poids du f\oe{}tus jusqu'à 20 \gls{sa}, on observe ensuite un tassement de l'augmentation du volume du \gls{la} (volume maximum entre 32 et 36 \gls{sa}) \cite{COD1991}. \\
+A terme, le volume du liquide amniotique varie entre 500ml et 1000ml \cite{MER2008} (\gls{ia} compris entre 8 et 18cm \cite{CODemc1996}). On parle d'oligoamnios si le volume est inférieur à 200ml et d'hydramnios si le volume est supérieur à 2000ml \cite{MADemc2016}.
 
 \chapter{Production, élimination}
 
@@ -1868,24 +1894,10 @@ Les aliments de nature douce et fraîche tonifient le C½ur, et le TRM et harmonis
 
 \part{Conclusion}
 
-lexique
-
-HTA(G) hypertension artérielle (gravidique)\\
-SA semaines d'amménorrhées\\
-FC fausse couche\\
-IA index amniotique\\
-GC grande citerne\\
-RCIU retard de croissance intra-utérin\\
-TR Triple Réchauffeur\\
-TRS Triple Réchauffeur Supérieur\\
-TRM Triple Réchauffeur Moyen\\
-TRI Triple Réchauffeur Inférieur\\
-MTC Médecine Traditionnelle Chinoise\\
-LCR Liquide Céphalo-rachidien\\
-MAP Menace d'accouchement prématuré \\
-CU contractions utérines\\
-DIU dispositif intra-utérin (anciennement appelé stérilet)
-MI membres inférieurs
+%%\printglossary
+%\printglossaries
+\printglossary[type=main,style=long,nonumberlist]
+\pagebreak
 
 \bibliographystyle{plain}
 \bibliography{biblio}
