@@ -6,3 +6,8 @@
 *.gz
 *.toc
 *.blg
+*.out
+*.xdy
+*.ist
+*.glo
+*.glg
