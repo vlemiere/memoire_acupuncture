@@ -10,8 +10,30 @@
 %%\usepackage[nottoc, notlof, notlot]{tocbibind}
 \usepackage{bold-extra}
 \renewcommand{\Frlabelitemi}{\textbullet}
+\renewcommand{\Frlabelitemii}{$\diamond$}
+
 \usepackage{float}
 
+
+\usepackage{tikz-qtree}
+\usetikzlibrary{matrix}
+
+\usepackage{tikz}
+\usetikzlibrary{%
+  arrows,%
+  calc,%
+  shapes.geometric,%
+  shapes.misc,%
+  shapes.symbols,%
+  shapes.arrows,%
+  automata,%
+  through,%
+  positioning,%
+  scopes,%
+  decorations.shapes,%
+  decorations.text,%
+  decorations.pathmorphing,%
+  shadows}
 
 
 
@@ -237,7 +259,7 @@ L'oligoamnios est principalement du à une oligurie ou une anurie f\oe{}tale. Il 
 \begin{itemize}
 \item les malformations f\oe{}tales 
 \begin{itemize}
-\item anomalies rénales
+\item[$\diamond$] anomalies rénales
 \item syndromes malformatifs
 \end{itemize}
 \item un syndrome transfuseur-transfusé lors d'une grossesse gémellaire mono-choriale
@@ -292,7 +314,7 @@ Pendant cette première semaine de vie, l'embryon se nourrit des sécrétions produ
 
 C. CHAGUE-GAGNERET, A. PELLETIER-LAMBERT et B. SALAGNAC écrivent que l'embryon vit sur son propre \textsc{yuan qi} pendant les deux premiers mois et que ce n'est qu'à partir du troisième mois qu'il se développe à partir du \textsc{yuan qi} et du \textsc{sang} de sa mère \cite{CHArfa81, SAL1998, PEL2014}, or comme nous le verrons plus loin et comme le dit J.M. EYSSALET à partir du 22\textsuperscript{ème} jours le c\oe{}ur commence à battre et permet les échanges utéro-placentaires (cf 2.1.troisième semaine). 
 
-A la fin de la première semaine (5-6\textsuperscript{ème} jour), les cellules du blastocyste, appelées blastomères, se différencient en bouton embryonnaire et en trophoblaste dans lequel une cavité se creuse. J. CHOAIN y décrit une différenciation \textsc{yin/yang}, le \textsc{yin} étant le trophoblaste qui donnera une partie des annexes et du placenta assurant les fonctions de nutrition et le \textsc{yang} étant le bouton embryonnaire \cite{CHOmer39-40}. 
+\`A la fin de la première semaine (5-6\textsuperscript{ème} jour), les cellules du blastocyste, appelées blastomères, se différencient en bouton embryonnaire et en trophoblaste dans lequel une cavité se creuse. J. CHOAIN y décrit une différenciation \textsc{yin/yang}, le \textsc{yin} étant le trophoblaste qui donnera une partie des annexes et du placenta assurant les fonctions de nutrition et le \textsc{yang} étant le bouton embryonnaire \cite{CHOmer39-40}. 
 
 \begin{figure}[H]
 \begin{center}
@@ -322,7 +344,7 @@ Lors de la troisième semaine, le mésoblaste extra-embryonnaire apparaît à l'extr
 
 Dans ce mésoblaste extra-embryonnaire, des ilots sanguins apparaissent, ils fusionnent pour donner un réseau veineux et les cellules sanguines. A l'extrémité craniale du disque embryonnaire, en avant de la membrane pharyngée (zone d'accolement de l'endoblaste et de l'ectoblaste), une zone constituée de mésoderme et de mésenchyme forme la zone cardiogène. Après la plicature de l'embryon, cette zone se retrouve en position ventrale, les tissus cardiogènes s'organisent en deux tubes endocardiques qui fusionnent pour donner le tube cardiaque puis ensuite le coeur. 
 
-A la fin de la troisième semaine, au 22\textsuperscript{ème} jour, le c\oe{}ur commence à battre, il permet la mise en communication de la circulation foetale avec celle de sa mère par l'intermédiaire des villosités choriales. L'énergie \textsc{zong} du f\oe{}tus permet l'installation de la rythmicité cardiaque et la circulation de l'énergie \textsc{zong} de la mère ainsi que la circulation du \textsc{jing} des aliments et de la respiration reçus par la mère. A partir de ce moment, l'embryon ne vit plus sur ses réserves énergétiques mais \emph{"il reçoit la vie par la région ombilicale primitive qui devient pour lui \textsc{ming men} : "Une porte du Destin" "}  \cite{EYS1990}. 
+\`A la fin de la troisième semaine, au 22\textsuperscript{ème} jour, le c\oe{}ur commence à battre, il permet la mise en communication de la circulation foetale avec celle de sa mère par l'intermédiaire des villosités choriales. L'énergie \textsc{zong} du f\oe{}tus permet l'installation de la rythmicité cardiaque et la circulation de l'énergie \textsc{zong} de la mère ainsi que la circulation du \textsc{jing} des aliments et de la respiration reçus par la mère. \`A partir de ce moment, l'embryon ne vit plus sur ses réserves énergétiques mais \emph{"il reçoit la vie par la région ombilicale primitive qui devient pour lui \textsc{ming men} : "Une porte du Destin"~"}  \cite{EYS1990}. 
 %Schéma p76 de EYS1990 
 
 Ce mésoderme ne pourrait-il pas être une expression de \textsc{chong mai}. En effet \textsc{chong mai} est dit être la Mer du \textsc{sang}, il assure la transformation et la distribution du \textsc{qi} et du \textsc{sang}. Or c'est dans le mésoderme extra-embryonnaire que nait la circulation utéro-placentaire qui permet les échanges entre la mère et l'embryon. De plus \textsc{chong mai} se situe entre \textsc{ren mai} et \textsc{du mai}, comme le mésoblaste intra-embryonnaire se situe entre ectoblaste et endoblaste. 
@@ -483,7 +505,7 @@ Au 4\textsuperscript{ème} mois lunaire, le f\oe{}tus se saisit de l'Essence vita
 
 Au fur et à mesure de la grossesse, la quantité de Liquides Organiques augmente franchement. Cette augmentation est entre autre due à l'augmentation de la quantité de \gls{la}. L'embryon très \textsc{yang} attire le \textsc{sang} et les Liquides Organiques dans la cavité amniotique qui est \textsc{yin} \cite{SAL1998}. 
  
-\chapter{Energetique de la grossesse}
+\chapter{\'Energétique de la grossesse}
 
 Dans les ouvrages sur la médecine traditionnelle chinoise, on ne retrouve pas d'explication de la physiologie du \gls{la} en tant que tel. Mais le f\oe{}tus, son \gls{la} et ses annexes sont considérés comme un tout. On peut donc en déduire que ce qui favorisera la croissance du f\oe{}tus favorisera la production de \gls{la} et inversement. 
 
@@ -532,7 +554,7 @@ De plus, l'insuffisance de \textsc{yang} de \textsc{rein} empêche le bon fonctio
 
 Enfin, le \textsc{rein} gouverne l'eau et donc les \textsc{jin ye}.
 
-% faire un organigramme
+\input{organigramme-vr-vsg.tex}
 
 \subsubsection{La \textsc{rate}}
 

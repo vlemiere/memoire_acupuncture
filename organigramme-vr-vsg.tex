@@ -1,0 +1,49 @@
+\begin{figure}[H]
+   \centering
+\begin{tikzpicture}[>=stealth,sloped]
+
+    \matrix (tree) [%
+      matrix of nodes,
+      minimum size=0.25cm,
+      column sep=0.50cm,
+      row sep=1.3cm,
+    ]
+    {                                                                                                    
+                                                                                           
+ & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Hypoperfusion placentaire\end{center} \end{minipage}} &\\
+ &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Augmentation de la chaleur\end{center} \end{minipage}} & {\begin{minipage}[t]{0.2\textwidth}\begin{center}Absence d'augmentation de la volémie\end{center} \end{minipage}} & \colorbox{red}{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{sang} et de \textsc{liquide organique}\end{center} \end{minipage}} &\\
+ &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yin} de \textsc{rein}\end{center} \end{minipage}} &\\
+ & & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yang} de \textsc{rate}\end{center} \end{minipage}} &\\
+\colorbox{orange}{\begin{minipage}[t]{0.1\textwidth}\begin{center}Vide de \textsc{rein}\end{center} \end{minipage}} &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yang} de \textsc{rein}\end{center} \end{minipage}} & & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Absence d'augmentation du débit et de la fréquence cardiaque\end{center} \end{minipage}}\\
+ &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{qi} du \textsc{rein}\end{center} \end{minipage}} & \\
+ & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Diminution de la PO2\end{center} \end{minipage}} & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Stase de \textsc{sang}\end{center} \end{minipage}} & \\
+ & & & {\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{qi} du \textsc{poumon}\end{center} \end{minipage}}\\
+ & & &\colorbox{red}{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{sang}\end{center} \end{minipage}}\\
+    };
+   
+   \draw[->] (tree-5-1) -- (tree-3-2) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-3-2) -- (tree-2-2) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-3-2) -- (tree-2-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-2-3) -- (tree-1-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-3-2) -- (tree-2-4) node [midway,above]{}; %{$P$};
+   
+   \draw[->] (tree-5-1) -- (tree-5-2) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-5-2) -- (tree-4-4) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-4-4) -- (tree-2-4) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-5-2) -- (tree-5-5) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-5-5) |- (tree-1-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-5-2) -- (tree-2-4) node [midway,above]{}; %{$P$};
+   
+   \draw[->] (tree-5-1) -- (tree-6-2) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-6-2) -- (tree-7-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-7-3) |- (tree-9-4) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-6-2) -- (tree-7-5) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-7-5) |- (tree-9-4) node [midway,above]{}; %{$P$};
+   
+   \draw[->] (tree-8-4) -- (tree-7-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-8-4) -- (tree-7-5) node [midway,above]{}; %{$P$};
+
+    
+\end{tikzpicture}
+\caption{\textbf{\label {}Relation entre vide de \textsc{rein} et vide de \textsc{sang}}} 
+\end{figure}

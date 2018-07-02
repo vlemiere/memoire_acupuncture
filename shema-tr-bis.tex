@@ -1,0 +1,102 @@
+     \documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts,amssymb,verbatim}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{colortbl,hhline}
+\usepackage{fullpage}
+\usepackage{calc}
+\usepackage[francais]{babel}
+\usepackage{fancyhdr}
+\usepackage{dsfont}
+\usepackage[latin1]{inputenc}
+\usepackage{xcolor}
+\usepackage{xcolor,rotating,epic,eepic}
+\usepackage{tikz-qtree}
+\usetikzlibrary{matrix}
+
+\usepackage{fancyhdr}
+\usepackage{xcolor,rotating,epic,eepic}
+\usepackage{tikz}
+\usepackage[babel=true,kerning=true]{microtype}
+
+\usetikzlibrary{%
+  arrows,%
+  calc,%
+  shapes.geometric,%
+  shapes.misc,%
+  shapes.symbols,%
+  shapes.arrows,%
+  automata,%
+  through,%
+  positioning,%
+  scopes,%
+  decorations.shapes,%
+  decorations.text,%
+  decorations.pathmorphing,%
+  shadows}
+  
+  
+  
+\begin{document}
+
+%\begin{figure}[h]
+  % \centering
+  
+  \begin{tikzpicture}
+  
+\draw[step=1cm,very thin, gray] (-1,-1) grid (15,20);  
+  
+\node (a4) at  (12,19) {O2};
+\node (a5) at  (15,19) {Alimentation};
+\node [anchor=south] (a5bis) at  (15,18) {Boisson};
+
+\node (b2) at  (6,16) {\textsc{sang}};
+\node (b3) at  (9,16) {\textsc{qi}};
+
+\node[anchor=west] (c1) at  (0,13) {TRS};
+\node (c2) at  (6,13) {\textsc{c\oe{}ur}};
+\node (c3) at  (9,13) {\textsc{poumon}};
+
+\node[anchor=south west] (d1) at  (0,11) {Diaphragme};
+
+\node[anchor=west] (e1) at  (0,8) {TRM};
+\node (e3) at  (9,9) {\textsc{rate}};
+\node (e5) at  (13,9) {\textsc{estomac}};
+
+\node (f5) at  (13,7) {\textsc{intestin gêle}};
+
+\node[anchor=south west] (g1) at  (0,5) {Ligne passant par l'ombilic};
+
+\node[anchor=west] (h1) at  (0,3) {TRI};
+\node (h3) at  (9,3) {\textsc{rein}};
+\node (h5) at  (13,3) {\textsc{gros intestin}};
+\node [anchor=south] (h5bis) at  (13,2) {\textsc{vessie}};
+
+\node (i5) at  (13,-1) {Elimination};
+
+%\node [anchor=west] at (13,8) {impur};
+%\node [anchor=west] at (13,8) {impur};
+
+\draw (0,11) -- (16,11);
+\draw (0,5) -- (16,5);
+
+\draw[->,>=latex] (a4) -- (e5);
+\draw[->,>=latex] (a5bis) -- (e5);
+\draw[->,>=latex] (e5) -- (f5) node[midway,above,sloped] {impur};
+\draw[->,>=latex] (f5) -- (h5) node[midway,above,sloped] {impur};
+\draw[->,>=latex] (h5bis) -- (i5);
+
+\draw[->,>=latex] (e5) -- (e3) node[midway,above,sloped] {pur};
+
+
+\end{tikzpicture}
+
+%\caption{\textbf{\label {}Shema du \textsc{triple réchauffeur}}} 
+%\end{figure}
+
+
+
+\end{document}
+    
