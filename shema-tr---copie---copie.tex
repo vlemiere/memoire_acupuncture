@@ -41,12 +41,12 @@
   
 \begin{document}
 
-%\begin{figure}[h]
-  % \centering
+\begin{figure}[h]
+   \centering
   
   \begin{tikzpicture}
   
-\draw[step=1cm,very thin, gray] (-1,-1) grid (15,20);  
+%\draw[step=1cm,very thin, gray] (-1,-1) grid (15,20);  
   
 \node (a4) at  (12,19) {O2};
 \node (a5) at  (15,19) {Alimentation};
@@ -89,12 +89,20 @@
 \draw[->,>=latex] (h5bis) -- (i5);
 
 \draw[->,>=latex] (e5) -- (e3) node[midway,above,sloped] {pur};
+\draw[->,>=latex] (e3) -- (c2) node[midway,above,sloped] {pur};
+\draw[->,>=latex] (e3) -- (c3) node[midway,above,sloped] {pur};
+
+\draw[->,>=latex] (c3) -- (c2);
+\draw[->,>=latex] (c3) -- (b3);
+\draw[->,>=latex] (c2) -- (b2);
+
+\draw[->,>=latex] (h5) -- (h3) node[midway,above,sloped] {pur};
 
 
 \end{tikzpicture}
 
-%\caption{\textbf{\label {}Shema du \textsc{triple réchauffeur}}} 
-%\end{figure}
+\caption{\textbf{\label {}shéma du \textsc{triple réchauffeur}}} 
+\end{figure}
 
 
 
