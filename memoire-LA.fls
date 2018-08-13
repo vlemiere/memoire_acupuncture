@@ -397,12 +397,15 @@ INPUT ./schema/Schema-TR.png
 INPUT organigramme-vr-vsg.tex
 INPUT organigramme-vr-vsg.tex
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/jknappen/ec/ecbi1200.tfm
+INPUT memoire-LA.lof
+INPUT memoire-LA.lof
 INPUT memoire-LA.gls
 INPUT memoire-LA.gls
 INPUT memoire-LA.gls
 INPUT memoire-LA.bbl
 INPUT memoire-LA.bbl
 OUTPUT memoire-LA.toc
+OUTPUT memoire-LA.lof
 INPUT memoire-LA.aux
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb

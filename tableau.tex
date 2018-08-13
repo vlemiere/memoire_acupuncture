@@ -1,0 +1,167 @@
+\documentclass[9pt,a4paper,article]{memoir} 
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+
+\usepackage{glossaries} 
+\makeglossaries
+
+\usepackage{graphicx}
+%%\usepackage[nottoc, notlof, notlot]{tocbibind}
+\usepackage{bold-extra}
+\renewcommand{\Frlabelitemi}{\textbullet}
+\renewcommand{\Frlabelitemii}{$\diamond$}
+
+\usepackage{float}
+
+
+\usepackage{tikz-qtree}
+\usetikzlibrary{matrix}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{multirow}
+%\usepackage{slashbox}
+
+\usepackage{tikz}
+\usetikzlibrary{%
+  arrows,%
+  calc,%
+  shapes.geometric,%
+  shapes.misc,%
+  shapes.symbols,%
+  shapes.arrows,%
+  automata,%
+  through,%
+  positioning,%
+  scopes,%
+  decorations.shapes,%
+  decorations.text,%
+  decorations.pathmorphing,%
+  shadows}
+
+\begin{document}
+
+%\newlength\epaisLigne \newcommand\Ghline{\noalign{\global\epaisLigne\arrayrulewidth\global\arrayrulewidth 1.5pt}%
+%\hline \noalign{\global\arrayrulewidth\epaisLigne}}
+
+{\renewcommand{\arraystretch}{1,5}
+
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\hline
+%\backslashbox{A}{B}
+& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée & Saveur inconnue \\\hline
+
+\multirow{6}{1cm}{Nature froide} & Cheval & Foie de lapin & Cheval & Cheval & Escargot & \\\cdashline{2-7} 
+ & & & Poulpe, coquilles st Jacques & & Crustacés, crabe, moules, encornets, calamar, huitres, coques, algues marines, coquilles st Jacques, palourdes & \\\cdashline{2-7} 
+ & & & \oe{}ufs & & Fromage & \\\cdashline{2-7} 
+ & Oseille, Tomate & Rhubarbe, céleri, asperge, endive,  pissenlit & Cresson, céleri, tomate, germes de soja & & Sarrasin, pois & chicorée \\\cdashline{2-7} 
+ & Ananas, citron, pamplemousse, pastèque, tomate, kaki & Rhubarbe & Melon, banane, kaki, pastèque & & & \\\cdashline{2-7} 
+ & Citronnelle & Verveine, thé, tuocha & Canne à sucre & & Sel & \\
+\hline
+
+\end{tabular}}
+
+%\caption{Tableau croisé des aliments par nature et saveur}
+
+
+
+{\renewcommand{\arraystretch}{1,5}
+
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\hline
+%\backslashbox{A}{B}
+& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée & Saveur inconnue \\\hline
+
+\multirow{6}{1cm}{Nature fraiche} & & Foie, lapin & Lapin & Lapin & Grenouille & \\\cdashline{2-7} %viande
+ & & & Blanc d?\oe{}ufs, \oe{}uf de cane, \oe{}uf de caille & & & \\\cdashline{2-7}  %poisson
+ & & & & & & \\\cdashline{2-7} %lait 
+ & Artichaut, épinard & Blé, laitue, orge, salade, seigle, endives & Chou-fleur, radis, blé, orge, sarrasin, haricot, concombre, aubergine, épinard, laitue, carotte crue, navet, courge d'hiver & Radis, menthe, chou rave, navet & Orge & Brocoli, chou chinois \\\cdashline{2-7} %legumes
+ & Mandarine, orange, prune, mangue, pomme, poire, framboise & & Pomme, poire, prune, avocat, mandarine, framboise & & & \\\cdashline{2-7}  %fruits
+ & & Thé, origan & Thé & Menthe, origan & & \\ %autre
+\hline
+
+\end{tabular}}
+
+%\caption{Tableau croisé des aliments par nature et saveur}
+
+
+
+{\renewcommand{\arraystretch}{1,5}
+
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\hline
+%\backslashbox{A}{B}
+& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée & Saveur inconnue \\\hline
+
+\multirow{6}{1cm}{Nature stable} & Poule & Foie de génisse, foie de veau, rognon & B\oe{}uf, caille, canard, porc, veau, poulet, oie, pigeon, sanglier, poule & & Canard, pigeon, porc, sanglier & \\\cdashline{2-7} %viande
+ & & & Cabillaud, truite, poisson d'eau douce, maquereau& & Morue, oursin & Sardine, sole \\\cdashline{2-7} %poisson
+ & & & Jaune d'\oe{}uf, \oe{}uf de poule, lait & & & \\\cdashline{2-7} %lait 
+ & Igname & Navet & Riz, maïs, polenta, avoine, millet, pomme de terre, pois, fève, haricots verts, chou, carottes, chou-fleur, patate douce, betterave, champignon parfumé, lentille & Navet, avoine & & \\\cdashline{2-7} %legumes
+ & Fraise, prune, raisin, pomme, poire & & Figue, papaye, raisin, grenade, prune, fraise & & & \\\cdashline{2-7}  %fruits
+ & & & Miel, safran, réglisse, camomille, sucre & & Sel de celeri & \\ %autre
+ \hline
+
+\end{tabular}}
+
+%\caption{Tableau croisé des aliments par nature et saveur}
+
+
+
+{\renewcommand{\arraystretch}{1,5}
+
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\hline
+%\backslashbox{A}{B}
+& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée & Saveur inconnue \\\hline
+
+\multirow{6}{1cm}{Nature tiède} & Faisan & Foie de volaille, mouton & Dinde, faisan, b\oe{}uf, mouton, poulet & Jambon & \\\cdashline{2-7} %viande
+ & Conserve de poisson, rollmops & & Anguille, crevette & & Harang, sardine, crevette, poisson fumé & \\\cdashline{2-7} %poisson
+ & Fromage de brebis & & Fromage de vache & Fromage de chèvre & Fromage & \\\cdashline{2-7} %lait 
+ & & Asperge & Fenouil, riz gluant, pleurote, potiron, poireau & Poireau, fenouil, oignon, échalotte, ail & Avoine & \\\cdashline{2-7} %legumes
+ & Abricot, pêche, cerise, litchi, arbouse & & Jujube, abricot, pêche, cerise, litchi, arbouse, châtaigne, datte & Pêche & Châtaigne & \\\cdashline{2-7}  %fruits
+ & Vinaigre & Alcool leger, tabac, valériane, café & Badiane, muscade, anis étoilé & Aneth, coriandre, ciboule, ciboulette, tabac, pistache, cumin, moutarde, girofle, gingembre, muscade, cardamone, anis étoilé & & \\ %autre
+\hline
+
+\end{tabular}}
+
+%\caption{Tableau croisé des aliments par nature et saveur}
+
+
+
+{\renewcommand{\arraystretch}{1,5}
+
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\hline
+%\backslashbox{A}{B}
+& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée & Saveur inconnue \\\hline
+
+\multirow{6}{1cm}{Nature chaude} & Agneau & Viande boucanée & & & Charcuterie, salaison & Pintade, faisan \\\cdashline{2-7} %viande
+ & & & & & & \\\cdashline{2-7} %poisson
+ & & & Beurre, graisse animale & Fromage fermenté, roquefort, bleu d'Auvergne & fromage gras & \\\cdashline{2-7} %lait 
+ & & & & & & \\\cdashline{2-7} %legumes
+ & & & & & & \\\cdashline{2-7}  %fruits
+ & Vinaigre & Alcool fort, café, fenugrec & Cannelle & Alcool fort, poivre noir, cannelle, piment, gingembre & & huile de soja \\ %autre
+\hline
+
+\end{tabular}}
+
+%\caption{Tableau croisé des aliments par nature et saveur}
+
+
+
+{\renewcommand{\arraystretch}{1,5}
+
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\hline
+%\backslashbox{A}{B}
+& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée & Saveur inconnue \\\hline
+
+\multirow{6}{1cm}{Nature inconue} & Pain au levain, yaourt & Chou-rave, persil, foie de porc, foie de mouton, cacao, fleur d'oranger, romarin, thym, sauge, curcuma & blette, panais, courgette, pois-chiche, soja, coing, pruneau, noix, noisette, pignon de pin, bar, anchois, thon, capre, lait de vache, lait de brebis, lait de soja, vanille, fleur d'oranger & carvi, thym, germe de blé & Salade cuite, noix, sauce soja, olives, thon, saumon & \\
+\hline
+
+\end{tabular}}
+
+%\caption{Tableau croisé des aliments par nature et saveur}
+
+
+\end{document}
