@@ -481,11 +481,75 @@ Pour B. AUTEROCHE :
 
 Les Liquides Organiques sont véhiculés à travers les \textsc{cu li} \cite{GUIrfa38}. Les \textsc{cu li} représentent tous les vides du corps qui permettent la circulation des liquides. \textsc{cu} sont les linéaments rattachés à la peau, les interstices entre les muscles, les fibres, les voies conjonctives ... et \textsc{li} sont les linéaments en relation avec les aponévroses, les fascias, les mésentères ... \cite{GUIrfa38}. \\
 
+%\begin{figure}[H]
+%\begin{center}
+%\includegraphics[width=0.5\textwidth]{schema/Schema-TR.png}
+%\caption{Le Triple Réchauffeur}
+%\end{center}
+%\end{figure}
+
+
 \begin{figure}[H]
-\begin{center}
-\includegraphics[width=0.5\textwidth]{schema/Schema-TR.png}
-\caption{Le Triple Réchauffeur}
-\end{center}
+   \centering
+  
+  \begin{tikzpicture}
+  
+%\draw[step=1cm,very thin, gray] (-1,-1) grid (15,20);  
+  
+\node (a4) at  (12,19) {O2};
+\node (a5) at  (15,19) {Alimentation};
+\node [anchor=south] (a5bis) at  (15,18) {Boisson};
+
+\node (b2) at  (6,16) {\textsc{sang}};
+\node (b3) at  (9,16) {\textsc{qi}};
+
+\node[anchor=west] (c1) at  (0,13) {TRS};
+\node (c2) at  (6,13) {\textsc{c\oe{}ur}};
+\node (c3) at  (9,13) {\textsc{poumon}};
+
+\node[anchor=south west] (d1) at  (0,11) {Diaphragme};
+
+\node[anchor=west] (e1) at  (0,8) {TRM};
+\node (e3) at  (9,9) {\textsc{rate}};
+\node (e5) at  (13,9) {\textsc{estomac}};
+
+\node (f5) at  (13,7) {\textsc{intestin gêle}};
+
+\node[anchor=south west] (g1) at  (0,5) {Ligne passant par l'ombilic};
+
+\node[anchor=west] (h1) at  (0,3) {TRI};
+\node (h3) at  (9,3) {\textsc{rein}};
+\node (h5) at  (13,3) {\textsc{gros intestin}};
+\node [anchor=south] (h5bis) at  (13,2) {\textsc{vessie}};
+
+\node (i5) at  (13,-1) {Elimination};
+
+%\node [anchor=west] at (13,8) {impur};
+%\node [anchor=west] at (13,8) {impur};
+
+\draw (0,11) -- (16,11);
+\draw (0,5) -- (16,5);
+
+\draw[->,>=latex] (a4) -- (e5);
+\draw[->,>=latex] (a5bis) -- (e5);
+\draw[->,>=latex] (e5) -- (f5) node[midway,above,sloped] {impur};
+\draw[->,>=latex] (f5) -- (h5) node[midway,above,sloped] {impur};
+\draw[->,>=latex] (h5bis) -- (i5);
+
+\draw[->,>=latex] (e5) -- (e3) node[midway,above,sloped] {pur};
+\draw[->,>=latex] (e3) -- (c2) node[midway,above,sloped] {pur};
+\draw[->,>=latex] (e3) -- (c3) node[midway,above,sloped] {pur};
+
+\draw[->,>=latex] (c3) -- (c2);
+\draw[->,>=latex] (c3) -- (b3);
+\draw[->,>=latex] (c2) -- (b2);
+
+\draw[->,>=latex] (h5) -- (h3) node[midway,above,sloped] {pur};
+
+
+\end{tikzpicture}
+
+\caption{shéma du \textsc{triple réchauffeur}}
 \end{figure}
 
 %\input{shema-tr.tex}
