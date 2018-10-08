@@ -1,9 +1,13 @@
 \select@language {french}
-\contentsline {figure}{\numberline {1}{\ignorespaces Mouvements des fluides constituant le liquide amniotique \cite {MADemc2016}}}{12}
-\contentsline {figure}{\numberline {2}{\ignorespaces Premi\`ere semaine du d\'eveloppement de l'embryon \cite {SCH2017}}}{23}
-\contentsline {figure}{\numberline {3}{\ignorespaces Embryologie des membranes f\oe {}tales \cite {ENCemc2002}}}{24}
-\contentsline {figure}{\numberline {4}{\ignorespaces Gastrulation : disque embryonnaire vu par sa face dorsale (A), courants de migration (B), coupe transversale du disque passant par c (C) \cite {ENCemc2002}}}{26}
-\contentsline {figure}{\numberline {5}{\ignorespaces \'Evolution du m\'esoderme \cite {ENCemc2002}}}{27}
-\contentsline {figure}{\numberline {6}{\ignorespaces Plicature c\'ephalocaudale \cite {ENCemc2002}}}{29}
-\contentsline {figure}{\numberline {7}{\ignorespaces sh\'ema du \textsc {triple r\'echauffeur}}}{32}
-\contentsline {figure}{\numberline {8}{\ignorespaces Relation entre vide de \textsc {rein} et vide de \textsc {sang}}}{38}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Mouvements des fluides constituant le liquide amniotique \cite {MADemc2016}}}{8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Premi\`ere semaine du d\'eveloppement de l'embryon \cite {SCH2017}}}{18}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Embryologie des membranes f\oe {}tales \cite {ENCemc2002}}}{19}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Gastrulation : disque embryonnaire vu par sa face dorsale (A), courants de migration (B), coupe transversale du disque passant par c (C) \cite {ENCemc2002}}}{21}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces \'Evolution du m\'esoderme \cite {ENCemc2002}}}{22}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Plicature c\'ephalocaudale \cite {ENCemc2002}}}{23}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1}{\ignorespaces sh\'ema du \textsc {triple r\'echauffeur}}}{71}
+\contentsline {figure}{\numberline {2}{\ignorespaces Relation entre vide de \textsc {rein} et vide de \textsc {sang}}}{72}

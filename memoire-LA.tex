@@ -1,8 +1,7 @@
-\documentclass[12pt,a4paper,article]{memoir} 
+\documentclass[12pt,a4paper,article]{book} 
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
-
 \usepackage{glossaries} 
 \makeglossaries
 
@@ -13,6 +12,22 @@
 \renewcommand{\Frlabelitemii}{$\diamond$}
 
 \usepackage{float}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\renewcommand{\headrulewidth}{1pt}
+%%\fancyhead[C]{\textbf{page \thepage}} 
+%\fancyhead[L]{\leftmark}
+%\fancyhead[R]{}
+
+\fancyfoot[C]{}	% Rien au milieu
+\fancyfoot[LE,RO]{\thepage}		% Le numéro de page à l'extérieur
+\fancyhead[RO]{\rightmark}		% Nom des sections
+\fancyhead[LE]{\leftmark}		% Nom des chapitres
+\fancyhead[RE,LO]{}	
 
 
 \usepackage{tikz-qtree}
@@ -39,11 +54,10 @@
   shadows}
 
 
+%\pagestyle{fancy}
+%\renewcommand{\chaptermark}[1]{\markboth}{\bsc{\chaptername~\thechapter{}:}#1}{}}
 
 
-
-
-%
 %\university{UNIVERSITE DE ROUEN}
 %\school{Faculté de médecine et de pharmacie}
 
@@ -55,7 +69,7 @@
 %\speciality{memoire soutenu en vu de l'obtention du DIU d'acupuncture obstétrical}
 \date{Session universitaire 2015-2017} 
 
-%
+
 \newglossaryentry{HTA}{name=hta,description={hypertension artérielle}}
 
 \newacronym{hta}{HTA}{hypertension artérielle}
@@ -85,71 +99,59 @@
 
 \begin{document}
 %
+
 \maketitle
+\clearpage{\pagestyle{empty}\cleardoublepage}
 \tableofcontents
 %
-\part*{Introduction}
-\addcontentsline{toc}{part}{Introduction}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter*{Introduction}
 
-Echographie du 3\textsuperscript{ème} trimestre. Le gynécologue, à la fin de l'examen dit : \emph{"Il y a peut de \gls{la} Madame. Nous allons devoir surveiller votre grossesse de plus prêt !"} La patiente inquiète répond : \emph{"C'est quoi le liquide amni...? Pourquoi il n'y en a pas beaucoup? Que puis-je faire? Y a t'il un traitement?"} \\
+%\thispagestyle{empty}
+
+%\addcontentsline{toc}{part}{Introduction}
+
+
+\'Echographie du 3\textsuperscript{ème} trimestre : \\
+au terme de l'examen, le gynécologue dit : \emph{"Il y a peut de liquide amniotique Madame. Nous allons devoir surveiller votre grossesse de plus près !"} \\
+La patiente, inquiète, répond : \emph{"C'est quoi le liquide amni...? Pourquoi il n'y en a pas beaucoup? Que puis-je faire? Y a-t-il un traitement?"} \\
 
 Quel professionnel de la grossesse n'a jamais entendu cet échange. \\
 
-Le \gls{la} est mal connu des patientes, elles savent que le "bébé nage dans de l'eau et que, à l'accouchement on perd les eaux"
+Le \gls{la} est mal connu des patientes, elles savent que le "bébé nage dans de l'eau et que, à l'accouchement, on perd les eaux"
 
-Le \gls{la} est, comme le f\oe{}tus, surveillé pendant la grossesse. Sa quantité, sa qualité est importante pour la personne qui suit la grossesse, trop ou trop peu est une pathologie obstétricale en soit. Elle peut être liée à d'autre pathologie. Ou pas ! Mais que faire devant ce problème, la médecine occidentale n'a pas beaucoup de remède à proposer lorsqu'une pathologie du \gls{la} est diagnostiquée. Bien sur si celle ci est liée à un diabète gestationnel, c'est le diabète que l'on traitera, mais souvent même associée on ne sait que faire. A part surveiller et provoquer l'accouchement.
-
+Le \gls{la} est, comme le f\oe{}tus, surveillé pendant la grossesse. Sa quantité et sa qualité sont importantes pour la personne qui suit la grossesse, trop ou trop peu sont des pathologies obstétricales en soit. Ces pathologies peuvent être liées à d'autres pathologies. Mais que faire devant ce problème ? La médecine occidentale n'a que peu de remède à proposer lorsqu'une pathologie du \gls{la} est diagnostiquée. Toutefois si celle-ci est liée à un diabète gestationnel, c'est uniquement le diabète que l'on traitera. Le trouble du \gls{la} quand à lui sera surveillé.
+	
 La \gls{mtc}, en abordant d'une manière différente la pathologie, peut venir aider notre patiente qui, désappointée, sort de son rendez-vous avec une ordonnance pour un bilan sanguin conséquent, une échographie de référence et beaucoup d'angoisse.
 
-La première partie de ce travail s'est intéressée à la notion occidentale du \gls{la}. La seconde partie abordera le \gls{la} sous l'\oe{}il de la \gls{mtc} en décrivant sa formation on pourra faire ressortir des tableaux cliniques expliquants les troubles quantitatifs de \gls{la} ainsi que des propositions de traitements. 
+La première partie de ce travail s'est intéressée à la notion occidentale du \gls{la}. La seconde partie abordera le \gls{la} sous l'\oe{}il de la \gls{mtc}. La description de sa formation permettra d'établir des tableaux cliniques expliquants les troubles quantitatifs du \gls{la} et de proposer des traitements. Dans la troisième partie, des cas cliniques illustreront ce travail bibliographique.
 
-\part*{Le liquide amniotique en médecine occidentale}
-\addcontentsline{toc}{part}{Le liquide amniotique en médecine occidentale}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
-\chapter{Définition}
+\chapter{Le liquide amniotique en médecine occidentale}
+
+\section{Définition}
 
 
-Le \gls{la} est un liquide clair et transparent contenu dans la cavité amniotique. Il représente un compartiment dynamique en étroite relation avec le f\oe{}tus et les membranes amniochoriales. Son rôle est essentiel pour le développement et la maturation du foetus pendant la grossesse. 
+Le liquide amniotique est un liquide clair et transparent contenu dans la cavité amniotique et dont le Ph est compris entre 6,9 et 7,2 \cite{MER2008}. Il représente un compartiment dynamique en étroite relation avec le f\oe{}tus et les membranes amniochoriales. Son rôle est essentiel pour le développement et la maturation du foetus pendant la grossesse. 
 
-Son Ph est compris entre 6.9 et 7.2 \cite{MER2008}.
+Le volume de \gls{la} est un indicateur de bien être f\oe{}tal. Il est corrélé au poids du f\oe{}tus jusqu'à 20 \gls{sa}. On observe ensuite un ralentissement de l'augmentation du volume du \gls{la} (volume maximum entre 32 et 36 \gls{sa}) \cite{COD1991}. \\
+\'A terme, le volume du liquide amniotique varie entre 500~ml et 1000~ml \cite{MER2008} (\gls{ia} compris entre 8 et 18~cm \cite{CODemc1996}). On parle d'oligoamnios si le volume est inférieur à 200~ml et d'hydramnios si le volume est supérieur à 2000~ml \cite{MADemc2016}.
 
-Le volume de \gls{la} est un indicateur de bien être f\oe{}tal, il est corrélé au poids du f\oe{}tus jusqu'à 20 \gls{sa}, on observe ensuite un tassement de l'augmentation du volume du \gls{la} (volume maximum entre 32 et 36 \gls{sa}) \cite{COD1991}. \\
-A terme, le volume du liquide amniotique varie entre 500ml et 1000ml \cite{MER2008} (\gls{ia} compris entre 8 et 18cm \cite{CODemc1996}). On parle d'oligoamnios si le volume est inférieur à 200ml et d'hydramnios si le volume est supérieur à 2000ml \cite{MADemc2016}.
+\section{Production et élimination du liquide amniotique}
 
-\chapter{Production, élimination}
+La cavité amniotique apparaît vers le 7\textsuperscript{ème} jour après la fécondation. Le liquide amniotique est majoritairement produit par le f\oe{}tus.
 
-La cavité amniotique apparait vers le 7\textsuperscript{ème} jour après la fécondation. Le liquide amniotique est majoritairement produit par le f\oe{}tus.
+On distingue deux périodes différentes pour la formation du liquide amniotique et sa composition biochimique. La période de transition se situe entre 20 et 25~\gls{sa}, ce qui correspond au début de la kératinisation de la peau du f\oe{}tus. Jusqu'à 20 \gls{sa}, le liquide amniotique provient du liquide extra cellulaire et du sang du f\oe{}tus. En effet, l'épiderme est rudimentaire jusqu'à 13 \gls{sa}, ce qui signifie que la peau du f\oe{}tus est perméable. Il y a communication entre la cavité amniotique et les vaisseaux contenus dans le derme f\oe{}tal \cite{COD1991}. \\
+Après 20 \gls{sa}, la kératinisation de la peau provoque l'oblitération définitive de cette zone de communication. Les sécrétions rénales et pulmonaires du f\oe{}tus deviennent la principale source de production du \gls{la}.\\
 
-On distingue deux périodes différentes pour la formation du liquide amniotique et pour sa composition biochimique. La période charnière se situe entre 20 et 25 \gls{sa}, ce qui correspond au début de la kératinisation de la peau du f\oe{}tus :
-\begin{itemize}
-\item Jusqu'à 20 \gls{sa}, le liquide amniotique provient du liquide extra cellulaire et du sang du f\oe{}tus. En effet, l'épiderme est rudimentaire jusqu'à 13 \gls{sa}, ce qui signifie que la peau du f\oe{}tus est perméable. Il y a communication entre la cavité amniotique et les vaisseaux contenus dans le derme f\oe{}tal \cite{COD1991}. 
-\item Après 20 \gls{sa}, la kératinisation de la peau provoque l'oblitération définitive cette zone de communication. Les sécrétions rénales et pulmonaires du f\oe{}tus sont alors la principale source de production du \gls{la}.
-\end{itemize}
-
-Les échanges liquidiens entre la mère et son f\oe{}tus sont importants (environ 460ml/h \cite{MADemc2016}). La régulation du volume de \gls{la} est controlée par le f\oe{}tus et semblerait dépendre de son état d'hydratation.
+Les échanges liquidiens entre la mère et son f\oe{}tus sont importants (environ 460~ml/h \cite{MADemc2016}). La régulation du volume de \gls{la} est controlée par le f\oe{}tus et semblerait dépendre de son état d'hydratation.
 
 Le liquide amniotique est renouvelé en une heure et son volume est maintenu stable grâce à des phénomènes de production / réabsorption. 
 
-Les principales sources : 
-\begin{itemize}
-\item de production sont :
-\begin{itemize}
-\item la diurèse foetale
-\item les sécrétions pulmonaires
-\end{itemize}
-\item d'élimination sont :
-\begin{itemize}
-\item l'absorption intramembranaire à travers la surface placentaire 
-\item la déglutition f\oe{}tale
-\end{itemize}
-\end{itemize}
+Les principales sources de production sont la diurèse foetale et les sécrétions pulmonaires tandis que les principales sources d'élimination sont l'absorption intramembranaire à travers la surface placentaire et la déglutition f\oe{}tale.
 
-Il existe également des voies d'échanges mineures : 
-\begin{itemize}
-\item les sécrétions oronasales
-\item la voie transmembranaire à travers les membranes amniochoriales
-\item les transferts transcordaux et transcutanés \cite{MADemc2016}.
-\end{itemize}
+Il existe également des voies d'échanges mineures : les sécrétions oronasales, la voie transmembranaire à travers les membranes amniochoriales et les transferts transcordaux et transcutanés \cite{MADemc2016}.
 
 \begin{figure}[h]
 \begin{center}
@@ -160,149 +162,149 @@ Il existe également des voies d'échanges mineures :
 
 \subsection{La diurèse f\oe{}tale}
 
-La diurèse f\oe{}tale est la principale voie d'entrée de \gls{la} à partir du second trimestre. On remarque, en effet, que l'absence de rein s'accompagne toujours d'un anamnios. 
+Dès 11 \gls{sa}, on peut observer les mictions du f\oe{}tus. La diurèse f\oe{}tale, connue depuis hyppocrate, augmente progressivement pour atteindre 500~ml/24h en fin de grossesse. Les fonctions glomérulaires et tubulaires débutent respectivement vers 10~\gls{sa} et 15~\gls{sa} et la néphrogénèse est terminée vers 34-35~\gls{sa} \cite{COD1991}. Cela fait à partir du second trimestre, de la diurèse f\oe{}tale la principale voie d'entrée de \gls{la}. 
 
-Dès 11 \gls{sa}, on peut observer les mictions du f\oe{}tus. La diurèse f\oe{}tale, connue depuis hyppocrate, augmente progressivement pour atteindre 500ml/24h en fin de grossesse. Les fonctions glomérulaires et tubulaires débutent respectivement vers 10 \gls{sa} et 15 \gls{sa} et la néphrogénèse est terminée vers 34-35 \gls{sa} \cite{COD1991}. 
-
-La diurèse f\oe{}tale est contrôlée par plusieurs hormones, comme chez l'adulte, ce qui explique une variation de la diurèse et donc du volume de \gls{la} en fonction de la situation hémodynamique du f\oe{}tus \cite{MADemc2016}. 
+La diurèse f\oe{}tale est contrôlée par plusieurs hormones, comme chez l'adulte, ce qui explique une variation de la diurèse et donc du volume de \gls{la} en fonction de la situation hémodynamique du f\oe{}tus \cite{MADemc2016}. De plus on observe que l'absence de rein s'accompagne toujours d'un anamnios.
 
 \subsection{Les sécrétions pulmonaires}
 
-A partir de 18 \gls{sa}, le poumon du f\oe{}tus secrète du liquide pulmonaire. Cette sécrétion augmente progressivement pour atteindre 300ml/24h en fin de grossesse. Le liquide pulmonaire contient de l'eau, des électrolytes et de nombreuses substances organiques (phospholipides, bilirubine entre autre) \cite{COD1991}. 
+\'A partir de 18~\gls{sa}, le poumon du f\oe{}tus secrète du liquide pulmonaire. Cette sécrétion augmente progressivement pour atteindre 300~ml/24h en fin de grossesse. Le liquide pulmonaire contient de l'eau, des électrolytes et de nombreuses substances organiques (phospholipides, bilirubine, ...) \cite{COD1991}. 
 
-Le liquide pulmonaire permet le développement de la taille des saccules et alvéoles pulmonaires grâce à des phénomènes de pression au niveau de l'arbre aérien. Il est ensuite, au cours des mouvements respiratoires, éliminé par la trachée. Il est ensuite soit dégluti, soit recraché dans le \gls{la}.
+Le liquide pulmonaire permet le développement de la taille des saccules et alvéoles pulmonaires grâce à des phénomènes de pression au niveau de l'arbre aérien. Il est éliminé par la trachée au cours des mouvements respiratoires puis il est soit dégluti, soit recraché dans le \gls{la}.
 
 \subsection{La déglutition f\oe{}tale}
 
-Vers 11 \gls{sa}, les premiers mouvements de déglutition sont observés ; mais la fonction de déglutition du f\oe{}tus commence réellement à partir de 16~-~17~\gls{sa}. La quantité de liquide amniotique déglutie par le f\oe{}tus augmente au fur et à mesure de la grossesse pour atteindre, à terme, environ 500ml/24h \cite{MER2008, COD1991}. 
+C'est vers 11~\gls{sa} que les premiers mouvements de déglutition seront observés mais la fonction de déglutition du f\oe{}tus commence réellement à partir de 16-17~\gls{sa}. La quantité de liquide amniotique déglutie par le f\oe{}tus augmente au fur et à mesure de la grossesse pour atteindre, à terme, environ 500ml/24h \cite{MER2008, COD1991}. 
 
-La déglutition est commandée par le système nerveux du f\oe{}tus, la quantité de \gls{la} déglutit varie en fonction du volume de celui-ci.
+La déglutition est commandée par le système nerveux du f\oe{}tus. La quantité de \gls{la} déglutit varie en fonction du volume total de gls{la}.
 
 Le liquide amniotique est ensuite absorbé par l'intestin. 
 
 \subsection{L'absorption intramembranaire à travers la surface placentaire}
 
-Mise en évidence dans les années 1980, c'est la principale source d'élimination du \gls{la} \cite{MADemc2016}. Elle permet la régulation de la quantité de \gls{la} même en cas d'atrésie de l'\oe{}sophage. 
+Mise en évidence dans les années 1980, l'absorption intramembranaire à travers la surface placentaire est la principale source d'élimination du \gls{la} \cite{MADemc2016}. Cela permet la régulation de la quantité de \gls{la} même en cas d'atrésie de l'\oe{}sophage. 
 
-Les échanges sont bidirectionnels mais le flux de \gls{la} de la cavité amniotique vers le placenta est prédominant (800ml/24h). Ce flux actif et unidirectionnel est sous contrôle hormonal \cite{MADemc2016}.
+Les échanges sont bidirectionnels mais le flux de \gls{la} de la cavité amniotique vers le placenta est prédominant (800~ml/24h). Ce flux actif est sous contrôle hormonal \cite{MADemc2016}.
 
 \subsection{La voie transmembranaire à travers les membranes amniochoriales}
 
-Les échanges sont bidirectionnels mais le flux de \gls{la} de la cavité amniotique vers la mère est prédominant. Ce flux  reste marginal 7 à 17ml/24h \cite{MADemc2016}.
+Les échanges de \gls{la} entre la mère et son f\oe{}tus à travers les membranes amniochoriales sont bidirectionnels mais le flux de \gls{la} de la cavité amniotique vers la mère est prédominant. Ce flux  reste marginal 7 à 17~ml/24h \cite{MADemc2016}.
 
 \subsection{Les sécrétions oronasales, les transferts transcordaux et transcutanés}
 
 Les sécrétions oronasales représentent elles aussi une part négligeable de la quantité de \gls{la} puisque le volume de sécrétion est d'environ 25ml/24h \cite{MADemc2016}. 
 
-Avant 20 \gls{sa}, l'épithélium recouvrant le cordon ombilical est imperméable aux échanges, après 20 \gls{sa} ceux-ci sont possibles mais représentent des quantités négligeables. 
+Avant 20~\gls{sa}, l'épithélium recouvrant le cordon ombilical est imperméable aux échanges. Après 20~\gls{sa} ces échanges deviennent possibles mais représentent des quantités négligeables. 
 
-Dans la première moitié de la grossesse, avant la kératinisation de la peau, les échanges bidirectionnels à travers la peau sont primordiaux. Après 20 \gls{sa}, les échanges transcutanés disparaissent sauf pour les molécules liposolubles de bas poids moléculaire.
+Dans la première moitié de la grossesse, avant la kératinisation de la peau, les échanges bidirectionnels à travers la peau sont primordiaux. Après 20~\gls{sa}, les échanges transcutanés disparaissent sauf pour les molécules liposolubles de bas poids moléculaire.
 
-\chapter{Composition}
+\section{Composition du liquide amniotique}
 
-Le liquide amniotique est composé majoritairement d'eau (98.4 à 99.4\% d'eau \cite{MER2008, TONjcma72}). On y trouve également des sels minéraux, des substances organiques (pour certaines, leur taux reflètent le degré de maturité du f\oe{}tus) et des cellules f\oe{}tales (cellules épidermiques desquamées, poils, lanugo, fragments de matière sébacée, cellules épithéliales provenant de l'arbre urinaire et du vagin \cite{MER2008}). 
-
-Avant 20 \gls{sa}, le \gls{la} provenant de la diffusion du liquide extra cellulaire et du sang, sa composition est proche de celle du sérum foetal. On y trouve également des enzymes digestives et hépatiques qui suivent le développement intestinal. \\
+Avant 20 \gls{sa}, le \gls{la} provient de la diffusion du liquide extra cellulaire et du sang, sa composition est proche de celle du sérum foetal. On y trouve également des enzymes digestives et hépatiques qui suivent le développement intestinal. \\
 Après la kératinisation de la peau (20 \gls{sa} environ), la composition du \gls{la} diffère de celle du sérum foetal et les enzymes digestives et hépatiques disparaissent \cite{COD1991}. 
+
+Globalement le liquide amniotique est composé majoritairement d'eau (98,4 à 99,4\% d'eau \cite{MER2008, TONjcma72}) dans lequel on trouve également des sels minéraux, des substances organiques (le taux de certaines de ces substances reflètent le degré de maturité du f\oe{}tus) et des cellules f\oe{}tales (cellules épidermiques desquamées, poils, lanugo, fragments de matière sébacée, cellules épithéliales provenant de l'arbre urinaire et du vagin \cite{MER2008}). 
 
 La présence de certaines substances dans le \gls{la} signe une pathologie du f\oe{}tus (acétylcholinestérase et fermeture du tube neural par exemple).
 
-\chapter{Rôle}
+\section{Rôle du liquide amniotique}
 
-Le liquide amniotique entoure le f\oe{}tus pendant toute la grossesse, il représente l'environnement sensoriel du foetus (goût, odorat, sons). Il joue, au cours du développement f\oe{}tal, plusieurs rôles. 
+Le liquide amniotique entoure le f\oe{}tus pendant toute la grossesse, il représente l'environnement sensoriel du foetus (goût, odorat, sons). Au cours du développement f\oe{}tal, il a plusieurs rôles. 
 
-Le volume liquidien qu'il représente permet le développement et les mouvements du f\oe{}tus et donc de son système musculaire. De plus il le protège contre les traumatismes extérieurs et les compressions du cordon. Il permet également une lubrification du f\oe{}tus, évitant ainsi l'apparition de brides. Par ailleurs, il permet une bonne isolation thermique du f\oe{}tus. 
+Ce volume liquidien permet les mouvements du f\oe{}tus et donc le développement de son système musculaire. De plus, il le protège contre les traumatismes extérieurs (physiques et thermiques) et les compressions du cordon. Il permet également une lubrification du f\oe{}tus, évitant ainsi l'apparition de brides.
 
-Le \gls{la} est nécessaire au développement des poumons du f\oe{}tus de par les mouvements respiratoires qu'il permet et par la pression dans les alvéoles pulmonaires qu'il exerce. 
+Le développement des poumons du f\oe{}tus est permis par les mouvements respiratoires, facilité par le volume du liquides amniotique, et par la pression qu'il exerce dans les alvéoles pulmonaires. 
 
-Par les phénomènes de déglutition, il permet l'hydratation du f\oe{}tus. Les facteurs de croissance présents dans le \gls{la}, absorbés par le système intestinal du f\oe{}tus et transportés dans tout son organisme, ont probablement un rôle important dans le développement du f\oe{}tus \cite{TONjcma72}. 
+L'hydratation du f\oe{}tus est assurée par les phénomènes de déglutition. Les facteurs de croissance présents dans le \gls{la}, absorbés par le système intestinal du f\oe{}tus et transportés dans tout son organisme, ont probablement un rôle important dans le développement du f\oe{}tus \cite{TONjcma72}. 
 
-Le liquide amniotique possède certaines propriétés antibactériennes qui évoluent au cours de la grossesse. Elles apparaissent vers 20 \gls{sa} et augmentent progressivement pour être maximal à terme \cite{COD1991}. 
+Le liquide amniotique possède certaines propriétés antibactériennes qui évoluent au cours de la grossesse. Ces propriétés apparaissent vers 20 \gls{sa} et augmentent progressivement pour être maximales à terme \cite{COD1991}. 
 
-Lors de l'accouchement, le \gls{la} facilite l'accommodation de la présentation et permet la lubrification du vagin après la rupture des membranes.
+Pour finir, lors de l'accouchement, le \gls{la} facilite l'accommodation de la présentation et permet la lubrification du vagin après la rupture des membranes.
 
-\chapter{Pathologie du liquide amniotique en médecine occidentale}
+\section{Pathologie du liquide amniotique en médecine occidentale}
 
-Le volume de \gls{la} est un indicateur de bien être f\oe{}tal, toute anomalie de la quantité de liquide amniotique (excès ou insuffisance) doit faire évoquer une pathologie f\oe{}tale ou maternelle. Ces anomalies sont souvent corrélées à une augmentation de la morbi-mortalité f\oe{}tale. \\
+Le volume de \gls{la} est un indicateur de bien être f\oe{}tal. Toute anomalie de la quantité de liquide amniotique (excès ou insuffisance) doit faire évoquer une pathologie f\oe{}tale ou maternelle. Ces anomalies sont souvent corrélées à une augmentation de la morbi-mortalité f\oe{}tale. \\
 
-Plusieurs méthodes de mesure du \gls{la} existent :
+Il existe trois méthodes de mesure du volume du \gls{la} :
 \begin{itemize}
 \item mesure de la plus \gls{gc} : c'est la mesure de la profondeur de la plus grande citerne de \gls{la} (ne contenant pas de cordon ombilical).
 \item mesure des deux diamètres de la plus grande citerne : c'est la multiplication du diamètre vertical et du diamètre horizontal de la plus grande citerne de \gls{la} (ne contenant pas de cordon ombilical).
 \item \gls{ia} (index amniotique) : on divise l'utérus en quatre quadrants et l'on additionne les quatre hauteurs verticales des citernes de \gls{la} les plus profondes. 
 \end{itemize}
 
-\section{L'hydramnios}
+\subsection{L'hydramnios}
 
-On définit l'hydramnios comme une quantité de \gls{la} supérieure à 2l. Pendant la grossesse, il correspond à une mesure de \cite{MADemc2016} :
+On définit l'hydramnios comme une quantité de \gls{la} supérieure à 2~litre. Pendant la grossesse, il correspond à une mesure de \cite{MADemc2016} :
 \begin{itemize}
-\item \gls{gc} > 8
-\item 2 diam de la \gls{gc} > 50 cm2
-\item \gls{ia} > 25 cm (excès de \gls{la} : \gls{ia} entre 18 et 25 cm)\\
+\item \gls{gc} > 8~cm
+\item produit des 2 diamètres de la \gls{gc} > 50~cm$^2$,
+\item \gls{ia} > 25~cm (excès de \gls{la} : \gls{ia} entre 18 et 25~cm)\\
 \end{itemize}
 
-La fréquence de l'hydramnios aigüe est environ 0,017 à 0,02\% des grossesses et la fréquence de l'hydramnios chronique est de 0,8 à 2,28\% des grossesses \cite{CODemc1996}. 
+La fréquence de l'hydramnios aigüe est d'environ 0,017 à 0,02~\% des grossesses et la fréquence de l'hydramnios chronique est de 0,8 à 2,28~\% des grossesses \cite{CODemc1996}. 
 
 Il existe diverses étiologies de l'hydramnios :
 \begin{itemize}
-\item les malformations f\oe{}tales 
+\item les malformations f\oe{}tales :
 \begin{itemize}
-\item anomalies du système nerveux central
-\item anomalies de l'appareil digestif
-\item anomalies de la déglutition
-\item anomalies cardiaques
-\item anomalies pulmonaires
-\item anomalies rénales
-\item anomalies chromosomiques
-\item anomalies musculaires
+\item anomalies du système nerveux central,
+\item anomalies de l'appareil digestif,
+\item anomalies de la déglutition,
+\item anomalies cardiaques,
+\item anomalies pulmonaires,
+\item anomalies rénales,
+\item anomalies chromosomiques,
+\item anomalies musculaires.
 \end{itemize}
-\item anomalies des annexes f\oe{}tales
+\item les anomalies des annexes f\oe{}tales : 
 \begin{itemize}
-\item anastomose artério-veineuses
-\item un syndrome transfuseur-transfusé lors d'une grossesse gémellaire mono-choriale
-\item tumeurs ...
+\item anastomose artério-veineuses,
+\item un syndrome transfuseur-transfusé lors d'une grossesse gémellaire mono-choriale bi-amniotique,
+\item tumeurs ... .
 \end{itemize}
-\item causes materno-f\oe{}tales
+\item les causes materno-f\oe{}tales : 
 \begin{itemize}
-\item diabète déséquilibré
-\item allo-immunisation
-\item infections maternelles
+\item diabète déséquilibré,
+\item allo-immunisation,
+\item infections maternelles.
 \end{itemize}
 \end{itemize}
 
-La conduite à tenir face à un hydramnios varie en fonction de l'étiologie, du terme, du pronostic maternel et f\oe{}tal. Elle peut varier de l'induction du travail (à terme ou prématuré) jusqu'à l'\gls{img} dans les cas de pathologies majeures lorsque le pronostic f\oe{}tal est très péjoratif ou lorsque la vie de la mère est en danger avant la période de viabilité f\oe{}tale. 
+La conduite à tenir face à un hydramnios varie en fonction de l'étiologie, du terme, du pronostic maternel et f\oe{}tal. Cela peut varier de l'induction du travail (à terme ou prématuré) à l'\gls{img} dans les cas de pathologies majeures lorsque le pronostic f\oe{}tal est très péjoratif ou lorsque la vie de la mère est en danger avant la période de viabilité f\oe{}tale. 
 
-A l'accouchement, la présence d'un hydramnios peut aussi être la source de complication pour la mère et le nouveau-né (procidence du cordon, \gls{hrp}, dystocie, embolie amniotique, hémorragie de la délivrance).
+\'A l'accouchement, la présence d'un hydramnios peut aussi être la source de complication pour la mère et le nouveau-né (procidence du cordon, \gls{hrp}, dystocie, embolie amniotique, hémorragie de la délivrance).
 
-\section{L'oligoamnios}
+\subsection{L'oligoamnios}
 
-On définit l'oligoamnios comme une quantité de \gls{la} inférieure à 250ml. Pendant la grossesse, il correspond à une mesure de \cite{MADemc2016} :
+L'oligoamnios est définit un volume de \gls{la} inférieur à 250~ml. Ce volume correspond à \cite{MADemc2016} :
 \begin{itemize}
-\item \gls{gc} < 2 cm
-\item 2 diam de la \gls{gc} < 15 cm2
-\item \gls{ia} < 5 cm (\gls{la} peu abondant \gls{ia} entre 5 et 8 cm)
+\item \gls{gc} < 2~cm,
+\item 2 diam de la \gls{gc} < 15~cm$^2$,
+\item \gls{ia} < 5 cm (\gls{la} peu abondant \gls{ia} entre 5 et 8~cm).
 \end{itemize}
 
 L'oligoamnios est principalement du à une oligurie ou une anurie f\oe{}tale. Il existe diverses étiologies de l'oligoamnios :
 \begin{itemize}
-\item les malformations f\oe{}tales 
+\item les malformations f\oe{}tales :
 \begin{itemize}
-\item[$\diamond$] anomalies rénales
-\item syndromes malformatifs
+\item[$\diamond$] anomalies rénales,
+\item syndromes malformatifs.
 \end{itemize}
-\item un syndrome transfuseur-transfusé lors d'une grossesse gémellaire mono-choriale
-\item \gls{rciu}
-\item cause iatrogène
+\item un syndrome transfuseur-transfusé lors d'une grossesse gémellaire mono-choriale bi-amniotique,
+\item \gls{rciu},
+\item cause iatrogène.
 \end{itemize}
 
 La rupture prématurée des membranes et le terme dépassé entraînent également une diminution de la quantité de \gls{la}. 
 
 Pendant la grossesse, un oligoamnios peut entraver le développement f\oe{}tal (déformations cutanées, musculaires ou articulaires, hypoplasie pulmonaire, cordon court). 
 
-La conduite à tenir face à un oligoamnios varie en fonction de l'étiologie. Elle peut varier de l'induction du travail (à terme ou prématuré) jusqu'à l'\gls{img} dans les cas de pathologies majeures avec retentissement f\oe{}tal létal. 
+La conduite à tenir face à un oligoamnios varie en fonction de l'étiologie allant de l'induction du travail (à terme ou prématuré) jusqu'à l'\gls{img} dans les cas de pathologies majeures avec retentissement f\oe{}tal létal. 
 
-\part*{Le liquide amniotique en médecine traditionnelle chinoise}
-\addcontentsline{toc}{part}{Le liquide amniotique en médecine traditionnelle chinoise}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\chapter{Le liquide amniotique en médecine traditionnelle chinoise}
+
 
 En chinois, le liquide amniotique est appelé \textsc{yang shui}, contraction de \textsc{yang mo li mian de shui}.
 \begin{description}
@@ -322,7 +324,7 @@ On dit de la grossesse que c'est une accumulation de \textsc{yin} dans le pelvis
 
 L'accumulation progressive de \textsc{yin} entraîne par la suite l'apparition du \textsc{yang} qui se manifeste par les mouvements du bébé et qui à son maximum provoque l'accouchement. Lors de l'accouchement, la femme en perdant du \textsc{sang} et en expulsant son f\oe{}tus, le placenta et le liquide amniotique perd une grande quantité de \textsc{yin}.
 
-\chapter{L'embryologie en médecine traditionnelle chinoise}
+\section{L'embryologie en médecine traditionnelle chinoise}
 
 Chez la femme la conception dépend du \textsc{yin} (\textsc{sang}, \textsc{essences}), du \textsc{rein}, du \textsc{foie}, de \textsc{du mai} et de \textsc{chong mai} en quantité suffisante et en bonne santé.\\ 
 WANG BING des TANG : \emph{"\textsc{chong mai} est la mer du \textsc{sang, ren mai} a la charge de la matrice et du f\oe{}tus ; comme les deux méridiens s'entraident, il peut y avoir fécondité"} \cite{AUT1986}. \\
@@ -373,7 +375,7 @@ Les cellules hypoblastiques migrent elles aussi pour former la cavité vitelline.
 \label{Troisième semaine} 
 Lors de la troisième semaine, le mésoblaste extra-embryonnaire apparaît à l'extrémité caudale du disque embryonnaire, au niveau du point de départ de la ligne primitive. Il se développe sur la paroi interne du trophoblaste, dans le pédicule de fixation et entoure la vésicule vitelline et la cavité amniotique. 
 
-Dans ce mésoblaste extra-embryonnaire, des ilots sanguins apparaissent, ils fusionnent pour donner un réseau veineux et les cellules sanguines. A l'extrémité craniale du disque embryonnaire, en avant de la membrane pharyngée (zone d'accolement de l'endoblaste et de l'ectoblaste), une zone constituée de mésoderme et de mésenchyme forme la zone cardiogène. Après la plicature de l'embryon, cette zone se retrouve en position ventrale, les tissus cardiogènes s'organisent en deux tubes endocardiques qui fusionnent pour donner le tube cardiaque puis ensuite le c\oe{}ur. 
+Dans ce mésoblaste extra-embryonnaire, des ilots sanguins apparaissent, ils fusionnent pour donner un réseau veineux et les cellules sanguines. \'A l'extrémité craniale du disque embryonnaire, en avant de la membrane pharyngée (zone d'accolement de l'endoblaste et de l'ectoblaste), une zone constituée de mésoderme et de mésenchyme forme la zone cardiogène. Après la plicature de l'embryon, cette zone se retrouve en position ventrale, les tissus cardiogènes s'organisent en deux tubes endocardiques qui fusionnent pour donner le tube cardiaque puis ensuite le c\oe{}ur. 
 
 \`A la fin de la troisième semaine, au 22\textsuperscript{ème} jour, le c\oe{}ur commence à battre, il permet la mise en communication de la circulation f\oe{}tale avec celle de sa mère par l'intermédiaire des villosités choriales. L'énergie \textsc{zong} du f\oe{}tus permet l'installation de la rythmicité cardiaque et la circulation de l'énergie \textsc{zong} de la mère ainsi que la circulation du \textsc{jing} des aliments et de la respiration reçus par la mère. \`A partir de ce moment, l'embryon ne vit plus sur ses réserves énergétiques mais \emph{"il reçoit la vie par la région ombilicale primitive qui devient pour lui \textsc{ming men} : "Une porte du Destin"~"}  \cite{EYS1990}. 
 %Schéma p76 de EYS1990 
@@ -447,26 +449,26 @@ La croissance de la cavité amniotique et les phénomènes de plicature et d'enroul
 \end{center}
 \end{figure}
 
-A la fin de cette 4\textsuperscript{ème} semaine, l'embryon s'est individualisé et les grandes structures sont en place. C'est la fin du 1\textsuperscript{er} mois lunaire dominé par le \textsc{bois}, mois dévolu au commencement de la forme : \emph{"Le 1\textsuperscript{er} mois de la grossesse s'appelle commencement de la forme. C'est la gestation du matériau inné"} \cite{ROQ2016}.
+\'A la fin de cette 4\textsuperscript{ème} semaine, l'embryon s'est individualisé et les grandes structures sont en place. C'est la fin du 1\textsuperscript{er} mois lunaire dominé par le \textsc{bois}, mois dévolu au commencement de la forme : \emph{"Le 1\textsuperscript{er} mois de la grossesse s'appelle commencement de la forme. C'est la gestation du matériau inné"} \cite{ROQ2016}.
 
-\chapter{Les \textsc{jin ye}} %mettre shema du terme voir Rempp p 47
+\section{Les \textsc{jin ye}} %mettre shema du terme voir Rempp p 47
 
 La notion de liquides organiques en médecine chinoise représente tout ce qui est spécifique d'une circulation liquidienne dans l'organisme. 
 
-\section{Définition des \textsc{jin ye}}
+\subsection{Définition des \textsc{jin ye}}
 
 \begin{quote}\small
-LING SHU 91 : \emph{"Les liquides organiques, \textsc{jin ye}, regroupent tous les liquides physiologiques de l'organisme et représentent en particulier la majeure partie du sang"} \cite{}.  %verifier que ce n'est pas dans EYSrfa148
+LING SHU 91 : \emph{"Les Liquides Organiques, \textsc{jin ye}, regroupent tous les liquides physiologiques de l'organisme et représentent en particulier la majeure partie du sang"}%\cite{}.  
 \end{quote}
 
-Les liquides organiques désignent l'ensemble des liquides contenus dans l'organisme ou qui s'en échappent (urine, sueur, liquide articulaire, liquide céphalo-rachidien...). Les \textsc{jin ye} sont une partie d'entre eux, ils ont des propriétés qui leur sont propres. Les eaux pures extraites de l'alimentation par le Triple Réchauffeur entrent dans le métabolisme pour assurer plusieurs fonctions, tant que ces fonctions sont assurées, les eaux pures sont appelées Liquides Organiques, \textsc{jin} ou \textsc{ye}, ou \textsc{jin ye}. Les \textsc{jin} et \textsc{ye} permettent la nutrition et la lubrification de l'intérieur (\textsc{ye}) et de l'extérieur (\textsc{jin}) du corps et participent à l'équilibre \textsc{yin} / \textsc{yang}.
+Les Liquides Organiques désignent l'ensemble des liquides contenus dans l'organisme ou qui s'en échappent (urine, sueur, liquide articulaire, liquide céphalo-rachidien...). Les \textsc{jin ye} sont une partie d'entre eux, ils ont des propriétés qui leur sont propres. Les eaux pures extraites de l'alimentation par le Triple Réchauffeur entrent dans le métabolisme pour assurer plusieurs fonctions, tant que ces fonctions sont assurées, les eaux pures sont appelées Liquides Organiques, \textsc{jin} ou \textsc{ye}, ou \textsc{jin ye}. Les \textsc{jin} et \textsc{ye} permettent la nutrition et la lubrification de l'intérieur (\textsc{ye}) et de l'extérieur (\textsc{jin}) du corps et participent à l'équilibre \textsc{yin} / \textsc{yang}.
 
-\section{Origine des \textsc{jin ye}}
+\subsection{Origine des \textsc{jin ye}}
 
 Les \textsc{jin ye} sont le produit de la transformation de l'eau et des céréales (\textsc{shui gu}) dans l'estomac, appelé aussi "mer des eaux et des grains". 
 
 \begin{quote}\small
-\textit{"A la frontière du ciel antérieur et du ciel postérieur, il permet et sous-tend le développement de la vie dans l'univers sous toutes ses formes, à tous les modes et à tous les plans, y compris chez l'homme. \\
+\textit{"\'A la frontière du ciel antérieur et du ciel postérieur, il permet et sous-tend le développement de la vie dans l'univers sous toutes ses formes, à tous les modes et à tous les plans, y compris chez l'homme. \\
 Fonction et non structure, il a le nom et pas la forme (You Ming Er Wu Xing). Mais parce qu'il a le nom il permet la forme, il enracine la forme. \\
 Chez l'homme, de la même façon il permet la construction et l'entretien de la vie avec les viscères, les méridiens, l'alimentation, la respiration ... Toute l'organisation qui permet et entretient la vie de l'homme se développe et s'enracine dans le triple réchauffeur, fonction et non structure qui a "le nom mais pas la forme" "} \cite{KESrfa39}. 
 \end{quote}
@@ -485,7 +487,7 @@ Les Liquides Organiques dépendent également de la \textsc{rate}, des \textsc{pou
 \item La \textsc{vessie} thésaurise et permet la vaporisation et la répartition des \textsc{jin ye}, elle assure aussi le tri des eaux usées pour les éliminer. 
 \item Le \textsc{rein} commande le secteur liquidien, il est le "Maitre de l'eau". Il commande "l'ouverture" (pour expulser l'eau en excès) et la "fermeture" (pour garder l'eau dans le corps). 
 \end{itemize} 
-
+Mettre la ref annexe 1%(cf sous-section \ref{annexe1} vue à la page \pageref{annexe1})
 
 Pour B. AUTEROCHE : 
 \begin{quote}\small
@@ -494,83 +496,7 @@ Pour B. AUTEROCHE :
 
 Les Liquides Organiques sont véhiculés à travers les \textsc{cu li} \cite{GUIrfa38}. Les \textsc{cu li} représentent tous les vides du corps qui permettent la circulation des liquides. \textsc{cu} sont les linéaments rattachés à la peau, les interstices entre les muscles, les fibres, les voies conjonctives ... et \textsc{li} sont les linéaments en relation avec les aponévroses, les fascias, les mésentères ... \cite{GUIrfa38}. \\
 
-%\begin{figure}[H]
-%\begin{center}
-%\includegraphics[width=0.5\textwidth]{schema/Schema-TR.png}
-%\caption{Le Triple Réchauffeur}
-%\end{center}
-%\end{figure}
-
-
-\begin{figure}[H]
-   \centering
-  
-  \begin{tikzpicture}
-  
-%\draw[step=1cm,very thin, gray] (-1,-1) grid (15,20);  
-  
-\node (a4) at  (12,19) {O2};
-\node (a5) at  (15,19) {Alimentation};
-\node [anchor=south] (a5bis) at  (15,18) {Boisson};
-
-\node (b2) at  (6,16) {\textsc{sang}};
-\node (b3) at  (9,16) {\textsc{qi}};
-
-\node[anchor=west] (c1) at  (0,13) {TRS};
-\node (c2) at  (6,13) {\textsc{c\oe{}ur}};
-\node (c3) at  (9,13) {\textsc{poumon}};
-
-\node[anchor=south west] (d1) at  (0,11) {Diaphragme};
-
-\node[anchor=west] (e1) at  (0,8) {TRM};
-\node (e3) at  (9,9) {\textsc{rate}};
-\node (e5) at  (13,9) {\textsc{estomac}};
-
-\node (f5) at  (13,7) {\textsc{intestin gêle}};
-
-\node[anchor=south west] (g1) at  (0,5) {Ligne passant par l'ombilic};
-
-\node[anchor=west] (h1) at  (0,3) {TRI};
-\node (h3) at  (9,3) {\textsc{rein}};
-\node (h5) at  (13,3) {\textsc{gros intestin}};
-\node [anchor=south] (h5bis) at  (13,2) {\textsc{vessie}};
-
-\node (i5) at  (13,-1) {Elimination};
-
-%\node [anchor=west] at (13,8) {impur};
-%\node [anchor=west] at (13,8) {impur};
-
-\draw (0,11) -- (16,11);
-\draw (0,5) -- (16,5);
-
-\draw[->,>=latex] (a4) -- (e5);
-\draw[->,>=latex] (a5bis) -- (e5);
-\draw[->,>=latex] (e5) -- (f5) node[midway,above,sloped] {impur};
-\draw[->,>=latex] (f5) -- (h5) node[midway,above,sloped] {impur};
-\draw[->,>=latex] (h5bis) -- (i5);
-
-\draw[->,>=latex] (e5) -- (e3) node[midway,above,sloped] {pur};
-\draw[->,>=latex] (e3) -- (c2) node[midway,above,sloped] {pur};
-\draw[->,>=latex] (e3) -- (c3) node[midway,above,sloped] {pur};
-
-\draw[->,>=latex] (c3) -- (c2);
-\draw[->,>=latex] (c3) -- (b3);
-\draw[->,>=latex] (c2) -- (b2);
-
-\draw[->,>=latex] (f5) -- (h3) node[midway,above,sloped] {pur};
-\draw[->,>=latex] (h3) -- (e3) node[midway,above,sloped] {pur};
-
-\draw[->,>=latex] (h5) -- (h3) node[midway,above,sloped] {pur};
-
-
-\end{tikzpicture}
-
-\caption{shéma du \textsc{triple réchauffeur}}
-\end{figure}
-
-%\input{shema-tr.tex}
-
-\section{Fonction des \textsc{jin ye}}
+\subsection{Fonction des \textsc{jin ye}}
 
 \begin{quote}\small
 \emph{"Lorsque deux esprits s'empoignent, ils s'unissent et donnent un corps (\textsc{xing}) ; ce qui est antérieur à la production du corps s'appelle essence ; ce qui se développe à partir du Réchauffeur Supérieur propage les saveurs des cinq céréales, embaume la peau, fortifie le corps, lubrifie les poils comme l'arrosage du brouillard et de la rosée, cela s'appelle le souffle. Lorsque les linéaments s'ouvrent et sécrètent, la sueur en sort, cela s'appelle Liquide Organique \textsc{jin} ; lorsque les céréales entrent (dans l'estomac) le souffle remplit (le corps) les (substances) humidifiantes se versent dans les os, les articulations se plient et s'étendent à souhait, le cerveau et la moelle sont tonifiés, la peau est humectée, cela s'appelle Liquide Organique \textsc{ye}. Le Réchauffeur Moyen reçoit le suc, le transforme, il devient rouge et cela s'appelle le \textsc{sang} ; ce qui renferme, contient le souffle nourricier et ne le laisse pas s'échapper, cela s'appelle les vaisseaux (\textsc{mai})"} \cite{HUA}. 
@@ -591,7 +517,7 @@ Dans le dictionnaire médical de Pékin, 1978 on peut lire : \emph{"Les \textsc{ye
 Le liquides organiques ont une relation d'interdépendance avec le \textsc{sang}. Une partie des \textsc{jin ye} est transformée par le \textsc{c\oe{}ur} en \textsc{sang}, la perte de l'un retenti sur l'autre. \\
 Les Liquides Organiques ont aussi une relation avec le \textsc{qi} puisqu'ils sont produits et circulent grâce à lui. Le \textsc{qi}, lui, circule et agit harmonieusement si les viscères et les tissus sont humectés par les \textsc{jin ye}.
 
-\section{Le liquide amniotique : un \textsc{jin ye}?}
+\subsection{Le liquide amniotique : un \textsc{jin ye}?}
 
 \begin{quote}\small
 \emph{"Quatrième mois \\
@@ -605,13 +531,13 @@ Au 4\textsuperscript{ème} mois lunaire, le f\oe{}tus se saisit de l'Essence vita
 
 Au fur et à mesure de la grossesse, la quantité de Liquides Organiques augmente franchement. Cette augmentation est entre autre due à l'augmentation de la quantité de \gls{la}. L'embryon très \textsc{yang} attire le \textsc{sang} et les Liquides Organiques dans la cavité amniotique qui est \textsc{yin} \cite{SAL1998}. 
  
-\chapter{\'Energétique de la grossesse}
+\section{\'Energétique de la grossesse}
 
 Dans les ouvrages de médecine traditionnelle chinoise, on ne retrouve pas d'explication de la physiologie du \gls{la} en tant que tel. Mais le f\oe{}tus, son \gls{la} et ses annexes sont considérés comme un tout. On peut donc en déduire que ce qui favorisera la croissance du f\oe{}tus favorisera la production de \gls{la} et inversement. 
 
-\section{les Souffles héréditaires et les méridiens curieux}
+\subsection{les Souffles héréditaires et les méridiens curieux}
 
-La bonne croissance de l'embryon et du f\oe{}tus dépendent des substances originelles du f\oe{}tus (qui détiennent le programme de son développement) et de celles de sa mère (stockées dans le \textsc{rein}, qui détiennent sa capacité à mener la grossesse à terme). Elle est liée, en \gls{mtc}, à \textsc{chong mai et ren mai} (dont le rôle est prépondérant), ainsi qu'aux Souffles héréditaires \textsc{zong qi}, \textsc{yuan qi} et \textsc{jing qi}. 
+La bonne croissance de l'embryon et du f\oe{}tus dépendent des substances originelles du f\oe{}tus (qui détiennent le programme de son développement) et de celles de sa mère (stockées dans le \textsc{rein}, qui détiennent sa capacité à mener la grossesse à terme). Elle est liée, en \gls{mtc}, à \textsc{chong mai} et \textsc{ren mai} (dont le rôle est prépondérant), ainsi qu'aux Souffles héréditaires \textsc{zong qi}, \textsc{yuan qi} et \textsc{jing qi}. 
 \begin{itemize}
 \item \textsc{chong mai} agit sur l'implantation du placenta et il est en relation avec l'énergie prénatale liée au \textsc{rein} et l'énergie postnatale liée à l'alimentation et à l'\textsc{estomac}. \textsc{chong mai} est la mer des cinq \textsc{zang} et des six \textsc{fu}, il est la mer du \textsc{sang}. Il est responsable de l'apport en \textsc{sang} dans l'utérus et irrigue l'utérus en énergie \textsc{rong}.
 \item \textsc{ren mai} est lié aux échanges f\oe{}to-maternels. \textsc{ren mai} est la mer des méridiens \textsc{yin}. Il est lié a l'apport d'Energie dans l'utérus. Notons l'implantation du cordon ombilical au niveau du 8RM, \textit{Shen Jue}.
@@ -629,7 +555,7 @@ La bonne croissance de l'embryon et du f\oe{}tus dépendent des substances origin
 
 %Un déficit de \textsc{yuan qi} donne des symptômes de vide de \textsc{yang} de \textsc{rein, rate, estomac, coeur, poumon}.
 
-\section{Le \textsc{sang}}
+\subsection{Le \textsc{sang}}
 
 Pendant la grossesse, le \textsc{sang} n'est plus évacué lors des règles, il se rassemble dans l'enveloppe pelvienne \textsc{bao huang} pour nourrir le f\oe{}tus. \\ 
 Le développement du f\oe{}tus dépend de l'équilibre \textsc{qi/xue},  pour G. MACIOCIA  \emph{"la seule cause de ralentissement de la croissance f\oe{}tale est la faiblesse du \textsc{sang} et/ou \textsc{rein} de la mère qui ne peuvent nourrir correctement le f\oe{}tus"} \cite{MAC1998}. \\
@@ -642,7 +568,7 @@ Le traitement par acupuncture consistera donc à agir sur la qualité et la répart
 \emph{"La nutrition et le développement du f\oe{}tus dépendent de la qualité, de la quantité et de la circulation des substances vitales de la mère. Toute altération du \textsc{qi}, du \textsc{sang} et des Liquides Organiques aura un retentissement sur la croissance f\oe{}tale"} \cite{ROQ2016}. 
 \end{quote}
 
-\section{les \textsc{zang fu}}
+\subsection{les \textsc{zang fu}}
 
 \subsubsection{Les \textsc{reins}} 
 
@@ -653,58 +579,6 @@ Le \textsc{yang} du \textsc{rein} permet l'augmentation du rythme et du débit ca
 De plus, l'insuffisance de \textsc{yang} de \textsc{rein} empêche le bon fonctionnement du couple \textsc{rate / estomac} d'où une insuffisance de \textsc{yang} de \textsc{rate}. 
 
 Enfin, le \textsc{rein} gouverne l'eau et donc les \textsc{jin ye}.
-
-%\input{organigramme-vr-vsg.tex}
-
-\begin{figure}[H]
-   \centering
-\begin{tikzpicture}[>=stealth,sloped]
-
-    \matrix (tree) [%
-      matrix of nodes,
-      minimum size=0.25cm,
-      column sep=0.50cm,
-      row sep=1.3cm,
-    ]
-    {                                                                                                    
-                                                                                           
- & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Hypoperfusion placentaire\end{center} \end{minipage}} &\\
- &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Augmentation de la chaleur\end{center} \end{minipage}} & {\begin{minipage}[t]{0.2\textwidth}\begin{center}Absence d'augmentation de la volémie\end{center} \end{minipage}} & \colorbox{red}{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{sang} et de \textsc{liquide organique}\end{center} \end{minipage}} &\\
- &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yin} de \textsc{rein}\end{center} \end{minipage}} &\\
- & & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yang} de \textsc{rate}\end{center} \end{minipage}} &\\
-\colorbox{orange}{\begin{minipage}[t]{0.1\textwidth}\begin{center}Vide de \textsc{rein}\end{center} \end{minipage}} &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yang} de \textsc{rein}\end{center} \end{minipage}} & & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Absence d'augmentation du débit et de la fréquence cardiaque\end{center} \end{minipage}}\\
- &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{qi} du \textsc{rein}\end{center} \end{minipage}} & \\
- & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Diminution de la PO2\end{center} \end{minipage}} & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Stase de \textsc{sang}\end{center} \end{minipage}} & \\
- & & & {\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{qi} du \textsc{poumon}\end{center} \end{minipage}}\\
- & & &\colorbox{red}{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{sang}\end{center} \end{minipage}}\\
-    };
-   
-   \draw[->] (tree-5-1) -- (tree-3-2) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-3-2) -- (tree-2-2) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-3-2) -- (tree-2-3) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-2-3) -- (tree-1-3) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-3-2) -- (tree-2-4) node [midway,above]{}; %{$P$};
-   
-   \draw[->] (tree-5-1) -- (tree-5-2) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-5-2) -- (tree-4-4) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-4-4) -- (tree-2-4) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-5-2) -- (tree-5-5) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-5-5) |- (tree-1-3) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-5-2) -- (tree-2-4) node [midway,above]{}; %{$P$};
-   
-   \draw[->] (tree-5-1) -- (tree-6-2) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-6-2) -- (tree-7-3) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-7-3) |- (tree-9-4) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-6-2) -- (tree-7-5) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-7-5) |- (tree-9-4) node [midway,above]{}; %{$P$};
-   
-   \draw[->] (tree-8-4) -- (tree-7-3) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-8-4) -- (tree-7-5) node [midway,above]{}; %{$P$};
-
-    
-\end{tikzpicture}
-\caption{Relation entre vide de \textsc{rein} et vide de \textsc{sang}}
-\end{figure}
 
 \subsubsection{La \textsc{rate}}
 
@@ -730,21 +604,27 @@ De plus, une insuffisance du \textsc{qi} du \textsc{poumon} entraîne une stase d
 A cet utérus est rattaché le \textsc{foie} et le \textsc{rein} qui parachèvent la réunion globale de l'énergie et du \textsc{sang}. Chez la femme le \textsc{sang} domine. L'énergie au sein de la chambre du \textsc{sang} se transforme aussi en eau pour donner le sang menstruel. Ce \textsc{sang} étant destiné à nourrir et entretenir le f\oe{}tus puisque l'utérus est non seulement la chambre du \textsc{sang} mais encore le lieu de conception et l'organe de gestation"} \cite{MINrfa45}. 
 \end{quote}
 
-\section{Le métabolisme des \textsc{yin ye}}
+Mettre la ref annexe 2%(cf sous-section \ref{annexe2} vue à la page \pageref{annexe2})
 
-Les troubles du métabolisme des \textsc{jin ye} impacteront le volume du \gls{la}. Le \gls{trm} étant responsable de la production de Liquides Organiques et le \gls{tri} étant responsable de leur élimination, des problèmes dans les couples \textsc{rate / estomac} ou \textsc{rein / vessie} peuvent donc provoquer des troubles de la quantité de \gls{la}. 
+\subsection{Le métabolisme des \textsc{yin ye}}
+
+Les troubles du métabolisme des \textsc{jin ye} impacteront le volume du \gls{la}. Le \gls{trm} étant responsable de la production de Liquides Organiques et le \gls{tri} étant responsable de leur élimination, des problèmes dans les couples \textsc{rate~/~ estomac} ou \textsc{rein~/nvessie} peuvent donc provoquer des troubles de la quantité de \gls{la}. 
 
 Un trouble de la fonction du \textsc{foie} va entraîner une mauvaise circulation du \textsc{qi} lui-même sera à l'origine soit d'une mauvaise circulation des Liquides Orgniques, soit d'un feu qui assèche les Liquides Organiques \cite{DELrfa40}.
 
-La maladie \textsc{xiao ke}, regroupe un ensemble maladie ayant pour symptômes: polydipsie, polyurie, polyphagie. Elle comprend les diabètes sucrés (\textsc{tang niao bing}) et insipides (\textsc{niao beng zheng}) et est considérée, dans les ouvrages de NEI KE, comme une pathologie des Liquides organiques. La maladie \textsc{xiao ke} est due :
+La maladie \textsc{xiao ke}, regroupe un ensemble maladie ayant pour symptômes: polydipsie, polyurie, polyphagie. Elle comprend les diabètes sucrés (\textsc{tang niao bing}) et insipides (\textsc{niao beng zheng}) et est considérée, dans les ouvrages de NEI KE, comme une pathologie des Liquides Organiques. La maladie \textsc{xiao ke} est due :
 \begin{itemize}
-\item soit à un trouble de la fonction du couple \textsc{rate / estomac}, il en résulte de la chaleur qui agresse les Liquides Organiques.
+\item soit à un trouble de la fonction du couple \textsc{rate~/~estomac}, il en résulte de la chaleur qui agresse les Liquides Organiques.
 \item soit à un trouble des émotions qui conduit à une stagnation du \textsc{qi} du \textsc{foie}, il en résulte un feu qui blesse les Liquides Organiques.
-\item soit à un épuisement de l'essence des \textsc{reins} et un affaiblissement progressif du \textsc{yin} et des liquides organiques ce qui entraîne un excès de feu affectant le \textsc{poumon}, les \textsc{reins} et l'\textsc{estomac} \cite{AUTrfa38}. 
+\item soit à un épuisement de l'essence des \textsc{reins} et un affaiblissement progressif du \textsc{yin} et des Liquides Organiques ce qui entraîne un excès de feu affectant le \textsc{poumon}, les \textsc{reins} et l'\textsc{estomac} \cite{AUTrfa38}. 
 \end{itemize}
 La mauvaise gestion des Liquides Organiques qui en résulte entraîne un hydramnios ou un oligoamnios. \\
 
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
 \chapter{Tableaux cliniques}
+
+\section{Description des tableaux cliniques}
 
 Les troubles quantitatifs du LA auront pour cause :
 \begin{itemize}
@@ -761,7 +641,7 @@ Les troubles quantitatifs du LA auront pour cause :
 
 Sources des différents tableaux \cite{GIR2014, MAC1998, PEL2014, ROQ2016, BIGafsfa2018, UHRafsfa2018}
 
-\section{Vide de \textsc{qi} et de \textsc{sang}}
+\subsection{Vide de \textsc{qi} et de \textsc{sang}}
 
 Un vide de \textsc{qi} et de \textsc{sang} va entraîner un ralentissement de la croissance f\oe{}tale et un oligoamnios par insuffisance d'apport en \textsc{sang} et en énergie vers l'utérus. En obstétrique occidentale on observera un \gls{rciu} +/- associé à une albuminurie avec ou sans \gls{hta}.
 
@@ -792,7 +672,7 @@ Le traitement consistera à nourrir le \textsc{sang}.
 Le \textsc{foie} emmagasine le \textsc{sang} et le transmet à l'utérus par le biais de \textsc{chong mai}. Un vide de \textsc{sang} du \textsc{foie} va entraîner un ralentissement de la croissance f\oe{}tale et un oligoamnios par insuffisance d'apport en \textsc{sang} vers l'utérus. \\
 
 Le tableau clinique associera : \gls{map}, \gls{htag}, \gls{rciu}, insomnie, rêves abondants, inadaptation à l'effort, vision brouillée, \oe{}il sec et sans éclats, sensations vertigineuses, sécheresse (peau, ongle, cheveux), teint pâle, fourmillements des membres, crampes et spasmes musculaires, ongles ternes et mous, douleurs pelviennes. \\
-Si ce vide est antérieur à la grossesse, on trouvera dans les antécédents de la patiente : cycles longs, règles peu abondantes, aménorrhée, stérilité, des céphalées pendant les règles. 
+Si ce vide est antérieur à la grossesse, on trouvera dans les antécédents de la patiente : cycles longs, règles peu abondantes, aménorrhée, stérilité, céphalées pendant les règles. 
 
 La langue est pâle, +/- mince. \\
 Le pouls est rugeux et fin.
@@ -801,7 +681,7 @@ Le traitement consistera à nourrir le \textsc{sang} et le \textsc{foie}.
 
 Une aggravation du vide de \textsc{sang} du \textsc{foie} peut amener à une montée du \textsc{yang} du \textsc{foie}, à un vide de \textsc{yin} ou de \textsc{yang} du \textsc{rein}, un vide de \textsc{qi} (car le \textsc{sang} est la mère du \textsc{qi}) ou une stagnation du \textsc{qi} du \textsc{foie}.
 
-\section{Vide de \textsc{yang} du \textsc{rein} et de la \textsc{rate}}
+\subsection{Vide de \textsc{yang} du \textsc{rein} et de la \textsc{rate}}
 
 On observera un oligoamnios associé à un RCIU au 5 et 6\textsuperscript{ème} mois, le \gls{rciu} sera +/- associé à une albuminurie sans \gls{hta}. 
 Dans le tableau de vide de \textsc{yang} de la \textsc{rate}, l'oligoamnios peut être également associé à un diabète gestationnel. \\
@@ -829,7 +709,7 @@ Le traitement consistera à tonifier le \textsc{rein} et la \textsc{rate}, renfor
 Un vide de \textsc{yang} de la \textsc{rate} peut entraîner un vide de \textsc{sang} du \textsc{foie} qui lui-même peut entraîner une augmentation du \textsc{yang} du \textsc{foie}. Le vide de \textsc{yang} de la \textsc{rate} peut aussi entraîner des glaires. \\
 Si le vide de \textsc{yang} de la \textsc{rate} et du \textsc{rein} est associé à des glaires et à une montée du \textsc{yang} du \textsc{foie}, on observera une albuminurie avec \gls{hta}. 
 
-\section{Vide de \textsc{yin} du \textsc{rein} et du \textsc{foie}}
+\subsection{Vide de \textsc{yin} du \textsc{rein} et du \textsc{foie}}
 
 Le vide de \textsc{yin} du \textsc{rein} et le vide de \textsc{yin} du \textsc{foie} ont la même source, le vide de l'un entraîne et entretient le vide de l'autre.
 L'épuisement du \textsc{yin} entraîne une insuffisance de production des liquides d'où l'oligoamnios et une augmentation de la chaleur interne qui à son tour provoque la diminution du \textsc{yin} et une augmentation du \textsc{yang}. Le vide de \textsc{yin} du \textsc{rein} et du \textsc{foie} peut aussi être du a une aggravation d'un vide de \textsc{sang}. L'insuffisance de \textsc{yin} provoque également un \gls{rciu}, souvent associé à une \gls{hta} ou un diabète gestationnel. \\
@@ -855,7 +735,7 @@ Le traitement consistera à nourrir le \textsc{yin} du \textsc{rein} et du \texts
 
 L'aggravation du vide de \textsc{yin} du \textsc{foie} va entraîner une augmentation du \textsc{yang} et conduire à un Vent du \textsc{foie} et une chaleur interne.
 
-\section{Stagnation du \textsc{qi} du \textsc{foie}}
+\subsection{Stagnation du \textsc{qi} du \textsc{foie}}
 
 La congestion du \textsc{qi} du \textsc{foie} va entraîner un trouble quantitatif du \gls{la} du à un diabète gestationnel, elle peut aussi être du à une aggravation d'un vide de \textsc{sang} du \textsc{foie}. On retrouve un oligoamnios associé à une albuminurie sans \gls{hta}. \\
 
@@ -876,7 +756,7 @@ Le pouls est tendu et en corde à la barrière gauche.
 
 Le traitement consistera à faire circuler le \textsc{qi} du \textsc{foie}.
 
-\section{Montée du \textsc{yang} du \textsc{foie} et vent du \textsc{foie}}
+\subsection{Montée du \textsc{yang} du \textsc{foie} et vent du \textsc{foie}}
 
 La montée du \textsc{yang} du \textsc{foie} et le vent du \textsc{foie} sont la conséquence d'un vide de \textsc{yin} et de \textsc{sang} du \textsc{foie}. L'oligoamnios est le résultat d'une insuffisance d'apport en sang vers l'utérus. Le feu du \textsc{foie} peut aussi être une conséquence d'une stagnation du \textsc{qi} du \textsc{foie}. Il est souvent associé à un \gls{rciu} +/- associé à une \gls{hta} avec albuminurie (pré-éclampsie). En cas d'ischémie placentaire sévère, un \gls{hrp} peut se produire.
 
@@ -917,7 +797,7 @@ Le pouls est rapide, en corde.
 
 Le traitement consistera à éteindre le vent du \textsc{foie} et à nourrir le \textsc{yin} du \textsc{foie} et du \textsc{rein} et le \textsc{sang}.
 
-\section{Chaleur de l'\textsc{estomac}}
+\subsection{Chaleur de l'\textsc{estomac}}
 
 Une Chaleur de l'\textsc{estomac} va entraîner un trouble quantitatif du LA associé à un diabète gestationnel. \\
 
@@ -933,7 +813,7 @@ Le pouls est rapide, fin et superficiel (en particulier à la barrière droite).
 
 Le traitement consistera à rafraichir l'\textsc{estomac}. 
 
-\section{Feu du \textsc{poumon}}
+\subsection{Feu du \textsc{poumon}}
 
 Un feu du \textsc{poumon} va entraîner un trouble quantitatif du \gls{la} associé à un diabète gestationnel.  \\
 
@@ -943,7 +823,7 @@ Les émotions et le deuil peuvent léser le \textsc{poumon}.
 La langue est rouge avec un enduit jaune. \\
 Le pouls est rapide, flottant.
 
-\section{Feu du \textsc{rein}}
+\subsection{Feu du \textsc{rein}}
 
 Un feu du \textsc{rein} va entraîner un trouble quantitatif du \gls{la} associé à un diabète gestationnel. \\
 
@@ -960,9 +840,9 @@ Le surmenage, l'excès de travail et le manque de sommeil peuvent affaiblir le \t
 La langue est rouge. \\
 Le pouls est profond, fin et rapide.
 
-\chapter{Points utiles dans la régulation du liquide amniotique}
+\section{Points utiles dans la régulation du liquide amniotique}
 
-\section{Proposition de points}
+\subsection{Proposition de points}
 
 \begin{quote}\small
 \textsc{XueLi Zhai} dit : \emph{"Le \textsc{sang} et le \textsc{qi} essentiel (\textsc{jing qi}) des aliments. Il met en ordre les cinq \textsc{zang} et les six \textsc{fu}. Chez l'homme, il donne le sperme, chez la femme, il donne en haut le lait et en bas les menstrues. Ainsi, bien qu'il soit régi par le \textsc{c\oe{}ur}, conservé par le \textsc{foie} et contrôlé par la \textsc{rate}, en tonifiant la \textsc{rate} et en harmonisant l'\textsc{estomac}, le \textsc{sang} est produit sans problème."} \cite{AUT1986} 
@@ -1004,7 +884,7 @@ moins utile : Shang Xiao - 9P - 42V
 \item[Feu du \textsc{rein}] : 3R - 6R - 7P (si accouchement proche) 
 \end{description}
 
-\section{Explication de points}
+\subsection{Explication de points}
 
 % Point interdit pendant la grossesse : 4GI, 6Rte, 60V, 67V.
 %(-) = dispersion
@@ -1745,17 +1625,9 @@ Il est utilisé en cas de vide de \textsc{sang} du \textsc{foie}, de montée du \t
 \end{itemize}
 Il est utilisé en cas de montée du \textsc{yang} du \textsc{foie} et vent du \textsc{foie}.
 
-\chapter{Alimentation et régulation du liquide amniotique}
+\section{Alimentation et régulation du liquide amniotique}
 
-En médecine chinoise, l'hygiène de vie, dont l'alimentation fait partie, représente une partie du traitement des déséquilibres énergétiques. En effet chaque aliment est caractérisé par :
-\begin{itemize}
-\item sa vitalité \textsc{jing}
-\item sa saveur \textsc{wei}
-\item sa nature \textsc{xing}
-\item sa texture et sa forme \textsc{xin}
-\item sa couleur \textsc{se}.
-\end{itemize}
-
+En médecine chinoise, l'hygiène de vie, dont l'alimentation fait partie, représente une partie du traitement des déséquilibres énergétiques. En effet chaque aliment est caractérisé par sa vitalité \textsc{jing}, sa saveur \textsc{wei}, sa nature \textsc{xing}, sa texture et sa forme \textsc{xin} et sa couleur \textsc{se}.
 
 J.M. EYSSALET : \emph{"L'aliment est essentiellement un véhicule de saveurs, \textsc{wei} et de souffles, \textsc{qi} destiné à restaurer respectivement notre forme corporelle, \textsc{xing} et notre principe vital, \textsc{jing}"} \cite{DUC2010}. \\ 
 
@@ -1770,7 +1642,7 @@ Il existe 5 saveurs, chaque saveur correspond à un élément dans le cercle des él
 
 SUWEN 5 \emph{"... Le salé engendre le \textsc{rein}... ...l'acide engendre le \textsc{foie}... ... l'amer engendre le \textsc{c\oe{}ur}... ... le doux engendre la \textsc{rate}... ... le piquant engendre le \textsc{poumon}... "} \cite{DUC2010}. \\
 
-SUWEN 74 \emph{"Chacune des saveurs qui entre rejoint son viscère d'élection... peu à peu s'accroit ainsi le \textsc{qi} qui en est le produit normal de transformation. Mais trop prolongé, cet accroissement est une cause de maladie."}
+SUWEN 74 \emph{"Chacune des saveurs qui entre rejoint son viscère d'élection... peu à peu s'accroit ainsi le \textsc{qi} qui en est le produit normal de transformation. Mais trop prolongé, cet accroissement est une cause de maladie."} \\
 
 La nature des aliments a une influence thermique. On trouve :
 \begin{itemize}
@@ -1779,6 +1651,7 @@ La nature des aliments a une influence thermique. On trouve :
 \item les aliments de nature neutre \textsc{ping}. Ils équilibrent et harmonisent le \textsc{yin} et le \textsc{yang}.
 \item les aliments de nature tiède \textsc{wen}. Ils sont de nature \textsc{yang}, mais moins que les aliments de nature chaude.
 \item les aliments de nature chaude \textsc{re}. Ils sont de nature \textsc{yang}, ils réchauffent et stimulent la circulation du \textsc{qi}.
+\item []
 \end{itemize} 
 
 Ainsi pour rétablir l'équilibre énergétique, on veillera à privilégier les aliments dont la saveur va nourrir l'organe en manque selon le cycle de \textsc{sheng} et de \textsc{ke} et dont la nature va compenser les excès et les déficits de \textsc{yin} ou de \textsc{yang}. On pourra proposer à la patiente une liste d'aliments et des exemples de plats qui, grâce à leur nature et leur saveur, vont soutenir le traitement par acupuncture. On donnera également quelques conseils plus généraux, en effet, d'une façon général il est préférable :
@@ -1786,7 +1659,7 @@ Ainsi pour rétablir l'équilibre énergétique, on veillera à privilégier les alime
 \item de diminuer la consommation de laitage, privilégier ceux de chèvre ou de brebis.
 \item de diminuer la consommation de graisses
 \item de manger à température ambiante ou chaude pour aider la digestion (les aliments crus agressent l'\textsc{estomac})
-\item d?éviter les aliments de nature trop chaude et les modes de cuisson dit « chaud » (fritures, sautés) car ils peuvent dessécher les LO
+\item d'éviter les aliments de nature trop chaude et les modes de cuisson dit « chaud » (fritures, sautés) car ils peuvent dessécher les LO
 \item de préférer les aliments de nature fraiche ou stable et de saveur douce qui nourrissent et harmonise le sang
 \end{itemize}
 
@@ -1800,7 +1673,7 @@ De plus, pour renforcer la \textsc{rate}, on conseillera :
 
 \cite{CHA2017, BET2012, DUC2010}
 
-\section{Vide de \textsc{qi}}
+\subsection{Vide de \textsc{qi}}
 
 Pour tonifier le \textsc{qi} on privilégiera les aliments de saveurs salées ou douces elles permettrons de soutenir les énergies originelles, de nourrir le \textsc{rein} et la \textsc{rate}, de reconstituer le \textsc{qi} et de favoriser l'absorption des liquides organiques ; ainsi que ceux de nature stable, qui harmonisent le \textsc{sang} et le \textsc{qi}. On évitera les aliments de saveurs piquantes qui épuise le \textsc{jing} et disperse l'énergie. Il est également recommandé d'avoir une alimentation équilibrée (féculent, céréales et viandes) pour renforcer le \textsc{qi} durablement.
 
@@ -1827,7 +1700,7 @@ On peut par exemple proposer comme plat :
 \item un clafoutis aux cerises
 \end{itemize}
 
-\section{Vide de \textsc{sang}}
+\subsection{Vide de \textsc{sang}}
 
 Pour tonifier le \textsc{sang} on privilégiera les aliments de saveurs salées ou douces qui permettrons de soutenir les énergies originelles, de nourrir le \textsc{rein} et la \textsc{rate}, de tonifier le \textsc{c\oe{}ur} et harmoniser la fonction du \textsc{foie} ; ainsi que ceux de nature stable, qui harmonisent le \textsc{sang} et le \textsc{qi}. On conseillera aussi les aliments de couleurs noires.
 
@@ -1836,8 +1709,9 @@ Aliments à privilégier :
 \item Viandes : \oe{}ufs (poule - en particulier le jaune -, caille), b\oe{}uf, porc (foie et rognons), foie (veau ou genisse), mouton (foie), poulet, boudin noir, canard, lait de jument
 \item Poissons : fruits de mer, pieuvre, calmar, poulpe, moules, bigorneaux, huîtres, sardines, thon, anguille
 \item Légumes : pomme de terre, carotte, épinards, betteraves, brocolis, pousse d'avoine germées (alfalfa), artichaut,  choux, céleri, cresson, champignons (Paris et shitake), riz et riz glutineux, choucroute, orge, mais, blé, avoine, lentilles, avocats, haricots rouges, igname
-\item Fruits : miel, sucre de canne, pomme, poire, cacahouètes, amandes, dattes rouges de chine, noix et lait de coco, sésame, raisin noir, pruneaux, fruits secs, cacao, abricots, figues, mûres, fruits rouges, citron, mélasse, lait de soja, pollen, pignons de pin, litchi
+\item Fruits : pomme, poire, cacahouètes, amandes, dattes rouges de chine, noix et lait de coco, sésame, raisin noir, pruneaux, fruits secs, abricots, figues, mûres, fruits rouges, citron, mélasse, lait de soja, pignons de pin, litchi
 \item Aromates : persil
+\item Autre : miel, sucre de canne, cacao, pollen
 \end{itemize}
 
 Aliments à éviter : café, thé, laitage
@@ -1849,16 +1723,17 @@ On peut par exemple proposer comme plat :
 \item une omelette au persil
 \end{itemize}
 
-\section{Vide de \textsc{yin}}
+\subsection{Vide de \textsc{yin}}
 
 Pour tonifier le \textsc{yin} on privilégiera les aliments de saveurs douces ou salées et saveur légèrement acide qui permettent de soutenir le \textsc{yin}, de diffuser l'énergie et de reconstituer l'énergie vitale. Les aliments de nature fraiche vont refroidir la chaleur provoquée par le vide de \textsc{yin}, et ceux de nature stable vont harmoniser le \textsc{yin} et le \textsc{yang}. On fera tout de même attention car en trop grande quantité ces aliments peuvent congestionner la \textsc{rate}. On évitera les aliments de nature chaude qui augmentent la chaleur et le \textsc{yang} ce qui aggrave le vide de \textsc{yin}.
 
 \begin{itemize}
-\item Viandes : \oe{}ufs (poule et cane), b\oe{}f, porc (foie et rognons), boudin, canard, oie, pigeon, lapin, poulet (foie)
+\item Viandes : \oe{}ufs (poule et cane), b\oe{}uf, porc (foie et rognons), boudin, canard, oie, pigeon, lapin, poulet (foie)
 \item Poissons : fruits de mer, moule, sèche, poissons d'eau douce, palourdes de mer et d'eau douce, crabe, huitre, poulpe, sardine,
 \item Légumes : pomme de terre, épinards, carotte, riz, choucroute, orge, millet, pousse d'avoine germées (alfalfa), artichaut, asperges, pousse de haricots mung, pois, haricots verts, patates douces, tomates, igname, avocats, haricots noirs et rouges, tofu, fromage, lait (vache, brebis, chèvre), malt 
-\item Fruits : miel, sucre de canne, pomme, poire, abricots, bananes, citrons verts, mangues, mures, kakis, ananas, grenades, lait de coco, graines de sésame et de sésame noir, noix, châtaignes, litchi, raisin
+\item Fruits : pomme, poire, abricots, bananes, citrons verts, mangues, mures, kakis, ananas, grenades, lait de coco, graines de sésame et de sésame noir, noix, châtaignes, litchi, raisin
 \item Aromates : marjolaine, orties, ginseng, gelée royale, huile d'olive
+\item Autre : miel, sucre de canne
 \end{itemize}
 
 Aliments à éviter : cafe, alcool, sucre, épices fortes et piquantes car augmentent le vide de yin
@@ -1871,7 +1746,7 @@ On peut par exemple proposer comme plat :
 \item des tacos
 \end{itemize}
 
-\section{Vide de \textsc{yang}}
+\subsection{Vide de \textsc{yang}}
 
 Pour tonifier le \textsc{yang}, on privilégiera les aliments de saveur douce qui vont nourrir le \textsc{yang}, reconstituer l'énergie vitale et la diffuser ;  ainsi que la saveur salée qui nourrit le \textsc{rein} et le \textsc{jing} inné. Les aliments de nature stable vont réchauffer et harmoniser le \textsc{yin} et le \textsc{yang}. De plus pour ne pas aggraver le vide de \textsc{yang}, il est nécessaire de privilégier les aliments cuits et d'éviter les aliments froids. Il faut également faire attention à ne pas utiliser trop d'épices qui réchaufferaient de trop le corps ce qui provoquerai de la transpiration, refroidirai et assécherai le corps.
 
@@ -1881,8 +1756,9 @@ Aliments à privilégier :
 \item Viandes : b\oe{}uf, porc (foie et rognons), boudin, canard, poulet, agneau, rognons (boeuf et agneau), mouton, cerf, 
 \item Poissons : anchois, homard, moules, crevettes, truites, 
 \item Légumes : pomme de terre, carotte, choucroute, orge, quinoa, riz glutineux, germes de blé, poireaux, radis, courges, patates douces, navet, cresson, 
-\item Fruits : miel, sucre de canne, pomme, poire, cerises, litchi, pêches, framboises, fraises, châtaignes, pignons de pin, pistache, noix, 
+\item Fruits : pomme, poire, cerises, litchi, pêches, framboises, fraises, châtaignes, pignons de pin, pistache, noix, 
 \item Aromates : échalotes, oignons, basilic, poivre noir et blanc, capres, piment de cayenne, ciboulette, canelle, girofle, ail, gingembre, raifort, muscade, romarin, sauge, sariette, menthe verte, anis étoilée, thym, vinaigre, ciboule chinoise
+\item Autre : miel, sucre de canne
 \end{itemize}
 
 %Aliments à éviter : 
@@ -1896,7 +1772,7 @@ On peut par exemple proposer comme plat :
 \item des potages à base de poissons
 \end{itemize}
 
-\section{Stagnation du \textsc{qi} du \textsc{foie}}
+\subsection{Stagnation du \textsc{qi} du \textsc{foie}}
 
 Pour améliorer la circulation du \textsc{qi} du \textsc{foie}, on privilégiera les aliments de saveur légèrement acide pour nourrir le \textsc{foie}, les saveurs douce pour harmoniser la fonction du \textsc{foie}, légèrement piquante pour stimuler le \textsc{foie} et faire circuler le \textsc{sang} et le \textsc{qi} et salée pour son action dispersante sur les accumulations. Les aliments de nature stable vont harmoniser le \textsc{qi} et ceux de nature tiède vont tonifier et stimuler la circulation du \textsc{qi}.
 
@@ -1904,8 +1780,9 @@ Pour améliorer la circulation du \textsc{qi} du \textsc{foie}, on privilégiera l
 \item Viandes : B\oe{}uf, canard, porc, poulet
 \item Poissons : cabillaud
 \item Légumes : poireau, céleri, fenouil, navet, pomme de terre
-\item Fruits : pomme, poire, miel
+\item Fruits : pomme, poire
 \item Aromates : ail cuit, cumin, herbes aromatiques, gingembre frais
+\item Autre : miel
 \end{itemize}
 
 %Aliments à éviter : 
@@ -1916,7 +1793,7 @@ On peut par exemple proposer comme plat :
 \item salade de fruits pommes et poires sucrée au miel
 \end{itemize}
 
-\section{Apaiser la chaleur}
+\subsection{Apaiser la chaleur}
 
 Les aliments de nature froide et fraiche vont permettre de rafraichir la chaleur et ceux de nature stable vont harmoniser les énergies. La saveur douce va harmoniser et humidifier l'\textsc{estomac}, la saveur légèrement amer va permettre d'éliminer la chaleur et celle légèrement salée va rafraichir le \textsc{sang} et augmenter l'absorption des liquides.
 
@@ -1924,8 +1801,9 @@ Les aliments de nature froide et fraiche vont permettre de rafraichir la chaleur
 \item Viandes : cheval, lapin, blanc d'\oe{}ufs
 \item Poissons : crabe, algue
 \item Légumes : céleri branche, épinards, choux chinois, tomate, choux fleur, germe de soja, soja vert, tofu, concombre, citrouille, potiron, aubergine, blette, laitue, cresson, orge, asperge
-\item Fruits : châtaigne d'eau, ananas, canne à sucre, poire, prune, mangue, pomme, pêche, pastèque, abricot, banane, kaki, kiwi, melon
+\item Fruits : châtaigne d'eau, ananas, poire, prune, mangue, pomme, pêche, pastèque, abricot, banane, kaki, kiwi, melon
 \item Aromates : chèvrefeuille
+\item Autre : canne à sucre
 \end{itemize}
 
 %Aliments à éviter : 
@@ -1936,14 +1814,15 @@ On peut par exemple proposer comme plat :
 \item salade de fruits au sucre de canne
 \end{itemize}
 
-\section{Régénérer les liquides}
+\subsection{Régénérer les liquides}
 
 Pour aider à la régénération des liquides, on privilégiera les aliments semi-liquides (soupes, bouillies). On privilégiera les aliments de saveur salée qui vont augmenter l'absorption des liquides, ceux de saveur douce qui nourrissent la \textsc{rate} et permettent les transformations. Les aliments de nature fraiche et froide vont permettre de stimuler la production de liquides organiques et ceux de nature stable vont harmoniser les énergies.
 
 \begin{itemize}
-\item Viandes : porc, lait de vache
+\item Viandes : porc
 \item Légumes : tomates, tofu, épinard, patate douce, navet
-\item Fruits : fruits et miel, banane, kaki, pastèque, pamplemousse, citron, mandarine, mangue, orange, poire, pomme, prune, raisin, canne à sucre, sucre de canne blanc, abricot, grenade, litchi
+\item Fruits : fruits, banane, kaki, pastèque, pamplemousse, citron, mandarine, mangue, orange, poire, pomme, prune, raisin, abricot, grenade, litchi
+\item Autre : lait de vache, miel, canne à sucre, sucre de canne blanc
 \end{itemize}
 
 %Aliments à éviter : 
@@ -2020,8 +1899,9 @@ On peut par exemple proposer comme plat :
 
 %Les aliments de nature douce et fraîche tonifient le C½ur, et le TRM et harmonise l?Estomac (riz dur, blé).
 
-\part*{Cas clinique}
-\addcontentsline{toc}{part}{Cas clinique}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\chapter{\'Etude de cas}
 
 \subsection{Cas n°1}
 
@@ -2029,7 +1909,7 @@ Mme LE Na 27 ans, présente un oligoamnios au terme de 40SA. C'est une IIg, IIp.
 On note dans ses antécédents: des migraines frontales en étau.
 
 Mme LE ne présente pas se signe de chaleur : pas de transpiration, pas de soif. Au niveau digestif il n'y a pas de plainte. Les urines sont sans particularités.
-Mme ne se plaint pas de fatigue, son endormissement facile, elle se réveille fréquemment la nuit mais le rendormissement est facile. il est a constater qu'elle a beaucoup de rêves.
+Mme LE ne se plaint pas de fatigue, son endormissement facile, elle se réveille fréquemment la nuit mais le rendormissement est facile. il est a constater qu'elle a beaucoup de rêves.
 
 Une douleur récente aigüe est apparue à la fesse gauche.
 
@@ -2067,7 +1947,7 @@ Mme TH est fatiguée, cette fatigue est ressentie dès le lever, elle a une insomn
 A niveau digestif, Mme TH a un reflux avec brulures acides, il n'y a pas eu de nausée / vomissement en début de grossesse. La digestion est lente, il y a une constipation avec des selles sèches (crottes de bique). Elle n'a pas d'attirance pour une saveur particulière ; pas de gout particulier dans la bouche.
 Soif améliorée par la prise de boisson avec attirance pour les boisons froides.
 
-Pas d'OMI, pas de varices. Hémorroïdes on douloureuses qui grattent.
+Pas d'OMI, pas de varices. Hémorroïdes non douloureuses qui grattent.
 
 Langue épaisse, rosée, pas d'enduit.
 
@@ -2116,9 +1996,9 @@ Diagnostique : vide de \textsc{yin} \\
 
 Proposition de point : 3R - 6R et 9R (nourrissent le \textsc{yin} du \textsc{rein}), 18V (point \textsc{shu} du \textsc{foie}), 23V (point \textsc{shu} du \textsc{rein}), 8F (nourrit le \textsc{yin}, tonifie le \textsc{foie}), 6MC (tonifie tout les \textsc{yin}).
 
-
-\part*{Conclusion}
-\addcontentsline{toc}{part}{Conclusion}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter*{Conclusion}
+%\addcontentsline{toc}{part}{Conclusion}
 
 Malgré le manque de description directe du \gls{la} dans les ouvrages de \gls{mtc}, on peut, en analysant les textes et en faisant le rapprochement entre le f\oe{}tus et ses annexes (placenta, \gls{la}), expliquer la physiologie du \gls{la}. Certains déséquilibres énergétiques vont favoriser les troubles quantitatifs de \gls{la} ; dans la majorité des cas on retrouve comme origine un vide de \textsc{rein}. \\
 
@@ -2129,6 +2009,130 @@ Ainsi, grâce à la \gls{mtc}, à sa patiente inquiète qui se demande lors de l'ann
 \clearpage
 
 \appendix
+
+\subsection{shéma du \textsc{triple réchauffeur}}
+
+%\input{shema-tr.tex}
+
+\begin{figure}[H]
+   \centering
+  
+  \begin{tikzpicture}
+  
+%\draw[step=1cm,very thin, gray] (-1,-1) grid (15,20);  
+  
+\node (a4) at  (12,19) {O2};
+\node (a5) at  (15,19) {Alimentation};
+\node [anchor=south] (a5bis) at  (15,18) {Boisson};
+
+\node (b2) at  (6,16) {\textsc{sang}};
+\node (b3) at  (9,16) {\textsc{qi}};
+
+\node[anchor=west] (c1) at  (0,13) {TRS};
+\node (c2) at  (6,13) {\textsc{c\oe{}ur}};
+\node (c3) at  (9,13) {\textsc{poumon}};
+
+\node[anchor=south west] (d1) at  (0,11) {Diaphragme};
+
+\node[anchor=west] (e1) at  (0,8) {TRM};
+\node (e3) at  (9,9) {\textsc{rate}};
+\node (e5) at  (13,9) {\textsc{estomac}};
+
+\node (f5) at  (13,7) {\textsc{intestin gêle}};
+
+\node[anchor=south west] (g1) at  (0,5) {Ligne passant par l'ombilic};
+
+\node[anchor=west] (h1) at  (0,3) {TRI};
+\node (h3) at  (9,3) {\textsc{rein}};
+\node (h5) at  (13,3) {\textsc{gros intestin}};
+\node [anchor=south] (h5bis) at  (13,2) {\textsc{vessie}};
+
+\node (i5) at  (13,-1) {Elimination};
+
+%\node [anchor=west] at (13,8) {impur};
+%\node [anchor=west] at (13,8) {impur};
+
+\draw (0,11) -- (16,11);
+\draw (0,5) -- (16,5);
+
+\draw[->,>=latex] (a4) -- (e5);
+\draw[->,>=latex] (a5bis) -- (e5);
+\draw[->,>=latex] (e5) -- (f5) node[midway,above,sloped] {impur};
+\draw[->,>=latex] (f5) -- (h5) node[midway,above,sloped] {impur};
+\draw[->,>=latex] (h5bis) -- (i5);
+
+\draw[->,>=latex] (e5) -- (e3) node[midway,above,sloped] {pur};
+\draw[->,>=latex] (e3) -- (c2) node[midway,above,sloped] {pur};
+\draw[->,>=latex] (e3) -- (c3) node[midway,above,sloped] {pur};
+
+\draw[->,>=latex] (c3) -- (c2);
+\draw[->,>=latex] (c3) -- (b3);
+\draw[->,>=latex] (c2) -- (b2);
+
+\draw[->,>=latex] (f5) -- (h3) node[midway,above,sloped] {pur};
+\draw[->,>=latex] (h3) -- (e3) node[midway,above,sloped] {pur};
+
+\draw[->,>=latex] (h5) -- (h3) node[midway,above,sloped] {pur};
+
+
+\end{tikzpicture}
+
+\caption{shéma du \textsc{triple réchauffeur}}
+\end{figure}
+
+\subsection{Relation entre vide de \textsc{rein} et vide de \textsc{sang}}
+
+%\input{organigramme-vr-vsg.tex}
+
+\begin{figure}[H]
+   \centering
+\begin{tikzpicture}[>=stealth,sloped]
+
+    \matrix (tree) [%
+      matrix of nodes,
+      minimum size=0.25cm,
+      column sep=0.50cm,
+      row sep=1.3cm,
+    ]
+    {                                                                                                    
+                                                                                           
+ & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Hypoperfusion placentaire\end{center} \end{minipage}} &\\
+ &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Augmentation de la chaleur\end{center} \end{minipage}} & {\begin{minipage}[t]{0.2\textwidth}\begin{center}Absence d'augmentation de la volémie\end{center} \end{minipage}} & \colorbox{red}{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{sang} et de \textsc{liquide organique}\end{center} \end{minipage}} &\\
+ &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yin} de \textsc{rein}\end{center} \end{minipage}} &\\
+ & & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yang} de \textsc{rate}\end{center} \end{minipage}} &\\
+\colorbox{orange}{\begin{minipage}[t]{0.1\textwidth}\begin{center}Vide de \textsc{rein}\end{center} \end{minipage}} &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yang} de \textsc{rein}\end{center} \end{minipage}} & & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Absence d'augmentation du débit et de la fréquence cardiaque\end{center} \end{minipage}}\\
+ &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{qi} du \textsc{rein}\end{center} \end{minipage}} & \\
+ & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Diminution de la PO2\end{center} \end{minipage}} & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Stase de \textsc{sang}\end{center} \end{minipage}} & \\
+ & & & {\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{qi} du \textsc{poumon}\end{center} \end{minipage}}\\
+ & & &\colorbox{red}{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{sang}\end{center} \end{minipage}}\\
+    };
+   
+   \draw[->] (tree-5-1) -- (tree-3-2) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-3-2) -- (tree-2-2) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-3-2) -- (tree-2-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-2-3) -- (tree-1-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-3-2) -- (tree-2-4) node [midway,above]{}; %{$P$};
+   
+   \draw[->] (tree-5-1) -- (tree-5-2) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-5-2) -- (tree-4-4) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-4-4) -- (tree-2-4) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-5-2) -- (tree-5-5) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-5-5) |- (tree-1-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-5-2) -- (tree-2-4) node [midway,above]{}; %{$P$};
+   
+   \draw[->] (tree-5-1) -- (tree-6-2) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-6-2) -- (tree-7-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-7-3) |- (tree-9-4) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-6-2) -- (tree-7-5) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-7-5) |- (tree-9-4) node [midway,above]{}; %{$P$};
+   
+   \draw[->] (tree-8-4) -- (tree-7-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-8-4) -- (tree-7-5) node [midway,above]{}; %{$P$};
+
+    
+\end{tikzpicture}
+\caption{Relation entre vide de \textsc{rein} et vide de \textsc{sang}}
+\end{figure}
 
 \subsection{Tableau des aliments de nature froide}
 
