@@ -1,8 +1,10 @@
-\documentclass[12pt,a4paper]{book} 
+\documentclass[12pt,a4paper]{report} 
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
 \usepackage{glossaries} 
+\usepackage{pdfpages}
+
 \makeglossaries
 
 \usepackage{graphicx}
@@ -57,34 +59,18 @@
   decorations.text,%
   decorations.pathmorphing,%
   shadows}
+  
+  \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 
 %\pagestyle{fancy}
 %\renewcommand{\chaptermark}[1]{\markboth}{\bsc{\chaptername~\thechapter{}:}#1}{}}
 
 
-%\university{UNIVERSITE DE ROUEN}
-%\school{Faculté de médecine et de pharmacie}
 
-\title{Liquide amniotique}
-
-%\begin{figure}[h]
-%\begin{center}
-%\includegraphics[width=0.75\textwidth]{jin-ye.png}
-%\caption{}
-%\end{center}
-%\end{figure}
-
-\author{VANNESTE épouse LEMIERE Virginie}
-
-%\advisor[M]{Directeur de mémoire : Patricia DUCHATEAU}
-%\coadvisor[M]{Directeur et coordinateur de l'enseignement : Docteur Marc MARTIN}
-%\speciality{mémoire soutenu en vu de l'obtention du DIU d'acupuncture obstétrical}
-%\date{Session universitaire 2015-2017} 
 
 
 \newglossaryentry{HTA}{name=hta,description={hypertension artérielle}}
-
 \newacronym{hta}{HTA}{hypertension artérielle}
 \newacronym{htag}{HTAG}{hypertension artérielle gravidique}
 \newacronym{sa}{SA}{semaines d'amménorrhée}
@@ -110,35 +96,39 @@
 \newacronym{rs}{RS}{Réchauffeur Supérieur}
 
 
+
 \begin{document}
 
+\includepdf[pages={1}]{page-de-garde-memoire.pdf}
 
-\maketitle
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\tableofcontents
-
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter*{Remerciement}
+\thispagestyle{empty}
+\hrule
+\vspace{1cm}
+\hfill \Large Remerciement
+\vspace{1cm}
+\hrule
+\vspace{1cm}
 
 Il est finalement plus difficile de trouver la formulation pour remercier toute les personnes qui m'ont aidée dans cette aventure qu'est le DIU d'acupuncture que d'écrire la partie théorique de cet ouvrage.\\
 
-Je tiens particulièrement à remercier 
-\begin{itemize} \item[]  \item[] Mme Patricia Duchateau, sage femme acupuntrice, directrice de mémoire, pour sa relecture et ses conseils lors de la rédaction de ce mémoire. \item[] 
-\item[] Le Dr Martin, Directeur et coordinateur de l'enseignement, ainsi que l'ensemble des intervenants du DIU d'acupuncture obstétrical de ROUEN pour la qualité des enseignements et l'ambiance conviviale lors des cours. \item[] 
-\item[] Ma famille, Yves mon conjoint pour sa patience, son soutient et ses cours de LATEX et ma maman pour sa relecture attentive et sa disponibilité pour garder Martin (mon fils) lors des cours et des stages. \item[] 
-\item[] Pascale pour m'avoir hébergé le jeudi soir lors des sessions de cours. \item[] 
-\item[] Mes collègues pour les nombreux échanges de garde durant ces deux années. \item[] 
-\item[] J'en oublie sans doute et si vous vous reconnaissez, je vous remercie également. \end{itemize}
+Je tiens particulièrement à remercier toutes les personnes qui m'ont permis de mener ce projet. \\
 
+Mme Patricia DUCHATEAU, sage femme acupunctrice, directrice de mémoire, pour sa relecture et ses conseils lors de la rédaction de ce mémoire. \\
+
+Le Dr MARTIN, Directeur et coordinateur de l'enseignement, ainsi que l'ensemble des intervenants du DIU d'acupuncture obstétrical de ROUEN pour la qualité des enseignements et l'ambiance conviviale lors des cours. \\
+
+Pascale pour m'avoir hébergé le jeudi soir lors des sessions de cours. \\
+
+Mes collègues pour les nombreux échanges de garde durant ces deux années. \\
+
+Mes pensées vont également a ma famille, en particulier à ma maman pour sa relecture attentive et sa disponibilité pour garder Martin (mon fils) lors des cours et des stages. \\
+
+Pour terminer, un grand merci à Yves mon mari, qui a toujours été présent à mes cotés, merci pour ta confiance en moi,  pour ta patience, ton soutient et tes cours de LATEX. \\
+ 
+J'en oublie sans doute et si vous vous reconnaissez, je vous remercie également. 
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter*{Résumé}
-
-Le liquide amniotique \gls{la} est un élément important dans la surveillance du bien-être f\oe{}tal. Bien connue en médecine occidentale, sa physiologie est beaucoup moins décrite en médecine traditionnelle chinoise. \\
-
-Ce mémoire a pour objectif la description de la physiologie du liquide amniotique et des déséquilibres énergétiques amenant à un trouble de la quantité de \gls{la} ainsi que des propositions de traitements (punctures et diététiques). Trois cas cliniques illustrent ce travail bibliographique. \\
-
-Mots clés : acupuncture, liquide amniotique, oligoamnios, hydramnios
+\tableofcontents
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter*{Introduction}
@@ -375,7 +365,7 @@ De cette rencontre en résulte une pâte : \textsc{huai nan zi} \emph{"Au premier 
 
 Pendant cette première semaine de vie, l'embryon se nourrit des sécrétions produites par l'endomètre, ces sécrétions sont sous le contrôle de \textsc{chong mai, ren mai et du mai}  \cite{EYS1990}. Il s'agit d'un mucus riche en substances nutritives dans lequel nage le blastocyste. En embryologie chinoise, on dit que l'embryon se nourrit de son propre \textsc{yuan qi}, et s'implante dans un endomètre préparé par les méridiens curieux \textsc{chong mai} et \textsc{yin wei mai}. 
 
-C. CHAGUE-GAGNERET, A. PELLETIER-LAMBERT et B. SALAGNAC écrivent que l'embryon vit sur son propre \textsc{yuan qi} pendant les deux premiers mois et que ce n'est qu'à partir du troisième mois qu'il se développe à partir du \textsc{yuan qi} et du \textsc{sang} de sa mère \cite{CHArfa81, SAL1998, PEL2014}, or comme nous le verrons plus loin et comme le dit J.M. EYSSALET à partir du 22\textsuperscript{ème} jour le c\oe{}ur commence à battre et permet les échanges utéro-placentaires (cf sous-section \ref{Troisième semaine} vue à la page \pageref{Troisième semaine}). 
+C. CHAGUE-GAGNERET, A. PELLETIER-LAMBERT et B. SALAGNAC écrivent que l'embryon vit sur son propre \textsc{yuan qi} pendant les deux premiers mois et que ce n'est qu'à partir du troisième mois qu'il se développe à partir du \textsc{yuan qi} et du \textsc{sang} de sa mère \cite{CHArfa81, SAL1998, PEL2014}, or comme nous le verrons plus loin et comme le dit J.M. EYSSALET à partir du 22\textsuperscript{ème} jour le c\oe{}ur commence à battre et permet les échanges utéro-placentaires (cf Troisième semaine, p\pageref{Troisième semaine}). 
 
 \`A la fin de la première semaine (5-6\textsuperscript{ème} jour), les cellules du blastocyste, appelées blastomères, se différencient en bouton embryonnaire et en trophoblaste dans lequel une cavité se creuse. J. CHOAIN y décrit une différenciation \textsc{yin/yang}, le \textsc{yin} étant le trophoblaste qui donnera une partie des annexes et du placenta assurant les fonctions de nutrition et le \textsc{yang} étant le bouton embryonnaire \cite{CHOmer39-40}. 
 
@@ -519,9 +509,7 @@ Les Liquides Organiques dépendent également de la \textsc{rate}, des \textsc{pou
 \item Le \textsc{rein} commande le secteur liquidien, il est le "Maitre de l'eau". Il commande "l'ouverture" (pour expulser l'eau en excès) et la "fermeture" (pour garder l'eau dans le corps). 
 \end{itemize} 
 
-%cf chapter \ref{shéma du \textsc{triple réchauffeur}} vue à la page \pageref{shéma du \textsc{triple réchauffeur}}
-
-
+(cf Annexe \ref{schema_tr}, p\pageref{schema_tr})
 
 Pour B. AUTEROCHE : 
 \begin{quote}\small
@@ -638,7 +626,7 @@ De plus, une insuffisance du \textsc{qi} du \textsc{poumon} entraîne une stase d
 A cet utérus est rattaché le \textsc{foie} et le \textsc{rein} qui parachèvent la réunion globale de l'énergie et du \textsc{sang}. Chez la femme le \textsc{sang} domine. L'énergie au sein de la chambre du \textsc{sang} se transforme aussi en eau pour donner le sang menstruel. Ce \textsc{sang} étant destiné à nourrir et entretenir le f\oe{}tus puisque l'utérus est non seulement la chambre du \textsc{sang} mais encore le lieu de conception et l'organe de gestation"} \cite{MINrfa45}. 
 \end{quote}
 
-%cf chapter \ref{Relation entre vide de \textsc{rein} et vide de \textsc{sang}} vue à la page \pageref{Relation entre vide de \textsc{rein} et vide de \textsc{sang}}
+(cf Annexe \ref{vide_rein_sang}, p\pageref{vide_rein_sang})
 
 \subsection{Le métabolisme des \textsc{yin ye}}
 
@@ -876,8 +864,6 @@ Le pouls est profond, fin et rapide.
 
 \section{Points utiles dans la régulation du liquide amniotique}
 
-\subsection{Proposition de points}
-
 \begin{quote}\small
 \textsc{XueLi Zhai} dit : \emph{"Le \textsc{sang} et le \textsc{qi} essentiel (\textsc{jing qi}) des aliments. Il met en ordre les cinq \textsc{zang} et les six \textsc{fu}. Chez l'homme, il donne le sperme, chez la femme, il donne en haut le lait et en bas les menstrues. Ainsi, bien qu'il soit régi par le \textsc{c\oe{}ur}, conservé par le \textsc{foie} et contrôlé par la \textsc{rate}, en tonifiant la \textsc{rate} et en harmonisant l'\textsc{estomac}, le \textsc{sang} est produit sans problème."} \cite{AUT1986} 
 \end{quote}
@@ -891,34 +877,760 @@ En parcourant la littérature un certain nombre de points apparaissent utiles. \c
 Le point 9R peut-être poncturé dans tout les tableaux, il permet en effet de tonifier le \textsc{rein} et d'harmoniser la grossesse. 
 
 \begin{description}
-\item[Vide de \textsc{qi} et de \textsc{sang}] : 36E moxé - 17V - 18V - 20V - 21V - 23V - 8F - 3R - 6R - 9R - 12RM - 2Rte - 3Rte - 6Rte (si accouchement proche) - 10Rte  \\
+\item[Vide de \textsc{qi} et de \textsc{sang}] : 36E moxé - \textbf{17V} - 18V - 20V - 21V - 23V - \textbf{8F} - 3R - \textbf{6R} - 9R - 12RM - 2Rte - 3Rte - 6Rte (si accouchement proche) - \textbf{10Rte}  \\
 moins utile : 4Rte - 7R - 13R - 14R - 7P (si accouchement proche) - 6MC  - 4RM - 6RM- 17RM - 41VB - 43V moxé - 53V - 4DM - 14DM moxé 
 
-\item[Vide de \textsc{sang} du \textsc{foie}] : 3F - 8F - 18V - 3R - 9R - 36E - 6Rte (si accouchement proche) \\
+\item[Vide de \textsc{sang} du \textsc{foie}] : 3F - \textbf{8F} - 18V - 3R - 9R - 36E - 6Rte (si accouchement proche) \\
 moins utile : 20DM 
 
-\item[Vide de \textsc{yang} du \textsc{rein} et de la \textsc{rate}] :  3R  - 9R - 17R - 1Rte - 2Rte - 3Rte - 20V - 21V - 23V - 12RM - 13F moxé -  36E \\
+\item[Vide de \textsc{yang} du \textsc{rein} et de la \textsc{rate}] :  \textbf{3R}  - 9R - 17R - 1Rte - 2Rte - \textbf{3Rte} - 20V - 21V - 23V - \textbf{12RM} - 13F moxé -  36E \\
 moins utile : 4Rte - 6Rte (si accouchement proche) - 9Rte - 14F - 14R - 49V - 50V - 52V - 53V - 25E - 30E - 4RM - 8RM moxé - 9RM - 4DM - 6DM
 
-\item[Vide de \textsc{yin} du \textsc{rein} et du \textsc{foie}] : 3R - 6R - 7R - 9R - 17V - 18V - 23V - 3F (si accouchement proche) - 8F - 6Rte (si accouchement proche) - 6MC - 36E \\
+\item[Vide de \textsc{yin} du \textsc{rein} et du \textsc{foie}] : 3R - \textbf{6R} - 7R - 9R - 17V - \textbf{18V} - \textbf{23V} - 3F (si accouchement proche) - \textbf{8F} - 6Rte (si accouchement proche) - \textbf{6MC} - 36E \\
 moins utile : 1R - 2R - 5R - 10R - 1F - 2F - 9F - 53V - 20VB - 4RM moxé 
 
-\item[Stagnation du \textsc{qi} du \textsc{foie}] : 26VB - 34VB - 18V - 2F - 3F (si accouchement proche) - 5F - 6F - 14F - 6MC - 6TR  \\
+\item[Stagnation du \textsc{qi} du \textsc{foie}] : 26VB - 34VB - 18V - 2F - 3F (si accouchement proche) - 5F - \textbf{6F} - \textbf{14F} - 6MC - 6TR  \\
 moins utile : 13F - 36E - 12RM
 
-\item[Montée du \textsc{yang} du \textsc{foie} et vent du \textsc{foie}] : 2F dispersé - 3F dispersé (si accouchement proche) - 5F - 8F - 14F dispersé - 18V - 20VB - 26VB - 6MC - 7C - 5TR  \\
+\item[Montée du \textsc{yang} du \textsc{foie} et vent du \textsc{foie}] : 2F dispersé - 3F dispersé (si accouchement proche) - 5F - 8F - \textbf{14F dispersé} - 18V - 20VB - 26VB - \textbf{6MC} - \textbf{7C} - 5TR  \\
 moins utile : 13F - 34VB - 43VB - 44VB - 9P - 4GI dispersé (si accouchement proche) - 11GI dispersé - 9E - 36E - 6Rte - 6DM - 14DM - 20DM - 26DM dispersé - 62V
 
-\item[Chaleur de l'\textsc{estomac}] : 3R - 7R - 13F - 12RM - 44E - 45E - 6TR - 11GI - 20V - 36E \\
+\item[Chaleur de l'\textsc{estomac}] : 3R - 7R - 13F - 12RM - 44E - \textbf{45E} - 6TR - 11GI - 20V - 36E \\
 moins utile : 2F - 41E - 6GI - PC Weiguanxiashu
 
-\item[Feu du \textsc{poumon}] : 12V \\
+\item[Feu du \textsc{poumon}] : \textbf{12V} \\
 moins utile : Shang Xiao - 9P - 42V
 
-\item[Feu du \textsc{rein}] : 3R - 6R - 7P (si accouchement proche) 
+\item[Feu du \textsc{rein}] : \textbf{3R} - \textbf{6R} - 7P (si accouchement proche) 
 \end{description}
 
-\subsection{Explication de points}
+\section{Alimentation et régulation du liquide amniotique}
+
+En médecine chinoise, l'hygiène de vie, dont l'alimentation fait partie, représente une partie du traitement des déséquilibres énergétiques. En effet chaque aliment est caractérisé par sa vitalité \textsc{jing}, sa saveur \textsc{wei}, sa nature \textsc{xing}, sa texture et sa forme \textsc{xin} et sa couleur \textsc{se}.
+
+J.M. EYSSALET : \emph{"L'aliment est essentiellement un véhicule de saveurs, \textsc{wei} et de souffles, \textsc{qi} destiné à restaurer respectivement notre forme corporelle, \textsc{xing} et notre principe vital, \textsc{jing}"} \cite{DUC2010}. \\ 
+
+Il existe 5 saveurs, chaque saveur correspond à un élément dans le cercle des éléments et vient en petite quantité nourrir l'organe, le tissu, la fonction et l'émotion lui correspondant : 
+\begin{itemize}
+\item l'acide, \textsc{suan}, de nature \textsc{yin}, correspond au \textsc{bois}, affinité avec \textsc{foie} et \textsc{vésicule biliaire}
+\item l'amère \textsc{ku}, de nature \textsc{yin}, correspond au \textsc{feu}, affinité avec \textsc{c\oe{}ur} et \textsc{intestin grêle}
+\item le doux \textsc{gan}, de nature \textsc{yang}, correspond à la \textsc{terre}, affinité avec \textsc{rate} et \textsc{estomac}
+\item le piquant \textsc{xin}, de nature \textsc{yang}, correspond au \textsc{métal}, affinité pour \textsc{poumon} et \textsc{gros intestin}
+\item le salé \textsc{xian}, de nature \textsc{yin}, correspond à l'\textsc{eau}, affinité  pour \textsc{rein} et \textsc{vessie}.
+\end{itemize} 
+
+SUWEN 5 \emph{"... Le salé engendre le \textsc{rein}... ...l'acide engendre le \textsc{foie}... ... l'amer engendre le \textsc{c\oe{}ur}... ... le doux engendre la \textsc{rate}... ... le piquant engendre le \textsc{poumon}... "} \cite{DUC2010}. \\
+
+SUWEN 74 \emph{"Chacune des saveurs qui entre rejoint son viscère d'élection... peu à peu s'accroit ainsi le \textsc{qi} qui en est le produit normal de transformation. Mais trop prolongé, cet accroissement est une cause de maladie."} \\
+
+La nature des aliments a une influence thermique. On trouve :
+\begin{itemize}
+\item les aliments de nature froide \textsc{han}. Ils sont de nature \textsc{yin}, ils refroidissent et font descendre le \textsc{qi}. Ils vont freiner le \textsc{yang}.
+\item les aliments de nature fraiche \textsc{liang}. Ils sont de nature \textsc{yin}, mais moins que les aliments de nature froide. 
+\item les aliments de nature neutre \textsc{ping}. Ils équilibrent et harmonisent le \textsc{yin} et le \textsc{yang}.
+\item les aliments de nature tiède \textsc{wen}. Ils sont de nature \textsc{yang}, mais moins que les aliments de nature chaude.
+\item les aliments de nature chaude \textsc{re}. Ils sont de nature \textsc{yang}, ils réchauffent et stimulent la circulation du \textsc{qi}.
+\item []
+\end{itemize} 
+
+Ainsi pour rétablir l'équilibre énergétique, on veillera à privilégier les aliments dont la saveur va nourrir l'organe en manque selon le cycle de \textsc{sheng} et de \textsc{ke} et dont la nature va compenser les excès et les déficits de \textsc{yin} ou de \textsc{yang}. On pourra proposer à la patiente une liste d'aliments et des exemples de plats qui, grâce à leur nature et leur saveur, vont soutenir le traitement par acupuncture. On donnera également quelques conseils plus généraux, en effet, d'une façon générale il est préférable :
+\begin{itemize}
+\item de diminuer la consommation de laitage, privilégier ceux de chèvre ou de brebis.
+\item de diminuer la consommation de graisses
+\item de manger à température ambiante ou chaude pour aider la digestion (les aliments crus agressent l'\textsc{estomac})
+\item d'éviter les aliments de nature trop chaude et les modes de cuisson dits « chaud » (fritures, sautés) car ils peuvent dessécher les LO
+\item de préférer les aliments de nature fraiche ou stable et de saveur douce qui nourrissent et harmonise le sang
+\end{itemize}
+
+De plus, pour renforcer la \textsc{rate}, on conseillera : 
+\begin{itemize}
+\item de manger un bon petit déjeuner car c'est entre 7 et 9 h que l'énergie de l'\textsc{estomac} est à son maximum (horloge énergétique chinoise) et si possible dans l'heure qui suit le lever.
+\item de manger tôt et léger le soir car l'énergie de l'\textsc{estomac} est à son minimum.
+\item de manger régulièrement (horaire et composition)
+\item de boire en petite quantité des boissons chaudes pendant le repas (trop de liquides ou des boissons froides perturbent le travail de l'\textsc{estomac})
+\end{itemize}
+
+\cite{CHA2017, BET2012, DUC2010}
+
+\subsection{Vide de \textsc{qi}}
+
+Pour tonifier le \textsc{qi} on privilégiera les aliments de saveurs salées subtiles ou douces elles permettront de soutenir les énergies originelles, de nourrir le \textsc{rein} et la \textsc{rate}, de reconstituer le \textsc{qi} et de favoriser l'absorption des liquides organiques ; ainsi que ceux de nature stable, qui harmonisent le \textsc{sang} et le \textsc{qi}. On évitera les aliments de saveurs piquantes qui épuisent le \textsc{jing} et dispersent l'énergie. Il est également recommandé d'avoir une alimentation équilibrée (féculents, céréales et viandes) pour renforcer le \textsc{qi} durablement.
+
+Aliments à privilégier : 
+\begin{itemize}
+\item Viandes : b\oe{}uf, mouton, \oe{}ufs (de poules et de caille), porc (foie et rognons), boudin, agneau, cheval, faisan, pigeon, caille, lapin, poulet et abats de poulet (gésier et foie), oie, canard, veau, dinde
+\item Poissons : anguille, hareng, maquereau, moule, poulpe, huitre, esturgeon, thon, truite, dorade, mulet
+\item Légumes : pomme de terre, carotte, potimarron, potiron, courge, patate douce, pois, asperge, champignon (rosé des prés et parfumés, pleurote, cèpes, shiitake), choux, tomate, igname, aubergine
+\item Légumineuses : lentille, haricot rouge, tofu
+\item Céréales : riz, orge, sarrasin, mais, avoine, millet (bien cuites)
+\item Fruits :  pomme, poire, châtaigne, noix, amande, noix de coco, cacahuète, raisin, cerise, sésame, datte, figue
+\item Aromates : laurier, réglisse
+\item Autre : lait de brebis, miel, sucre de canne, ginseng, mélasse, gelée royale
+\end{itemize}
+
+Aliments à éviter : ail frais, cumin, clou de girofle, poivre noir, piment, gingembre, fromage de chèvre et fermenté
+
+On peut par exemple proposer comme plat : 
+\begin{itemize}
+\item une bouillie de flocons d'avoine aux dattes
+\item un risotto aux champignons et poulet
+\item un hachis Parmentier de b\oe{}uf et pommes de terre ou de canard et patates douces
+\item une salades de pommes de terre et \oe{}ufs 
+\item un clafoutis aux cerises
+\end{itemize}
+
+\subsection{Vide de \textsc{sang}}
+
+Pour tonifier le \textsc{sang} on privilégiera les aliments de saveurs salées subtiles ou douces qui permettront de soutenir les énergies originelles, de nourrir le \textsc{rein} et la \textsc{rate}, de tonifier le \textsc{c\oe{}ur} et harmoniser la fonction du \textsc{foie} ; ainsi que ceux de nature stable, qui harmonisent le \textsc{sang} et le \textsc{qi}. On conseillera aussi les aliments de couleurs rouges et sombres.
+
+Aliments à privilégier : 
+\begin{itemize}
+\item Viandes : \oe{}ufs (poule - en particulier le jaune -, caille), b\oe{}uf, porc (foie et rognons), foie (veau ou genisse), mouton (foie), poulet, boudin noir, canard, lait de jument
+\item Poissons : fruits de mer, pieuvre, calmar, poulpe, moule, bigorneau, huître, sardine, thon, anguille
+\item Légumes : pomme de terre, carotte, épinard, betterave, brocolis, pousse d'avoine germée (alfalfa), artichaut,  choux, céleri, cresson, champignon (Paris et shitake), choucroute, avocat, igname
+\item Légumineuses : lentille, haricots rouge
+\item Céréales : riz et riz glutineux, orge, mais, blé, avoine
+\item Fruits : pomme, poire, cacahouète, amande, datte rouge de chine, noix et lait de coco, sésame, raisin noir, pruneaux, fruits secs, abricot, figue, mûre, fruits rouges, citron, mélasse, lait de soja, pignons de pin, litchi
+\item Aromates : persil
+\item Autre : miel, sucre de canne, cacao, pollen
+\end{itemize}
+
+Aliments à éviter : café, thé, laitage
+
+On peut par exemple proposer comme plat : 
+\begin{itemize}
+\item du riz au lait de soja avec des amandes et abricots
+\item un risotto aux champignons et poulet
+\item une omelette au persil
+\end{itemize}
+
+\subsection{Vide de \textsc{yin}}
+
+Pour tonifier le \textsc{yin} on privilégiera les aliments de saveurs douces ou salées subtiles et saveur légèrement acide qui permettent de soutenir le \textsc{yin}, de diffuser l'énergie et de reconstituer l'énergie vitale. Les aliments de nature fraiche vont refroidir la chaleur provoquée par le vide de \textsc{yin}, et ceux de nature stable vont harmoniser le \textsc{yin} et le \textsc{yang}. On fera tout de même attention car en trop grande quantité ces aliments peuvent congestionner la \textsc{rate}. On évitera les aliments de nature chaude qui augmentent la chaleur et le \textsc{yang} ce qui aggrave le vide de \textsc{yin}.
+
+\begin{itemize}
+\item Viandes : \oe{}ufs (poule et cane), b\oe{}uf, porc (foie et rognons), boudin, canard, oie, pigeon, lapin, poulet (foie)
+\item Poissons : fruits de mer, moule, sèche, poisson d'eau douce, palourde de mer et d'eau douce, crabe, huitre, poulpe, sardine,
+\item Légumes : pomme de terre, épinard, carotte, choucroute, pousse d'avoine germée (alfalfa), artichaut, asperge, pousse de haricots mung, pois, haricot vert, patate douce, tomate, igname, avocat, malt 
+\item Légumineuses : haricots noir et rouge, tofu
+\item Céréales : riz, orge, millet, 
+\item Fruits : pomme, poire, abricots, bananes, citrons verts, mangues, mures, kakis, ananas, grenades, lait de coco, graines de sésame et de sésame noir, noix, châtaignes, litchi, raisin
+\item Aromates : marjolaine, orties, ginseng, gelée royale, huile d'olive
+\item Autre : miel, sucre de canne, fromage, lait (vache, brebis, chèvre)
+\end{itemize}
+
+Aliments à éviter : café, alcool, sucre, épice forte et piquante car augmentent le vide de yin
+
+On peut par exemple proposer comme plat : 
+\begin{itemize}
+\item une salade de fruits
+\item du poisson au lait de coco
+\item des smoothies sucrés au miel
+\item des tacos
+\end{itemize}
+
+\subsection{Vide de \textsc{yang}}
+
+Pour tonifier le \textsc{yang}, on privilégiera les aliments de saveur douce qui vont nourrir le \textsc{yang}, reconstituer l'énergie vitale et la diffuser ;  ainsi que la saveur salée subtiles qui nourrit le \textsc{rein} et le \textsc{jing} inné. Les aliments de nature stable vont réchauffer et harmoniser le \textsc{yin} et le \textsc{yang}. De plus pour ne pas aggraver le vide de \textsc{yang}, il est nécessaire de privilégier les aliments cuits et d'éviter les aliments froids. Il faut également faire attention à ne pas utiliser trop d'épices qui réchaufferaient de trop le corps ce qui provoquerait de la transpiration, refroidirait et assécherait le corps.
+
+
+Aliments à privilégier : 
+\begin{itemize}
+\item Viandes : b\oe{}uf, porc (foie et rognons), boudin, canard, poulet, agneau, rognons (boeuf et agneau), mouton, cerf, 
+\item Poissons : anchois, homard, moule, crevette, truite 
+\item Légumes : pomme de terre, carotte, choucroute, germe de blé, poireaux, radis, courge, patate douce, navet, cresson
+\item Céréales : orge, quinoa, riz glutineux, 
+\item Fruits : pomme, poire, cerise, litchi, pêche, framboise, fraise, châtaigne, pignon de pin, pistache, noix, 
+\item Aromates : échalote, oignon, basilic, poivre noir et blanc, capre, piment de cayenne, ciboulette, canelle, girofle, ail, gingembre, raifort, muscade, romarin, sauge, sariette, menthe verte, anis étoilée, thym, vinaigre, ciboule chinoise
+\item Autre : miel, sucre de canne
+\end{itemize}
+
+%Aliments à éviter : 
+
+On peut par exemple proposer comme plat : 
+\begin{itemize}
+\item du poulet rôti aux herbes
+\item des moules à l'ail
+\item un gâteau de riz à la cannelle sucré au sucre brun
+\item une soupe de poireaux
+\item des potages à base de poissons
+\end{itemize}
+
+\subsection{Stagnation du \textsc{qi} du \textsc{foie}}
+
+Pour améliorer la circulation du \textsc{qi} du \textsc{foie}, on privilégiera les aliments de saveur légèrement acide pour nourrir le \textsc{foie}, les saveurs douces pour harmoniser la fonction du \textsc{foie}, légèrement piquantes pour stimuler le \textsc{foie} et faire circuler le \textsc{sang} et le \textsc{qi} et salées subtiles pour son action dispersante sur les accumulations. Les aliments de nature stable vont harmoniser le \textsc{qi} et ceux de nature tiède vont tonifier et stimuler la circulation du \textsc{qi}.
+
+\begin{itemize}
+\item Viandes : B\oe{}uf, canard, porc, poulet
+\item Poissons : cabillaud
+\item Légumes : poireau, céleri, fenouil, navet, pomme de terre
+\item Fruits : pomme, poire
+\item Aromates : ail cuit, cumin, herbes aromatiques, ciboulettes, gingembre frais, oignons cuits
+\item Autre : miel
+\end{itemize}
+
+%Aliments à éviter : 
+
+On peut par exemple proposer comme plat : 
+\begin{itemize}
+\item soupe de poireaux
+\item gratin de cabillaud et purée de pomme de terre
+\item roti de porc aux oignons et pommes de terre
+\item salade de fruits pommes et poires sucrée au miel
+\end{itemize}
+
+\subsection{Apaiser la chaleur}
+
+Les aliments de nature froide et fraiche vont permettre de rafraichir la chaleur et ceux de nature stable vont harmoniser les énergies. La saveur douce va harmoniser et humidifier l'\textsc{estomac}, la saveur légèrement amère va permettre d'éliminer la chaleur et celle légèrement salée subtiles va rafraichir le \textsc{sang} et augmenter l'absorption des liquides.
+
+\begin{itemize}
+\item Viandes : cheval, lapin, blanc d'\oe{}ufs
+\item Poissons : crabe, algue
+\item Légumes : céleri branche, épinard, choux chinois, tomate, choux fleur, germe de soja, concombre, citrouille, potiron, aubergine, blette, laitue, cresson, asperge
+\item Légumineuses : soja vert, tofu
+\item Céréales : orge
+\item Fruits : châtaigne d'eau, ananas, poire, prune, mangue, pomme, pêche, pastèque, abricot, banane, kaki, kiwi, melon
+\item Aromates : chèvrefeuille
+\item Autre : canne à sucre
+\end{itemize}
+
+%Aliments à éviter : 
+
+On peut par exemple proposer comme plat : 
+\begin{itemize}
+\item moussaka à la viande de cheval
+\item salade de fruits au sucre de canne
+\end{itemize}
+
+\subsection{Régénérer les liquides}
+
+Pour aider à la régénération des liquides, on privilégiera les aliments semi-liquides (soupes, bouillies) ainsi que les aliments juteux et riches en eau. On privilégiera les aliments de saveur salée subtile qui vont augmenter l'absorption des liquides et tonifier le  \textsc{rein}, ceux de saveur douce qui nourrissent la \textsc{rate} et permettent les transformations. Les aliments de nature fraiche vont permettre de stimuler la production de liquides organiques et ceux de nature stable vont harmoniser les énergies.
+
+\begin{itemize}
+\item Viandes : porc
+\item Légumes : tomate, épinard, patate douce, navet
+\item Légumineuses : tofu, 
+\item Fruits : banane, kaki, pastèque, pamplemousse, citron, mandarine, mangue, orange, poire, pomme, prune, raisin, abricot, grenade, litchi
+\item Autre : lait de vache, miel, canne à sucre, sucre de canne blanc
+\end{itemize}
+
+%Aliments à éviter : 
+
+On peut par exemple proposer comme plat : 
+\begin{itemize}
+\item brochettes de porc marinée au miel et citron
+\item salade de fruits 
+\end{itemize}
+
+Les annexes C récapitulent sous formes de tableaux la nature et la saveur des différents aliments.
+
+%-------------------------------------------------
+
+% 1er mois: 
+% aliments bénéfiques : orge
+% aliments CI : épices, aliments fumés, ail, oignons, échalottes
+
+% 2ème mois: 
+% aliments bénéfiques : 
+% aliments CI : épices, aliments fumés
+
+% 3ème mois: 
+% aliments bénéfiques :
+% aliments CI : épices, aigres
+
+% 4ème mois: 
+% aliments bénéfiques : riz, soupe de poulet ou poisson
+% aliments CI :
+
+% 5ème mois: 
+% aliments bénéfiques : poulet
+% aliments CI :
+
+% 6ème mois: 
+% aliments bénéfiques : aliments savoureux et frais
+% aliments CI :
+
+% 7ème mois: 
+% aliments bénéfiques : pigeon, perdrix, faisant, lièvre, lapin
+% aliments CI :
+
+% 8ème mois: 
+% aliments bénéfiques : riz, lentille, aliments secs
+% aliments CI :
+
+% 9ème mois: 
+% aliments bénéfiques :
+% aliments CI :
+
+% 10ème mois: 
+% aliments bénéfiques :
+% aliments CI : aliments chauds, salés
+
+
+%Josette chapellet
+
+%Nourrir les 5 organes : Nature neutre : sésame noir, oeufs de caille
+
+%Réchauffer les reins : Nature tiède : fenouil, poireaux, pistache, rognons de moutons ou d?agneaux, badiane, ciboule chinoise, clou de girofle . Nature chaude : poivre du Sichuan
+
+%Tonifier le foie et le rein : Nature neutre : sésame noir, haricots noirs, moules, perche, baies de goji . Nature tiède : framboises, cerise, foie de poulet
+
+%Tonifier l'estomac : Nature froide : tomates . Nature neutre : patates douces, b½uf, câpres, truites . Nature tiède : potiron
+
+%Tonifier le foyer médian : Nature neutre : fèves, carottes, pommes de terre, papaye, noisette, caille, poulet, pied de porc, sang de b½uf, câpre, truite, sucre de canne blanc, miel  . Nature tiède : riz glutineux, pleurote, potiron, cerises, châtaignes, faisan, anguilles, cumin, persil, sucre de canne complet
+
+%Tonifier les 5 organes : Nature neutre : caille, sanglier . Nature tiède : cerf
+
+%----------------------------------------------------------------
+
+%Les aliments de saveurs douces et de nature Yang harmonisent le système digestif : miel, pomme de terre, carotte, sucre de canne (active le sang), riz, boeuf, pomme, poire, aliments de saveurs salées, poissons, fruits de mer, porc (foie et rognons), boudin, canard, choucroute, orge.
+
+%Le riz, le poisson, l?oie sauvage rendent le qi et le sang du f½tus fort.
+
+%Les aliments de nature douce et fraîche tonifient le C½ur, et le TRM et harmonise l?Estomac (riz dur, blé).
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\chapter{\'Etude de cas}
+
+\section{Cas n°1}
+
+Mme LE Na est une IIg, IIp agée de27 ans. Elle présente un oligoamnios au terme de 40SA. 
+On note dans ses antécédents: des migraines frontales en étau.
+
+Mme LE ne présente pas de signe de chaleur : pas de transpiration, pas de soif. Au niveau digestif il n'y a pas de plainte. Les urines sont sans particularités.
+Mme LE ne se plaint pas de fatigue, son endormissement est facile, elle se réveille fréquemment la nuit mais le rendormissement est facile. il est a constater qu'elle a beaucoup de rêves.
+
+Une douleur récente aigüe est apparue à la fesse gauche.
+
+Elle a des vertiges.
+
+La langue est pale, l'enduit est normal.
+
+Le pouls est rapide et fin, le pouls du pouce droit et du pied gauche sont faibles. \\
+
+Analyse : 
+\begin{itemize} \item[] les rêves, les réveils fréquents, les vertiges, la langue pâle et les pouls fins font penser à un vide de \textsc{sang}. \item[] les céphalées frontales en étau et la langue pale font penser à une insuffisance de \textsc{yang ming}. \item[] \end{itemize}
+
+Diagnostic : vide de \textsc{sang} \\
+
+Proposition de points : \begin{itemize} \item[] 3R (nourrit le \textsc{sang} du \textsc{foie} et le \textsc{yin} du \textsc{rein}) \item[]18V (point \textsc{shu} du \textsc{foie}) \item[] 17V (point \textsc{shu} du \textsc{foie}) \item[] 8F (nourrit le \textsc{sang} et le \textsc{yin}) \item[] 10Rte (tonifie et nourrit le \textsc{sang}) \end{itemize}
+d'autres points peuvent être utile : 6R (nourrit le \textsc{yin} du \textsc{rein}), 9R (nourrit le \textsc{rein}), 20V (point \textsc{shu} de la \textsc{rate}), 23V (point \textsc{shu} du \textsc{rein}), 12RM (point \textsc{mu} de l'\textsc{estomac}). \\
+
+Conseils alimentaires : la patiente pourra privilégier la consommation d'aliments de saveurs salées subtiles ou douces et de nature stable. Un repas se composera, par exemple, d'une soupe (pommes de terre, carottes, poireaux, navet) en entrée, suivi d'un rôti de porc avec des haricots verts et en dessert une salade de fraise.
+
+\clearpage
+
+\section{Cas n°2}
+
+Mme TH Au 35 ans, il s'agit d'une IIIg IIp. Cette 3\textsuperscript{ème} grossesse au terme de 33SA+5 est marquée par un hydramnios et une cholestase gravidique. Il n'y a pas de diabète gestationnel.
+On note dans ses antécédents : 
+\begin{description}
+\item 2008 : grossesse marquée par une séroconversion CMV, un hydramnios, une cholestase gravidique, pas de diabète gestationnel. Travail déclenché à terme, césarienne pour échec de déclenchement. Naissance d'une fille 3300g, bien portante. Délivrance complète, suites de couches normales.
+\item 2009 : grossesse marquée  un hydramnios, une cholestase gravidique, pas de diabète gestationnel. Césarienne itérative pour utérus cicatriciel et nécessité de provoquer l'accouchement à terme. Naissance d'un garçon 3915g (détresse respiratoire), bien portant ensuite. Délivrance complète, suites de couches normales.
+\item un diastasis des grands droits après sa seconde grossesse avec une hernie ombilicale
+\end{description}
+
+Il s'agit d'une patiente d'allure mince, de nature angoissée.
+
+Elle est frileuse, et présente des transpirations diurnes à l'effort ou quand il fait froid.
+Pas de douleurs décrite.
+Ses yeux sont secs et grattent.
+
+Mme TH est fatiguée, cette fatigue est ressentie dès le lever, elle a une insomnie d'endormissement et des réveils nocturnes dus au prurit. On constate une sommeil diurne après le repas.
+
+Au niveau digestif, Mme TH a un reflux avec brulures acides, il n'y a pas eu de nausée / vomissement en début de grossesse. La digestion est lente, il y a une constipation avec des selles sèches (crottes de bique). Elle n'a pas d'attirance pour une saveur particulière ; pas de gout particulier dans la bouche.
+Soif améliorée par la prise de boisson avec attirance pour les boissons froides.
+
+Pas d'OMI, pas de varices. Hémorroïdes non douloureuses qui grattent.
+
+Langue épaisse, rosée, pas d'enduit.
+
+Pouls régulier tonique un peu fin. Barrière gauche un peu profonde, pied droit pas assez perçu, pied gauche un peu trop ressorti. \\
+
+Analyse : 
+\begin{itemize} \item[] présence de signe de chaleur (constipation avec selles sèches, hémorroïdes qui grattent, soifs de boissons froides)
+\item[] présence de signe d'épuisement des liquides organiques (soif, selles sèches)
+\item[] présence de signe de \textsc{foie} (prurit, les yeux secs)
+\item[] présence de signe de vide de  \textsc{qi} (transpiration, frilosité, fatigue, somnolence)
+\item[] présence de signe de vide (fatigue, insomnie d'endormissement)
+\item[] présence de signe de \textsc{rate} (sommeil diurne, constipation, hémorroïdes, lenteur digestive) \item[] \end{itemize}
+
+Diagnostic : chaleur du \textsc{foie} qui perturbe la \textsc{rate}. \\
+
+Proposition de point : 
+\begin{itemize} \item[] 8F (point de tonification du \textsc{foie}, nourrit le \textsc{yin}) \item[] 3R (harmonise le \textsc{yin} et le \textsc{yang} du \textsc{rein}, produit et régule les liquides en général, nourrit le \textsc{yin} du \textsc{rein}, rafraichit) \item[] 6R commande l'enracinnement du \textsc{yin}, nourrit le \textsc{yin} du \textsc{rein} \item[] 13F (point \textsc{mu} de la \textsc{rate}, harmonise la \textsc{rate}, l'\textsc{estomac} et le \textsc{foie}, calme la chaleur du \textsc{foie}) \item[] 2Rte (régule et tonifie la \textsc{rate}) \item[] 12RM (point \textsc{mu} de l'\textsc{estomac}, favorise la transformation des liquides, tonifie le \textsc{qi} de la \textsc{rate}) \item[] 6MC (tonifie tout les \textsc{yin}, disperse tout les \textsc{yang}, disperse la chaleur des trois foyers) \end{itemize}
+d'autres points peuvent être utile : 9Rte (tonifie le \textsc{foie} et la \textsc{rein}, renforce la \textsc{rate}), 3Rte (tonifie la \textsc{rate} et l'\textsc{estomac}) . \\
+
+Conseils alimentaires : la consommation d'aliments de saveurs douces ou salées subtiles et de saveur légèrement acide sera conseillée à la patiente ainsi que les aliments de nature stable et fraiche (en petite quantité). On lui demandera d'éviter les aliments de nature chaude. Une terrine de lapin, un parmantier de canard et patates douces et une salade de fruits (pomme, mangue, framboise) pourront composer le repas de la patiente.
+\clearpage
+
+\section{Cas n°3}
+
+Mme LE La 33 ans, il s'agit d'une IIg Ip.  Cette 2\textsuperscript{nde} grossesse au terme 40SA +6j est marquée par un hydramnios et une macrosomie. Il n'y a pas de diabète gestationnel.
+On note dans ses antécédents : 
+\begin{description}
+\item une allergie aux pollens
+\item ablation dents de sagesse
+\item des cycles réguliers, de couleur et d'abondance normales, pas de douleur, pas de leucorrhées
+\item 2010 grossesse sans particularité, accouchement à terme +2 jours, travail spontané, bébé 4000g bien portant, allaitement artificiel.
+\end{description}
+
+Il s'agit d'une patiente d'allure robuste, de nature colérique.
+
+Elle a une sensation de chaleur (déjà présente avant la grossesse) avec bouffée de chaleur, sueurs spontanées et nocturnes.
+Pas de douleurs dos, lombes, genoux, chevilles décrites
+
+Pas de fatigue, malgré des réveils fréquents avec insomnie de rendormissement.
+
+Digestif RAS
+
+OMI présent, hémorroïdes qui piquent, varices et varicosités ++.
+
+Sensation de soif présente, de boisson froide, améliorée par la prise de boisson
+
+Urines RAS
+
+Langue rosée, enduit normal.
+
+Pouls sont bien ressentis dans toutes les loges. \\
+
+Analyse : 
+\begin{itemize} \item[] présence de signes de vide de \textsc{yin} (chaleur, sueurs nocturnes) 
+\item[] présence de signes de vide de \textsc{qi} (sueurs spontanées)
+\item[] présence de signes de chaleur (les réveils fréquents, l'insomnie de rendormissement, les hémorroïdes, la soif de boissons froides)  \item[] \end{itemize}
+
+Diagnostic : vide de \textsc{yin} \\
+
+Proposition de point : 
+\begin{itemize} \item[] 6R et 9R (nourrissent le \textsc{yin} du \textsc{rein}) \item[] 8F (nourrit le \textsc{yin}, tonifie le \textsc{foie}) \item[] 6MC (tonifie tout les \textsc{yin}) \end{itemize}
+d'autres points peuvent être utile : 3R (nourrit le \textsc{yin} du \textsc{rein}),18V (point \textsc{shu} du \textsc{foie}) \\
+
+Conseils alimentaires : les aliments de saveurs douces ou salées subtiles et de nature stable consommés par la patiente vont venir soutenir le \textsc{yin}. Un repas composé de brandade de morue accompagnée d'une salade (composée de laitue, haricots vert et betteraves) et en dessert un riz au lait d'amande parfumé à la fleur d'oranger permettra d'apporter ces différentes saveurs.
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+%\chapter*{Conclusion}
+\chapter*{Conclusion\markboth{Conclusion}{}}
+
+Il existe peu de description directe du \gls{la} dans les ouvrages de \gls{mtc} et peu d'études cliniques ; cela a représenté la difficulté majeur de ce travail. Malgré cela, on peut, en analysant les textes et en faisant le rapprochement entre le f\oe{}tus et ses annexes (placenta, \gls{la}), expliquer la physiologie du \gls{la}. Certains déséquilibres énergétiques vont favoriser les troubles quantitatifs de \gls{la} ; dans la majorité des cas on retrouve comme origine un vide de \textsc{rein}. \\
+
+Or la grossesse est un phénomène extrêmement \textsc{yin} qui va consommer les énergies de la femme en particulier celle du \textsc{rein}. Il est donc intéressant en préventif (c\oe{}ur de métier de la sage-femme) d'équilibrer les énergies de la femme lors d'un projet de grossesse lorsque cela est possible. Mais surtout de dépister pendant la grossesse les déséquilibres avant que les symptômes n'apparaissent et de les traiter quand les patientes se présentent avec un trouble quantitatif du \gls{la} déjà installé. \\
+
+%\pagestyle{empty}
+
+Ainsi, grâce à la \gls{mtc}, à sa patiente inquiète qui se demande lors de l'annonce d'un oligo ou hydramnios "Que puis-je faire ? Y a t'il un traitement ?" l'échographiste pourra  répondre "Madame, allez voir un acupuncteur. Les trouble du \gls{la} sont liés à un déséquilibre énergétique que l'on peut traiter."
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\clearpage
+%%\begin{appendices}
+
+\appendix
+%\appendixpage
+\addappheadtotoc
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\chapter{schéma du \textsc{triple réchauffeur}}
+\label{schema_tr}
+%\clearpage
+\pagestyle{empty}
+\vfill
+
+\pagebreak
+\pagestyle{empty}
+%\input{shema-tr.tex}
+
+\begin{figure}[H]
+   \centering
+  
+  \begin{tikzpicture}
+  
+%\draw[step=1cm,very thin, gray] (-1,-1) grid (15,20);  
+  
+\node (a4) at  (12,19) {O2};
+\node (a5) at  (15,19) {Alimentation};
+\node [anchor=south] (a5bis) at  (15,18) {Boisson};
+
+\node (b2) at  (6,16) {\textsc{sang}};
+\node (b3) at  (9,16) {\textsc{qi}};
+
+\node[anchor=west] (c1) at  (0,13) {TRS};
+\node (c2) at  (6,13) {\textsc{c\oe{}ur}};
+\node (c3) at  (9,13) {\textsc{poumon}};
+
+\node[anchor=south west] (d1) at  (0,11) {Diaphragme};
+
+\node[anchor=west] (e1) at  (0,8) {TRM};
+\node (e3) at  (9,9) {\textsc{rate}};
+\node (e5) at  (13,9) {\textsc{estomac}};
+
+\node (f5) at  (13,7) {\textsc{intestin gêle}};
+
+\node[anchor=south west] (g1) at  (0,5) {Ligne passant par l'ombilic};
+
+\node[anchor=west] (h1) at  (0,3) {TRI};
+\node (h3) at  (9,3) {\textsc{rein}};
+\node (h5) at  (13,3) {\textsc{gros intestin}};
+\node [anchor=south] (h5bis) at  (13,2) {\textsc{vessie}};
+
+\node (i5) at  (13,-1) {Elimination};
+
+%\node [anchor=west] at (13,8) {impur};
+%\node [anchor=west] at (13,8) {impur};
+
+\draw (0,11) -- (16,11);
+\draw (0,5) -- (16,5);
+
+\draw[->,>=latex] (a4) -- (e5);
+\draw[->,>=latex] (a5bis) -- (e5);
+\draw[->,>=latex] (e5) -- (f5) node[midway,above,sloped] {impur};
+\draw[->,>=latex] (f5) -- (h5) node[midway,above,sloped] {impur};
+\draw[->,>=latex] (h5bis) -- (i5);
+
+\draw[->,>=latex] (e5) -- (e3) node[midway,above,sloped] {pur};
+\draw[->,>=latex] (e3) -- (c2) node[midway,above,sloped] {pur};
+\draw[->,>=latex] (e3) -- (c3) node[midway,above,sloped] {pur};
+
+\draw[->,>=latex] (c3) -- (c2);
+\draw[->,>=latex] (c3) -- (b3);
+\draw[->,>=latex] (c2) -- (b2);
+
+\draw[->,>=latex] (f5) -- (h3) node[midway,above,sloped] {pur};
+\draw[->,>=latex] (h3) -- (e3) node[midway,above,sloped] {pur};
+
+\draw[->,>=latex] (h5) -- (h3) node[midway,above,sloped] {pur};
+
+
+\end{tikzpicture}
+
+\caption{schéma du \textsc{triple réchauffeur}}
+\end{figure}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\pagestyle{empty}
+
+\chapter{Relation entre vide de \textsc{rein} et vide de \textsc{sang}}
+\label{vide_rein_sang}
+\pagestyle{empty}
+\vfill
+
+\pagebreak
+\pagestyle{empty}
+
+
+%\input{organigramme-vr-vsg.tex}
+
+\begin{figure}[H]
+   \centering
+\begin{tikzpicture}[>=stealth,sloped]
+
+    \matrix (tree) [%
+      matrix of nodes,
+      minimum size=0.25cm,
+      column sep=0.50cm,
+      row sep=1.3cm,
+    ]
+    {                                                                                                    
+                                                                                           
+ & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Hypoperfusion placentaire\end{center} \end{minipage}} &\\
+ &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Augmentation de la chaleur\end{center} \end{minipage}} & {\begin{minipage}[t]{0.2\textwidth}\begin{center}Absence d'augmentation de la volémie\end{center} \end{minipage}} & \colorbox{red}{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{sang} et de \textsc{liquide organique}\end{center} \end{minipage}} &\\
+ &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yin} de \textsc{rein}\end{center} \end{minipage}} &\\
+ & & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yang} de \textsc{rate}\end{center} \end{minipage}} &\\
+\colorbox{orange}{\begin{minipage}[t]{0.1\textwidth}\begin{center}Vide de \textsc{rein}\end{center} \end{minipage}} &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yang} de \textsc{rein}\end{center} \end{minipage}} & & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Absence d'augmentation du débit et de la fréquence cardiaque\end{center} \end{minipage}}\\
+ &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{qi} du \textsc{rein}\end{center} \end{minipage}} & \\
+ & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Diminution de la PO2\end{center} \end{minipage}} & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Stase de \textsc{sang}\end{center} \end{minipage}} & \\
+ & & & {\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{qi} du \textsc{poumon}\end{center} \end{minipage}}\\
+ & & &\colorbox{red}{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{sang}\end{center} \end{minipage}}\\
+    };
+   
+   \draw[->] (tree-5-1) -- (tree-3-2) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-3-2) -- (tree-2-2) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-3-2) -- (tree-2-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-2-3) -- (tree-1-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-3-2) -- (tree-2-4) node [midway,above]{}; %{$P$};
+   
+   \draw[->] (tree-5-1) -- (tree-5-2) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-5-2) -- (tree-4-4) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-4-4) -- (tree-2-4) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-5-2) -- (tree-5-5) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-5-5) |- (tree-1-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-5-2) -- (tree-2-4) node [midway,above]{}; %{$P$};
+   
+   \draw[->] (tree-5-1) -- (tree-6-2) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-6-2) -- (tree-7-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-7-3) |- (tree-9-4) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-6-2) -- (tree-7-5) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-7-5) |- (tree-9-4) node [midway,above]{}; %{$P$};
+   
+   \draw[->] (tree-8-4) -- (tree-7-3) node [midway,above]{}; %{$P$};
+   \draw[->] (tree-8-4) -- (tree-7-5) node [midway,above]{}; %{$P$};
+
+    
+\end{tikzpicture}
+\caption{Relation entre vide de \textsc{rein} et vide de \textsc{sang}}
+\end{figure}
+\clearpage
+\vfill
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\chapter{Tableaux des aliments}
+
+%\pagestyle{empty}
+%\vfill
+
+\section{Nature froide}
+
+{\renewcommand{\arraystretch}{1,5}
+
+\begin{figure}[H]
+\begin{center}
+
+\footnotesize
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\hline
+
+& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
+
+\multirow{6}{1cm}{Nature froide} & Cheval & Foie de lapin & Cheval & Cheval & Escargot \\\cdashline{2-7} 
+ & & & Poulpe, coquilles st Jacques & & Crustacés, crabe, moules, encornets, calamar, huitres, coques, algues marines, coquilles st Jacques, palourdes \\\cdashline{2-7} 
+ & & & \oe{}ufs & & Fromage \\\cdashline{2-7} 
+ & Oseille, Tomate & Rhubarbe, céleri, asperge, endive,  pissenlit, chicorée & Cresson, céleri, tomate, germes de soja & & Sarrasin, pois  \\\cdashline{2-7} 
+ & Ananas, citron, pamplemousse, pastèque, tomate, kaki & Rhubarbe & Melon, banane, kaki, pastèque & & \\\cdashline{2-7} 
+ & Citronnelle & Verveine, thé, tuocha & Canne à sucre & & Sel, sauce soja \\
+\hline
+
+\end{tabular}
+\normalsize
+
+\end{center}
+\caption{Tableaux des aliments de nature froide}
+\end{figure}
+
+
+\section{Nature fraiche}
+
+{\renewcommand{\arraystretch}{1,5}
+
+\begin{figure}[H]
+\begin{center}
+
+\footnotesize
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\hline
+
+& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
+
+\multirow{6}{1cm}{Nature fraiche} & & Foie, lapin, foie de mouton & Lapin & Lapin & Grenouille \\\cdashline{2-7} %viande
+ & & & Blanc d'\oe{}ufs, \oe{}uf de cane, \oe{}uf de caille & & \\\cdashline{2-7}  %poisson
+ & Yaourt & & & & \\\cdashline{2-7} %lait 
+ & Artichaut, épinard & Blé, laitue, orge, salade, seigle, endives, chou-rave, brocoli & Chou-fleur, chou chinois, radis, blé, orge, sarrasin, haricot, concombre, aubergine, champignon de Paris, épinard, laitue, carotte crue, brocoli, navet, courge d'hiver, blette & Radis, menthe, chou rave, navet & Orge \\\cdashline{2-7} %legumes
+ & Mandarine, orange, prune, mangue, pomme, poire, framboise & & Pomme, poire, prune, avocat, mandarine, framboise & & \\\cdashline{2-7}  %fruits
+ & & Thé, origan & Thé & Menthe, origan & \\ %autre
+\hline
+
+\end{tabular}
+\vfill
+\normalsize
+
+\end{center}
+\caption{Tableaux des aliments de nature fraiche}
+\end{figure}
+
+\section{Nature stable}
+
+{\renewcommand{\arraystretch}{1,5}
+
+\begin{figure}[H]
+\begin{center}
+
+\footnotesize
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\hline
+
+& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
+
+\multirow{6}{1cm}{Nature stable} & Poule, b\oe{}uf, porc, poulet & Foie de génisse, foie de veau, rognon & B\oe{}uf, caille, canard, porc, veau, poulet, oie, pigeon, sanglier, poule & & Canard, pigeon, porc, sanglier  \\\cdashline{2-7} %viande
+ & & & Cabillaud, truite, poisson d'eau douce, maquereau, carpe & & Morue, oursin, sardine   \\\cdashline{2-7} %poisson
+ & & & Jaune d'\oe{}uf, \oe{}uf de poule, lait de vache & &  \\\cdashline{2-7} %lait 
+ & Igname & Navet & Riz, maïs, polenta, avoine, millet, pomme de terre, pois, fève, haricots verts, chou, carottes, chou-fleur, patate douce, betterave, champignon parfumé, lentille, amande & Navet, avoine &  \\\cdashline{2-7} %legumes
+ & Fraise, prune, raisin, pomme, poire & & Figue, papaye, raisin, grenade, prune, fraise & & \\\cdashline{2-7}  %fruits
+ & & Fleur d'oranger& Miel, safran, réglisse, camomille, sucre, fleur d'oranger & & Sel de celeri  \\ %autre
+ \hline
+
+\end{tabular}
+\normalsize
+
+\end{center}
+\caption{Tableaux des aliments de nature stable}
+\end{figure}
+
+\section{Nature tiède}
+
+{\renewcommand{\arraystretch}{1,5}
+
+\begin{figure}[H]
+\begin{center}
+
+\footnotesize
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\hline
+
+& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
+
+\multirow{6}{1cm}{Nature tiède} & Faisan & Foie de volaille, mouton, foie de porc & Dinde, faisan, b\oe{}uf, mouton, poulet & Jambon & \\\cdashline{2-7} %viande
+ & Conserve de poisson, rollmops, moule & & Anguille, crevette, anchois, thon & & Hareng, sardine, crevette, thon, saumon, poisson fumé \\\cdashline{2-7} %poisson
+ & Fromage de brebis, fromage de chèvre & & Fromage de vache, lait de brebis & Fromage de chèvre & Fromage \\\cdashline{2-7} %lait 
+ & & Asperge, épautre & Fenouil, riz gluant, pleurote, potiron, poireau, épautre & Poireau, fenouil, oignon, échalotte, ail & Avoine \\\cdashline{2-7} %legumes
+ & Abricot, pêche, cerise, litchi, arbouse, datte & & Jujube, abricot, pêche, cerise, litchi, arbouse, châtaigne, datte, pignon de pin, coing, noix, noisette & Pêche & Châtaigne, noix \\\cdashline{2-7}  %fruits
+ & Vinaigre & Alcool leger, tabac, valériane, café, thym & Badiane, muscade, anis étoilé & Aneth, coriandre, ciboule, ciboulette, tabac, pistache, cumin, moutarde, girofle, gingembre, muscade, cardamome, anis étoilé, carvi, thym & \\ %autre
+\hline
+
+\end{tabular}
+\normalsize
+
+\end{center}
+\caption{Tableaux des aliments de nature tiède}
+\end{figure}
+
+\section{Nature chaude}
+
+{\renewcommand{\arraystretch}{1,5}
+
+\begin{figure}[H]
+\begin{center}
+
+\footnotesize
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\hline
+
+& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
+
+\multirow{6}{1cm}{Nature chaude} & Agneau & Viande boucanée, faisan & & & Charcuterie, salaison  \\\cdashline{2-7} %viande
+ & & & Soja & &  \\\cdashline{2-7} %poisson
+ & & & Beurre, graisse animale & Fromage fermenté, roquefort, bleu d'Auvergne & fromage gras  \\\cdashline{2-7} %lait 
+ & & & & & \\\cdashline{2-7} %legumes
+ & & & & &  \\\cdashline{2-7}  %fruits
+ & Vinaigre & Alcool fort, café, fenugrec & Cannelle & Alcool fort, poivre noir, cannelle, piment, gingembre &  \\ %autre
+\hline
+
+\end{tabular}
+\normalsize
+
+\end{center}
+\caption{Tableaux des aliments de nature chaude}
+\end{figure}
+%%%%%
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\pagestyle{empty}
+
+\chapter{Explication de points}
+
+\pagestyle{empty}
+\vfill
+
+\pagebreak
+\pagestyle{empty}
 
 % Point interdit pendant la grossesse : 4GI, 6Rte, 60V, 67V.
 %(-) = dispersion
@@ -1659,717 +2371,7 @@ Il est utilisé en cas de vide de \textsc{sang} du \textsc{foie}, de montée du \t
 \end{itemize}
 Il est utilisé en cas de montée du \textsc{yang} du \textsc{foie} et vent du \textsc{foie}.
 
-\section{Alimentation et régulation du liquide amniotique}
-
-En médecine chinoise, l'hygiène de vie, dont l'alimentation fait partie, représente une partie du traitement des déséquilibres énergétiques. En effet chaque aliment est caractérisé par sa vitalité \textsc{jing}, sa saveur \textsc{wei}, sa nature \textsc{xing}, sa texture et sa forme \textsc{xin} et sa couleur \textsc{se}.
-
-J.M. EYSSALET : \emph{"L'aliment est essentiellement un véhicule de saveurs, \textsc{wei} et de souffles, \textsc{qi} destiné à restaurer respectivement notre forme corporelle, \textsc{xing} et notre principe vital, \textsc{jing}"} \cite{DUC2010}. \\ 
-
-Il existe 5 saveurs, chaque saveur correspond à un élément dans le cercle des éléments et vient en petite quantité nourrir l'organe, le tissu, la fonction et l'émotion lui correspondant : 
-\begin{itemize}
-\item l'acide, \textsc{suan}, de nature \textsc{yin}, correspond au \textsc{bois}, affinité avec \textsc{foie} et \textsc{vésicule biliaire}
-\item l'amère \textsc{ku}, de nature \textsc{yin}, correspond au \textsc{feu}, affinité avec \textsc{c\oe{}ur} et \textsc{intestin grêle}
-\item le doux \textsc{gan}, de nature \textsc{yang}, correspond à la \textsc{terre}, affinité avec \textsc{rate} et \textsc{estomac}
-\item le piquant \textsc{xin}, de nature \textsc{yang}, correspond au \textsc{métal}, affinité pour \textsc{poumon} et \textsc{gros intestin}
-\item le salé \textsc{xian}, de nature \textsc{yin}, correspond à l'\textsc{eau}, affinité  pour \textsc{rein} et \textsc{vessie}.
-\end{itemize} 
-
-SUWEN 5 \emph{"... Le salé engendre le \textsc{rein}... ...l'acide engendre le \textsc{foie}... ... l'amer engendre le \textsc{c\oe{}ur}... ... le doux engendre la \textsc{rate}... ... le piquant engendre le \textsc{poumon}... "} \cite{DUC2010}. \\
-
-SUWEN 74 \emph{"Chacune des saveurs qui entre rejoint son viscère d'élection... peu à peu s'accroit ainsi le \textsc{qi} qui en est le produit normal de transformation. Mais trop prolongé, cet accroissement est une cause de maladie."} \\
-
-La nature des aliments a une influence thermique. On trouve :
-\begin{itemize}
-\item les aliments de nature froide \textsc{han}. Ils sont de nature \textsc{yin}, ils refroidissent et font descendre le \textsc{qi}. Ils vont freiner le \textsc{yang}.
-\item les aliments de nature fraiche \textsc{liang}. Ils sont de nature \textsc{yin}, mais moins que les aliments de nature froide. 
-\item les aliments de nature neutre \textsc{ping}. Ils équilibrent et harmonisent le \textsc{yin} et le \textsc{yang}.
-\item les aliments de nature tiède \textsc{wen}. Ils sont de nature \textsc{yang}, mais moins que les aliments de nature chaude.
-\item les aliments de nature chaude \textsc{re}. Ils sont de nature \textsc{yang}, ils réchauffent et stimulent la circulation du \textsc{qi}.
-\item []
-\end{itemize} 
-
-Ainsi pour rétablir l'équilibre énergétique, on veillera à privilégier les aliments dont la saveur va nourrir l'organe en manque selon le cycle de \textsc{sheng} et de \textsc{ke} et dont la nature va compenser les excès et les déficits de \textsc{yin} ou de \textsc{yang}. On pourra proposer à la patiente une liste d'aliments et des exemples de plats qui, grâce à leur nature et leur saveur, vont soutenir le traitement par acupuncture. On donnera également quelques conseils plus généraux, en effet, d'une façon générale il est préférable :
-\begin{itemize}
-\item de diminuer la consommation de laitage, privilégier ceux de chèvre ou de brebis.
-\item de diminuer la consommation de graisses
-\item de manger à température ambiante ou chaude pour aider la digestion (les aliments crus agressent l'\textsc{estomac})
-\item d'éviter les aliments de nature trop chaude et les modes de cuisson dits « chaud » (fritures, sautés) car ils peuvent dessécher les LO
-\item de préférer les aliments de nature fraiche ou stable et de saveur douce qui nourrissent et harmonise le sang
-\end{itemize}
-
-De plus, pour renforcer la \textsc{rate}, on conseillera : 
-\begin{itemize}
-\item de manger un bon petit déjeuner car c'est entre 7 et 9 h que l'énergie de l'\textsc{estomac} est à son maximum (horloge énergétique chinoise) et si possible dans l'heure qui suit le lever.
-\item de manger tôt et léger le soir car l'énergie de l'\textsc{estomac} est à son minimum.
-\item de manger régulièrement (horaire et composition)
-\item de boire en petite quantité des boissons chaudes pendant le repas (trop de liquides ou des boissons froides perturbent le travail de l'\textsc{estomac})
-\end{itemize}
-
-\cite{CHA2017, BET2012, DUC2010}
-
-\subsection{Vide de \textsc{qi}}
-
-Pour tonifier le \textsc{qi} on privilégiera les aliments de saveurs salées subtiles ou douces elles permettront de soutenir les énergies originelles, de nourrir le \textsc{rein} et la \textsc{rate}, de reconstituer le \textsc{qi} et de favoriser l'absorption des liquides organiques ; ainsi que ceux de nature stable, qui harmonisent le \textsc{sang} et le \textsc{qi}. On évitera les aliments de saveurs piquantes qui épuisent le \textsc{jing} et dispersent l'énergie. Il est également recommandé d'avoir une alimentation équilibrée (féculents, céréales et viandes) pour renforcer le \textsc{qi} durablement.
-
-Aliments à privilégier : 
-\begin{itemize}
-\item Viandes : b\oe{}uf, mouton, \oe{}ufs (de poules et de caille), porc (foie et rognons), boudin, agneau, cheval, faisan, pigeon, caille, lapin, poulet et abats de poulet (gésier et foie), oie, canard, veau, dinde
-\item Poissons : anguille, hareng, maquereau, moule, poulpe, huitre, esturgeon, thon, truite, dorade, mulet
-\item Légumes : pomme de terre, carotte, potimarron, potiron, courge, patate douce, pois, asperge, champignon (rosé des prés et parfumés, pleurote, cèpes, shiitake), choux, tomate, igname, aubergine
-\item Légumineuses : lentille, haricot rouge, tofu
-\item Céréales : riz, orge, sarrasin, mais, avoine, millet (bien cuites)
-\item Fruits :  pomme, poire, châtaigne, noix, amande, noix de coco, cacahuète, raisin, cerise, sésame, datte, figue
-\item Aromates : laurier, réglisse
-\item Autre : lait de brebis, miel, sucre de canne, ginseng, mélasse, gelée royale
-\end{itemize}
-
-Aliments à éviter : ail frais, cumin, clou de girofle, poivre noir, piment, gingembre, fromage de chèvre et fermenté
-
-On peut par exemple proposer comme plat : 
-\begin{itemize}
-\item une bouillie de flocons d'avoine aux dattes
-\item un risotto aux champignons et poulet
-\item un hachis Parmentier de b\oe{}uf et pommes de terre ou de canard et patates douces
-\item une salades de pommes de terre et \oe{}ufs 
-\item un clafoutis aux cerises
-\end{itemize}
-
-\subsection{Vide de \textsc{sang}}
-
-Pour tonifier le \textsc{sang} on privilégiera les aliments de saveurs salées subtiles ou douces qui permettront de soutenir les énergies originelles, de nourrir le \textsc{rein} et la \textsc{rate}, de tonifier le \textsc{c\oe{}ur} et harmoniser la fonction du \textsc{foie} ; ainsi que ceux de nature stable, qui harmonisent le \textsc{sang} et le \textsc{qi}. On conseillera aussi les aliments de couleurs rouges et sombres.
-
-Aliments à privilégier : 
-\begin{itemize}
-\item Viandes : \oe{}ufs (poule - en particulier le jaune -, caille), b\oe{}uf, porc (foie et rognons), foie (veau ou genisse), mouton (foie), poulet, boudin noir, canard, lait de jument
-\item Poissons : fruits de mer, pieuvre, calmar, poulpe, moule, bigorneau, huître, sardine, thon, anguille
-\item Légumes : pomme de terre, carotte, épinard, betterave, brocolis, pousse d'avoine germée (alfalfa), artichaut,  choux, céleri, cresson, champignon (Paris et shitake), choucroute, avocat, igname
-\item Légumineuses : lentille, haricots rouge
-\item Céréales : riz et riz glutineux, orge, mais, blé, avoine
-\item Fruits : pomme, poire, cacahouète, amande, datte rouge de chine, noix et lait de coco, sésame, raisin noir, pruneaux, fruits secs, abricot, figue, mûre, fruits rouges, citron, mélasse, lait de soja, pignons de pin, litchi
-\item Aromates : persil
-\item Autre : miel, sucre de canne, cacao, pollen
-\end{itemize}
-
-Aliments à éviter : café, thé, laitage
-
-On peut par exemple proposer comme plat : 
-\begin{itemize}
-\item du riz au lait de soja avec des amandes et abricots
-\item un risotto aux champignons et poulet
-\item une omelette au persil
-\end{itemize}
-
-\subsection{Vide de \textsc{yin}}
-
-Pour tonifier le \textsc{yin} on privilégiera les aliments de saveurs douces ou salées subtiles et saveur légèrement acide qui permettent de soutenir le \textsc{yin}, de diffuser l'énergie et de reconstituer l'énergie vitale. Les aliments de nature fraiche vont refroidir la chaleur provoquée par le vide de \textsc{yin}, et ceux de nature stable vont harmoniser le \textsc{yin} et le \textsc{yang}. On fera tout de même attention car en trop grande quantité ces aliments peuvent congestionner la \textsc{rate}. On évitera les aliments de nature chaude qui augmentent la chaleur et le \textsc{yang} ce qui aggrave le vide de \textsc{yin}.
-
-\begin{itemize}
-\item Viandes : \oe{}ufs (poule et cane), b\oe{}uf, porc (foie et rognons), boudin, canard, oie, pigeon, lapin, poulet (foie)
-\item Poissons : fruits de mer, moule, sèche, poisson d'eau douce, palourde de mer et d'eau douce, crabe, huitre, poulpe, sardine,
-\item Légumes : pomme de terre, épinard, carotte, choucroute, pousse d'avoine germée (alfalfa), artichaut, asperge, pousse de haricots mung, pois, haricot vert, patate douce, tomate, igname, avocat, malt 
-\item Légumineuses : haricots noir et rouge, tofu
-\item Céréales : riz, orge, millet, 
-\item Fruits : pomme, poire, abricots, bananes, citrons verts, mangues, mures, kakis, ananas, grenades, lait de coco, graines de sésame et de sésame noir, noix, châtaignes, litchi, raisin
-\item Aromates : marjolaine, orties, ginseng, gelée royale, huile d'olive
-\item Autre : miel, sucre de canne, fromage, lait (vache, brebis, chèvre)
-\end{itemize}
-
-Aliments à éviter : café, alcool, sucre, épice forte et piquante car augmentent le vide de yin
-
-On peut par exemple proposer comme plat : 
-\begin{itemize}
-\item une salade de fruits
-\item du poisson au lait de coco
-\item des smoothies sucrés au miel
-\item des tacos
-\end{itemize}
-
-\subsection{Vide de \textsc{yang}}
-
-Pour tonifier le \textsc{yang}, on privilégiera les aliments de saveur douce qui vont nourrir le \textsc{yang}, reconstituer l'énergie vitale et la diffuser ;  ainsi que la saveur salée subtiles qui nourrit le \textsc{rein} et le \textsc{jing} inné. Les aliments de nature stable vont réchauffer et harmoniser le \textsc{yin} et le \textsc{yang}. De plus pour ne pas aggraver le vide de \textsc{yang}, il est nécessaire de privilégier les aliments cuits et d'éviter les aliments froids. Il faut également faire attention à ne pas utiliser trop d'épices qui réchaufferaient de trop le corps ce qui provoquerait de la transpiration, refroidirait et assécherait le corps.
-
-
-Aliments à privilégier : 
-\begin{itemize}
-\item Viandes : b\oe{}uf, porc (foie et rognons), boudin, canard, poulet, agneau, rognons (boeuf et agneau), mouton, cerf, 
-\item Poissons : anchois, homard, moule, crevette, truite 
-\item Légumes : pomme de terre, carotte, choucroute, germe de blé, poireaux, radis, courge, patate douce, navet, cresson
-\item Céréales : orge, quinoa, riz glutineux, 
-\item Fruits : pomme, poire, cerise, litchi, pêche, framboise, fraise, châtaigne, pignon de pin, pistache, noix, 
-\item Aromates : échalote, oignon, basilic, poivre noir et blanc, capre, piment de cayenne, ciboulette, canelle, girofle, ail, gingembre, raifort, muscade, romarin, sauge, sariette, menthe verte, anis étoilée, thym, vinaigre, ciboule chinoise
-\item Autre : miel, sucre de canne
-\end{itemize}
-
-%Aliments à éviter : 
-
-On peut par exemple proposer comme plat : 
-\begin{itemize}
-\item du poulet rôti aux herbes
-\item des moules à l'ail
-\item un gâteau de riz à la cannelle sucré au sucre brun
-\item une soupe de poireaux
-\item des potages à base de poissons
-\end{itemize}
-
-\subsection{Stagnation du \textsc{qi} du \textsc{foie}}
-
-Pour améliorer la circulation du \textsc{qi} du \textsc{foie}, on privilégiera les aliments de saveur légèrement acide pour nourrir le \textsc{foie}, les saveurs douces pour harmoniser la fonction du \textsc{foie}, légèrement piquantes pour stimuler le \textsc{foie} et faire circuler le \textsc{sang} et le \textsc{qi} et salées subtiles pour son action dispersante sur les accumulations. Les aliments de nature stable vont harmoniser le \textsc{qi} et ceux de nature tiède vont tonifier et stimuler la circulation du \textsc{qi}.
-
-\begin{itemize}
-\item Viandes : B\oe{}uf, canard, porc, poulet
-\item Poissons : cabillaud
-\item Légumes : poireau, céleri, fenouil, navet, pomme de terre
-\item Fruits : pomme, poire
-\item Aromates : ail cuit, cumin, herbes aromatiques, ciboulettes, gingembre frais, oignons cuits
-\item Autre : miel
-\end{itemize}
-
-%Aliments à éviter : 
-
-On peut par exemple proposer comme plat : 
-\begin{itemize}
-\item soupe de poireaux
-\item gratin de cabillaud et purée de pomme de terre
-\item roti de porc aux oignons et pommes de terre
-\item salade de fruits pommes et poires sucrée au miel
-\end{itemize}
-
-\subsection{Apaiser la chaleur}
-
-Les aliments de nature froide et fraiche vont permettre de rafraichir la chaleur et ceux de nature stable vont harmoniser les énergies. La saveur douce va harmoniser et humidifier l'\textsc{estomac}, la saveur légèrement amère va permettre d'éliminer la chaleur et celle légèrement salée subtiles va rafraichir le \textsc{sang} et augmenter l'absorption des liquides.
-
-\begin{itemize}
-\item Viandes : cheval, lapin, blanc d'\oe{}ufs
-\item Poissons : crabe, algue
-\item Légumes : céleri branche, épinard, choux chinois, tomate, choux fleur, germe de soja, concombre, citrouille, potiron, aubergine, blette, laitue, cresson, asperge
-\item Légumineuses : soja vert, tofu
-\item Céréales : orge
-\item Fruits : châtaigne d'eau, ananas, poire, prune, mangue, pomme, pêche, pastèque, abricot, banane, kaki, kiwi, melon
-\item Aromates : chèvrefeuille
-\item Autre : canne à sucre
-\end{itemize}
-
-%Aliments à éviter : 
-
-On peut par exemple proposer comme plat : 
-\begin{itemize}
-\item moussaka à la viande de cheval
-\item salade de fruits au sucre de canne
-\end{itemize}
-
-\subsection{Régénérer les liquides}
-
-Pour aider à la régénération des liquides, on privilégiera les aliments semi-liquides (soupes, bouillies) ainsi que les aliments juteux et riches en eau. On privilégiera les aliments de saveur salée subtile qui vont augmenter l'absorption des liquides et tonifier le  \textsc{rein}, ceux de saveur douce qui nourrissent la \textsc{rate} et permettent les transformations. Les aliments de nature fraiche vont permettre de stimuler la production de liquides organiques et ceux de nature stable vont harmoniser les énergies.
-
-\begin{itemize}
-\item Viandes : porc
-\item Légumes : tomate, épinard, patate douce, navet
-\item Légumineuses : tofu, 
-\item Fruits : banane, kaki, pastèque, pamplemousse, citron, mandarine, mangue, orange, poire, pomme, prune, raisin, abricot, grenade, litchi
-\item Autre : lait de vache, miel, canne à sucre, sucre de canne blanc
-\end{itemize}
-
-%Aliments à éviter : 
-
-On peut par exemple proposer comme plat : 
-\begin{itemize}
-\item brochettes de porc marinée au miel et citron
-\item salade de fruits 
-\end{itemize}
-
-Les annexes C récapitulent sous formes de tableaux la nature et la saveur des différents aliments.
-
-%-------------------------------------------------
-
-% 1er mois: 
-% aliments bénéfiques : orge
-% aliments CI : épices, aliments fumés, ail, oignons, échalottes
-
-% 2ème mois: 
-% aliments bénéfiques : 
-% aliments CI : épices, aliments fumés
-
-% 3ème mois: 
-% aliments bénéfiques :
-% aliments CI : épices, aigres
-
-% 4ème mois: 
-% aliments bénéfiques : riz, soupe de poulet ou poisson
-% aliments CI :
-
-% 5ème mois: 
-% aliments bénéfiques : poulet
-% aliments CI :
-
-% 6ème mois: 
-% aliments bénéfiques : aliments savoureux et frais
-% aliments CI :
-
-% 7ème mois: 
-% aliments bénéfiques : pigeon, perdrix, faisant, lièvre, lapin
-% aliments CI :
-
-% 8ème mois: 
-% aliments bénéfiques : riz, lentille, aliments secs
-% aliments CI :
-
-% 9ème mois: 
-% aliments bénéfiques :
-% aliments CI :
-
-% 10ème mois: 
-% aliments bénéfiques :
-% aliments CI : aliments chauds, salés
-
-
-%Josette chapellet
-
-%Nourrir les 5 organes : Nature neutre : sésame noir, oeufs de caille
-
-%Réchauffer les reins : Nature tiède : fenouil, poireaux, pistache, rognons de moutons ou d?agneaux, badiane, ciboule chinoise, clou de girofle . Nature chaude : poivre du Sichuan
-
-%Tonifier le foie et le rein : Nature neutre : sésame noir, haricots noirs, moules, perche, baies de goji . Nature tiède : framboises, cerise, foie de poulet
-
-%Tonifier l'estomac : Nature froide : tomates . Nature neutre : patates douces, b½uf, câpres, truites . Nature tiède : potiron
-
-%Tonifier le foyer médian : Nature neutre : fèves, carottes, pommes de terre, papaye, noisette, caille, poulet, pied de porc, sang de b½uf, câpre, truite, sucre de canne blanc, miel  . Nature tiède : riz glutineux, pleurote, potiron, cerises, châtaignes, faisan, anguilles, cumin, persil, sucre de canne complet
-
-%Tonifier les 5 organes : Nature neutre : caille, sanglier . Nature tiède : cerf
-
-%----------------------------------------------------------------
-
-%Les aliments de saveurs douces et de nature Yang harmonisent le système digestif : miel, pomme de terre, carotte, sucre de canne (active le sang), riz, boeuf, pomme, poire, aliments de saveurs salées, poissons, fruits de mer, porc (foie et rognons), boudin, canard, choucroute, orge.
-
-%Le riz, le poisson, l?oie sauvage rendent le qi et le sang du f½tus fort.
-
-%Les aliments de nature douce et fraîche tonifient le C½ur, et le TRM et harmonise l?Estomac (riz dur, blé).
-
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter{\'Etude de cas}
-
-\section{Cas n°1}
-
-Mme LE Na est une IIg, IIp agée de27 ans. Elle présente un oligoamnios au terme de 40SA. 
-On note dans ses antécédents: des migraines frontales en étau.
-
-Mme LE ne présente pas de signe de chaleur : pas de transpiration, pas de soif. Au niveau digestif il n'y a pas de plainte. Les urines sont sans particularités.
-Mme LE ne se plaint pas de fatigue, son endormissement est facile, elle se réveille fréquemment la nuit mais le rendormissement est facile. il est a constater qu'elle a beaucoup de rêves.
-
-Une douleur récente aigüe est apparue à la fesse gauche.
-
-Elle a des vertiges.
-
-La langue est pale, l'enduit est normal.
-
-Le pouls est rapide et fin, le pouls du pouce droit et du pied gauche sont faibles. \\
-
-Analyse : 
-\begin{itemize} \item[] les rêves, les réveils fréquents, les vertiges, la langue pâle et les pouls fins font penser à un vide de \textsc{sang}. \item[] les céphalées frontales en étau et la langue pale font penser à une insuffisance de \textsc{yang ming}. \item[] \end{itemize}
-
-Diagnostic : vide de \textsc{sang} \\
-
-Proposition de points : \begin{itemize} \item[] 3R (nourrit le \textsc{sang} du \textsc{foie} et le \textsc{yin} du \textsc{rein}) \item[]18V (point \textsc{shu} du \textsc{foie}) \item[] 17V (point \textsc{shu} du \textsc{foie}) \item[] 8F (nourrit le \textsc{sang} et le \textsc{yin}) \item[] 10Rte (tonifie et nourrit le \textsc{sang}) \end{itemize}
-d'autres points peuvent être utile : 6R (nourrit le \textsc{yin} du \textsc{rein}), 9R (nourrit le \textsc{rein}), 20V (point \textsc{shu} de la \textsc{rate}), 23V (point \textsc{shu} du \textsc{rein}), 12RM (point \textsc{mu} de l'\textsc{estomac}). \\
-
-Conseils alimentaires : la patiente pourra privilégier la consommation d'aliments de saveurs salées subtiles ou douces et de nature stable. Un repas se composera, par exemple, d'une soupe (pommes de terre, carottes, poireaux, navet) en entrée, suivi d'un rôti de porc avec des haricots verts et en dessert une salade de fraise.
-
-\clearpage
-
-\section{Cas n°2}
-
-Mme TH Au 35 ans, il s'agit d'une IIIg IIp. Cette 3\textsuperscript{ème} grossesse au terme de 33SA+5 est marquée par un hydramnios et une cholestase gravidique. Il n'y a pas de diabète gestationnel.
-On note dans ses antécédents : 
-\begin{description}
-\item 2008 : grossesse marquée par une séroconversion CMV, un hydramnios, une cholestase gravidique, pas de diabète gestationnel. Travail déclenché à terme, césarienne pour échec de déclenchement. Naissance d'une fille 3300g, bien portante. Délivrance complète, suites de couches normales.
-\item 2009 : grossesse marquée  un hydramnios, une cholestase gravidique, pas de diabète gestationnel. Césarienne itérative pour utérus cicatriciel et nécessité de provoquer l'accouchement à terme. Naissance d'un garçon 3915g (détresse respiratoire), bien portant ensuite. Délivrance complète, suites de couches normales.
-\item un diastasis des grands droits après sa seconde grossesse avec une hernie ombilicale
-\end{description}
-
-Il s'agit d'une patiente d'allure mince, de nature angoissée.
-
-Elle est frileuse, et présente des transpirations diurnes à l'effort ou quand il fait froid.
-Pas de douleurs décrite.
-Ses yeux sont secs et grattent.
-
-Mme TH est fatiguée, cette fatigue est ressentie dès le lever, elle a une insomnie d'endormissement et des réveils nocturnes dus au prurit. On constate une sommeil diurne après le repas.
-
-Au niveau digestif, Mme TH a un reflux avec brulures acides, il n'y a pas eu de nausée / vomissement en début de grossesse. La digestion est lente, il y a une constipation avec des selles sèches (crottes de bique). Elle n'a pas d'attirance pour une saveur particulière ; pas de gout particulier dans la bouche.
-Soif améliorée par la prise de boisson avec attirance pour les boissons froides.
-
-Pas d'OMI, pas de varices. Hémorroïdes non douloureuses qui grattent.
-
-Langue épaisse, rosée, pas d'enduit.
-
-Pouls régulier tonique un peu fin. Barrière gauche un peu profonde, pied droit pas assez perçu, pied gauche un peu trop ressorti. \\
-
-Analyse : 
-\begin{itemize} \item[] présence de signe de chaleur (constipation avec selles sèches, hémorroïdes qui grattent, soifs de boissons froides)
-\item[] présence de signe d'épuisement des liquides organiques (soif, selles sèches)
-\item[] présence de signe de \textsc{foie} (prurit, les yeux secs)
-\item[] présence de signe de vide de  \textsc{qi} (transpiration, frilosité, fatigue, somnolence)
-\item[] présence de signe de vide (fatigue, insomnie d'endormissement)
-\item[] présence de signe de \textsc{rate} (sommeil diurne, constipation, hémorroïdes, lenteur digestive) \item[] \end{itemize}
-
-Diagnostic : chaleur du \textsc{foie} qui perturbe la \textsc{rate}. \\
-
-Proposition de point : 
-\begin{itemize} \item[] 8F (point de tonification du \textsc{foie}, nourrit le \textsc{yin}) \item[] 3R (harmonise le \textsc{yin} et le \textsc{yang} du \textsc{rein}, produit et régule les liquides en général, nourrit le \textsc{yin} du \textsc{rein}, rafraichit) \item[] 6R commande l'enracinnement du \textsc{yin}, nourrit le \textsc{yin} du \textsc{rein} \item[] 13F (point \textsc{mu} de la \textsc{rate}, harmonise la \textsc{rate}, l'\textsc{estomac} et le \textsc{foie}, calme la chaleur du \textsc{foie}) \item[] 2Rte (régule et tonifie la \textsc{rate}) \item[] 12RM (point \textsc{mu} de l'\textsc{estomac}, favorise la transformation des liquides, tonifie le \textsc{qi} de la \textsc{rate}) \item[] 6MC (tonifie tout les \textsc{yin}, disperse tout les \textsc{yang}, disperse la chaleur des trois foyers) \end{itemize}
-d'autres points peuvent être utile : 9Rte (tonifie le \textsc{foie} et la \textsc{rein}, renforce la \textsc{rate}), 3Rte (tonifie la \textsc{rate} et l'\textsc{estomac}) . \\
-
-Conseils alimentaires : la consommation d'aliments de saveurs douces ou salées subtiles et de saveur légèrement acide sera conseillée à la patiente ainsi que les aliments de nature stable et fraiche (en petite quantité). On lui demandera d'éviter les aliments de nature chaude. Une terrine de lapin, un parmantier de canard et patates douces et une salade de fruits (pomme, mangue, framboise) pourront composer le repas de la patiente.
-\clearpage
-
-\section{Cas n°3}
-
-Mme LE La 33 ans, il s'agit d'une IIg Ip.  Cette 2\textsuperscript{nde} grossesse au terme 40SA +6j est marquée par un hydramnios et une macrosomie. Il n'y a pas de diabète gestationnel.
-On note dans ses antécédents : 
-\begin{description}
-\item une allergie aux pollens
-\item ablation dents de sagesse
-\item des cycles réguliers, de couleur et d'abondance normales, pas de douleur, pas de leucorrhées
-\item 2010 grossesse sans particularité, accouchement à terme +2 jours, travail spontané, bébé 4000g bien portant, allaitement artificiel.
-\end{description}
-
-Il s'agit d'une patiente d'allure robuste, de nature colérique.
-
-Elle a une sensation de chaleur (déjà présente avant la grossesse) avec bouffée de chaleur, sueurs spontanées et nocturnes.
-Pas de douleurs dos, lombes, genoux, chevilles décrites
-
-Pas de fatigue, malgré des réveils fréquents avec insomnie de rendormissement.
-
-Digestif RAS
-
-OMI présent, hémorroïdes qui piquent, varices et varicosités ++.
-
-Sensation de soif présente, de boisson froide, améliorée par la prise de boisson
-
-Urines RAS
-
-Langue rosée, enduit normal
-
-Pouls sont bien ressentis dans toutes les loges. \\
-
-Analyse : 
-\begin{itemize} \item[] présence de signes de vide de \textsc{yin} (chaleur, sueurs nocturnes) 
-\item[] présence de signes de vide de \textsc{qi} (sueurs spontanées)
-\item[] présence de signes de chaleur (les réveils fréquents, l'insomnie de rendormissement, les hémorroïdes, la soif de boissons froides)  \item[] \end{itemize}
-
-Diagnostic : vide de \textsc{yin} \\
-
-Proposition de point : 
-\begin{itemize} \item[] 6R et 9R (nourrissent le \textsc{yin} du \textsc{rein}) \item[] 8F (nourrit le \textsc{yin}, tonifie le \textsc{foie}) \item[] 6MC (tonifie tout les \textsc{yin}) \end{itemize}
-d'autres points peuvent être utile : 3R (nourrit le \textsc{yin} du \textsc{rein}),18V (point \textsc{shu} du \textsc{foie})
-
-Conseils alimentaires : les aliments de saveurs douces ou salées subtiles et de nature stable consommés par la patiente vont venir soutenir le \textsc{yin}. Un repas composé de brandade de morue accompagnée d'une salade (composée de laitue, haricots vert et betteraves) et en dessert un riz au lait d'amande parfumé à la fleur d'oranger permettra d'apporter ces différentes saveurs.
-
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter*{Conclusion}
-%\addcontentsline{toc}{part}{Conclusion}
-
-Il existe peu de description directe du \gls{la} dans les ouvrages de \gls{mtc} et peu d'études cliniques ; cela a représenté la difficulté majeur de ce travail. Malgré cela, on peut, en analysant les textes et en faisant le rapprochement entre le f\oe{}tus et ses annexes (placenta, \gls{la}), expliquer la physiologie du \gls{la}. Certains déséquilibres énergétiques vont favoriser les troubles quantitatifs de \gls{la} ; dans la majorité des cas on retrouve comme origine un vide de \textsc{rein}. \\
-
-Or la grossesse est un phénomène extrêmement \textsc{yin} qui va consommer les énergies de la femme en particulier celle du \textsc{rein}. Il est donc intéressant en préventif (c\oe{}ur de métier de la sage-femme) d'équilibrer les énergies de la femme lors d'un projet de grossesse lorsque cela est possible. Mais surtout de dépister pendant la grossesse les déséquilibres avant que les symptômes n'apparaissent et de les traiter quand les patientes se présentent avec un trouble quantitatif du \gls{la} déjà installé. \\
-
-Ainsi, grâce à la \gls{mtc}, à sa patiente inquiète qui se demande lors de l'annonce d'un oligo ou hydramnios "Que puis-je faire ? Y a t'il un traitement ?" l'échographiste pourra  répondre "Madame, allez voir un acupuncteur. Les trouble du \gls{la} sont liés à un déséquilibre énergétique que l'on peut traiter."
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\clearpage
-%%\begin{appendices}
-
-\appendix
-%\appendixpage
-\addappheadtotoc
-
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\chapter{shéma du \textsc{triple réchauffeur}}
-%\clearpage
-\pagestyle{empty}
-\vfill
-
-\pagebreak
-\pagestyle{empty}
-%\input{shema-tr.tex}
-
-\begin{figure}[H]
-   \centering
-  
-  \begin{tikzpicture}
-  
-%\draw[step=1cm,very thin, gray] (-1,-1) grid (15,20);  
-  
-\node (a4) at  (12,19) {O2};
-\node (a5) at  (15,19) {Alimentation};
-\node [anchor=south] (a5bis) at  (15,18) {Boisson};
-
-\node (b2) at  (6,16) {\textsc{sang}};
-\node (b3) at  (9,16) {\textsc{qi}};
-
-\node[anchor=west] (c1) at  (0,13) {TRS};
-\node (c2) at  (6,13) {\textsc{c\oe{}ur}};
-\node (c3) at  (9,13) {\textsc{poumon}};
-
-\node[anchor=south west] (d1) at  (0,11) {Diaphragme};
-
-\node[anchor=west] (e1) at  (0,8) {TRM};
-\node (e3) at  (9,9) {\textsc{rate}};
-\node (e5) at  (13,9) {\textsc{estomac}};
-
-\node (f5) at  (13,7) {\textsc{intestin gêle}};
-
-\node[anchor=south west] (g1) at  (0,5) {Ligne passant par l'ombilic};
-
-\node[anchor=west] (h1) at  (0,3) {TRI};
-\node (h3) at  (9,3) {\textsc{rein}};
-\node (h5) at  (13,3) {\textsc{gros intestin}};
-\node [anchor=south] (h5bis) at  (13,2) {\textsc{vessie}};
-
-\node (i5) at  (13,-1) {Elimination};
-
-%\node [anchor=west] at (13,8) {impur};
-%\node [anchor=west] at (13,8) {impur};
-
-\draw (0,11) -- (16,11);
-\draw (0,5) -- (16,5);
-
-\draw[->,>=latex] (a4) -- (e5);
-\draw[->,>=latex] (a5bis) -- (e5);
-\draw[->,>=latex] (e5) -- (f5) node[midway,above,sloped] {impur};
-\draw[->,>=latex] (f5) -- (h5) node[midway,above,sloped] {impur};
-\draw[->,>=latex] (h5bis) -- (i5);
-
-\draw[->,>=latex] (e5) -- (e3) node[midway,above,sloped] {pur};
-\draw[->,>=latex] (e3) -- (c2) node[midway,above,sloped] {pur};
-\draw[->,>=latex] (e3) -- (c3) node[midway,above,sloped] {pur};
-
-\draw[->,>=latex] (c3) -- (c2);
-\draw[->,>=latex] (c3) -- (b3);
-\draw[->,>=latex] (c2) -- (b2);
-
-\draw[->,>=latex] (f5) -- (h3) node[midway,above,sloped] {pur};
-\draw[->,>=latex] (h3) -- (e3) node[midway,above,sloped] {pur};
-
-\draw[->,>=latex] (h5) -- (h3) node[midway,above,sloped] {pur};
-
-
-\end{tikzpicture}
-
-\caption{shéma du \textsc{triple réchauffeur}}
-\end{figure}
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\pagestyle{empty}
-
-\chapter{Relation entre vide de \textsc{rein} et vide de \textsc{sang}}
-
-\pagestyle{empty}
-\vfill
-
-\pagebreak
-\pagestyle{empty}
-
-
-%\input{organigramme-vr-vsg.tex}
-
-\begin{figure}[H]
-   \centering
-\begin{tikzpicture}[>=stealth,sloped]
-
-    \matrix (tree) [%
-      matrix of nodes,
-      minimum size=0.25cm,
-      column sep=0.50cm,
-      row sep=1.3cm,
-    ]
-    {                                                                                                    
-                                                                                           
- & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Hypoperfusion placentaire\end{center} \end{minipage}} &\\
- &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Augmentation de la chaleur\end{center} \end{minipage}} & {\begin{minipage}[t]{0.2\textwidth}\begin{center}Absence d'augmentation de la volémie\end{center} \end{minipage}} & \colorbox{red}{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{sang} et de \textsc{liquide organique}\end{center} \end{minipage}} &\\
- &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yin} de \textsc{rein}\end{center} \end{minipage}} &\\
- & & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yang} de \textsc{rate}\end{center} \end{minipage}} &\\
-\colorbox{orange}{\begin{minipage}[t]{0.1\textwidth}\begin{center}Vide de \textsc{rein}\end{center} \end{minipage}} &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{yang} de \textsc{rein}\end{center} \end{minipage}} & & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Absence d'augmentation du débit et de la fréquence cardiaque\end{center} \end{minipage}}\\
- &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{qi} du \textsc{rein}\end{center} \end{minipage}} & \\
- & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Diminution de la PO2\end{center} \end{minipage}} & &{\begin{minipage}[t]{0.2\textwidth}\begin{center}Stase de \textsc{sang}\end{center} \end{minipage}} & \\
- & & & {\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{qi} du \textsc{poumon}\end{center} \end{minipage}}\\
- & & &\colorbox{red}{\begin{minipage}[t]{0.2\textwidth}\begin{center}Vide de \textsc{sang}\end{center} \end{minipage}}\\
-    };
-   
-   \draw[->] (tree-5-1) -- (tree-3-2) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-3-2) -- (tree-2-2) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-3-2) -- (tree-2-3) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-2-3) -- (tree-1-3) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-3-2) -- (tree-2-4) node [midway,above]{}; %{$P$};
-   
-   \draw[->] (tree-5-1) -- (tree-5-2) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-5-2) -- (tree-4-4) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-4-4) -- (tree-2-4) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-5-2) -- (tree-5-5) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-5-5) |- (tree-1-3) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-5-2) -- (tree-2-4) node [midway,above]{}; %{$P$};
-   
-   \draw[->] (tree-5-1) -- (tree-6-2) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-6-2) -- (tree-7-3) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-7-3) |- (tree-9-4) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-6-2) -- (tree-7-5) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-7-5) |- (tree-9-4) node [midway,above]{}; %{$P$};
-   
-   \draw[->] (tree-8-4) -- (tree-7-3) node [midway,above]{}; %{$P$};
-   \draw[->] (tree-8-4) -- (tree-7-5) node [midway,above]{}; %{$P$};
-
-    
-\end{tikzpicture}
-\caption{Relation entre vide de \textsc{rein} et vide de \textsc{sang}}
-\end{figure}
-\clearpage
-\vfill
-%\clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter{Tableaux des aliments}
-
-%\pagestyle{empty}
-%\vfill
-
-\section{Nature froide}
-
-{\renewcommand{\arraystretch}{1,5}
-
-\begin{figure}[H]
-\begin{center}
-
-\footnotesize
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
-\hline
-
-& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
-
-\multirow{6}{1cm}{Nature froide} & Cheval & Foie de lapin & Cheval & Cheval & Escargot \\\cdashline{2-7} 
- & & & Poulpe, coquilles st Jacques & & Crustacés, crabe, moules, encornets, calamar, huitres, coques, algues marines, coquilles st Jacques, palourdes \\\cdashline{2-7} 
- & & & \oe{}ufs & & Fromage \\\cdashline{2-7} 
- & Oseille, Tomate & Rhubarbe, céleri, asperge, endive,  pissenlit, chicorée & Cresson, céleri, tomate, germes de soja & & Sarrasin, pois  \\\cdashline{2-7} 
- & Ananas, citron, pamplemousse, pastèque, tomate, kaki & Rhubarbe & Melon, banane, kaki, pastèque & & \\\cdashline{2-7} 
- & Citronnelle & Verveine, thé, tuocha & Canne à sucre & & Sel, sauce soja \\
-\hline
-
-\end{tabular}
-\normalsize
-
-\end{center}
-\caption{Tableaux des aliments de nature froide}
-\end{figure}
-
-
-\section{Nature fraiche}
-
-{\renewcommand{\arraystretch}{1,5}
-
-\begin{figure}[H]
-\begin{center}
-
-\footnotesize
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
-\hline
-
-& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
-
-\multirow{6}{1cm}{Nature fraiche} & & Foie, lapin, foie de mouton & Lapin & Lapin & Grenouille \\\cdashline{2-7} %viande
- & & & Blanc d'\oe{}ufs, \oe{}uf de cane, \oe{}uf de caille & & \\\cdashline{2-7}  %poisson
- & Yaourt & & & & \\\cdashline{2-7} %lait 
- & Artichaut, épinard & Blé, laitue, orge, salade, seigle, endives, chou-rave, brocoli & Chou-fleur, chou chinois, radis, blé, orge, sarrasin, haricot, concombre, aubergine, champignon de Paris, épinard, laitue, carotte crue, brocoli, navet, courge d'hiver, blette & Radis, menthe, chou rave, navet & Orge \\\cdashline{2-7} %legumes
- & Mandarine, orange, prune, mangue, pomme, poire, framboise & & Pomme, poire, prune, avocat, mandarine, framboise & & \\\cdashline{2-7}  %fruits
- & & Thé, origan & Thé & Menthe, origan & \\ %autre
-\hline
-
-\end{tabular}
-\vfill
-\normalsize
-
-\end{center}
-\caption{Tableaux des aliments de nature fraiche}
-\end{figure}
-
-\section{Nature stable}
-
-{\renewcommand{\arraystretch}{1,5}
-
-\begin{figure}[H]
-\begin{center}
-
-\footnotesize
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
-\hline
-
-& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
-
-\multirow{6}{1cm}{Nature stable} & Poule, b\oe{}uf, porc, poulet & Foie de génisse, foie de veau, rognon & B\oe{}uf, caille, canard, porc, veau, poulet, oie, pigeon, sanglier, poule & & Canard, pigeon, porc, sanglier  \\\cdashline{2-7} %viande
- & & & Cabillaud, truite, poisson d'eau douce, maquereau, carpe & & Morue, oursin, sardine   \\\cdashline{2-7} %poisson
- & & & Jaune d'\oe{}uf, \oe{}uf de poule, lait de vache & &  \\\cdashline{2-7} %lait 
- & Igname & Navet & Riz, maïs, polenta, avoine, millet, pomme de terre, pois, fève, haricots verts, chou, carottes, chou-fleur, patate douce, betterave, champignon parfumé, lentille, amande & Navet, avoine &  \\\cdashline{2-7} %legumes
- & Fraise, prune, raisin, pomme, poire & & Figue, papaye, raisin, grenade, prune, fraise & & \\\cdashline{2-7}  %fruits
- & & Fleur d'oranger& Miel, safran, réglisse, camomille, sucre, fleur d'oranger & & Sel de celeri  \\ %autre
- \hline
-
-\end{tabular}
-\normalsize
-
-\end{center}
-\caption{Tableaux des aliments de nature stable}
-\end{figure}
-
-\section{Nature tiède}
-
-{\renewcommand{\arraystretch}{1,5}
-
-\begin{figure}[H]
-\begin{center}
-
-\footnotesize
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
-\hline
-
-& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
-
-\multirow{6}{1cm}{Nature tiède} & Faisan & Foie de volaille, mouton, foie de porc & Dinde, faisan, b\oe{}uf, mouton, poulet & Jambon & \\\cdashline{2-7} %viande
- & Conserve de poisson, rollmops, moule & & Anguille, crevette, anchois, thon & & Hareng, sardine, crevette, thon, saumon, poisson fumé \\\cdashline{2-7} %poisson
- & Fromage de brebis, fromage de chèvre & & Fromage de vache, lait de brebis & Fromage de chèvre & Fromage \\\cdashline{2-7} %lait 
- & & Asperge, épautre & Fenouil, riz gluant, pleurote, potiron, poireau, épautre & Poireau, fenouil, oignon, échalotte, ail & Avoine \\\cdashline{2-7} %legumes
- & Abricot, pêche, cerise, litchi, arbouse, datte & & Jujube, abricot, pêche, cerise, litchi, arbouse, châtaigne, datte, pignon de pin, coing, noix, noisette & Pêche & Châtaigne, noix \\\cdashline{2-7}  %fruits
- & Vinaigre & Alcool leger, tabac, valériane, café, thym & Badiane, muscade, anis étoilé & Aneth, coriandre, ciboule, ciboulette, tabac, pistache, cumin, moutarde, girofle, gingembre, muscade, cardamome, anis étoilé, carvi, thym & \\ %autre
-\hline
-
-\end{tabular}
-\normalsize
-
-\end{center}
-\caption{Tableaux des aliments de nature tiède}
-\end{figure}
-
-\section{Nature chaude}
-
-{\renewcommand{\arraystretch}{1,5}
-
-\begin{figure}[H]
-\begin{center}
-
-\footnotesize
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
-\hline
-
-& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
-
-\multirow{6}{1cm}{Nature chaude} & Agneau & Viande boucanée, faisan & & & Charcuterie, salaison  \\\cdashline{2-7} %viande
- & & & Soja & &  \\\cdashline{2-7} %poisson
- & & & Beurre, graisse animale & Fromage fermenté, roquefort, bleu d'Auvergne & fromage gras  \\\cdashline{2-7} %lait 
- & & & & & \\\cdashline{2-7} %legumes
- & & & & &  \\\cdashline{2-7}  %fruits
- & Vinaigre & Alcool fort, café, fenugrec & Cannelle & Alcool fort, poivre noir, cannelle, piment, gingembre &  \\ %autre
-\hline
-
-\end{tabular}
-\normalsize
-
-\end{center}
-\caption{Tableaux des aliments de nature chaude}
-\end{figure}
+%%%%%%
 
 %\end{appendices}
 
@@ -2386,5 +2388,21 @@ Ainsi, grâce à la \gls{mtc}, à sa patiente inquiète qui se demande lors de l'ann
 
 \bibliographystyle{plain}
 \bibliography{biblio}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\begin{abstract} 
+
+Le liquide amniotique \gls{la} est un élément important dans la surveillance du bien-être f\oe{}tal. Bien connue en médecine occidentale, sa physiologie est beaucoup moins décrite en médecine traditionnelle chinoise. \\
+
+Ce mémoire a pour objectif la description de la physiologie du liquide amniotique et des déséquilibres énergétiques amenant à un trouble de la quantité de \gls{la} ainsi que des propositions de traitements (punctures et diététiques). Trois cas cliniques illustrent ce travail bibliographique. \\
+
+\vspace{1cm}
+\hrule
+\vspace{0.5cm}
+
+Mots clés : acupuncture, liquide amniotique, oligoamnios, hydramnios
+\vfill
+\end{abstract}
 
 \end{document}
