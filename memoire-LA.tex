@@ -131,7 +131,8 @@ J'en oublie sans doute et si vous vous reconnaissez, je vous remercie également.
 \tableofcontents
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter*{Introduction}
+%\chapter*{Introduction}
+\chapter*{Introduction\markboth{Introduction}{}}
 
 \'Echographie du 3\textsuperscript{ème} trimestre : \\
 au terme de l'examen, le gynécologue dit : \emph{"Il y a peu de liquide amniotique Madame. Nous allons devoir surveiller votre grossesse de plus près !"} \\
@@ -902,7 +903,10 @@ moins utile : 2F - 41E - 6GI - PC Weiguanxiashu
 moins utile : Shang Xiao - 9P - 42V
 
 \item[Feu du \textsc{rein}] : \textbf{3R} - \textbf{6R} - 7P (si accouchement proche) 
+\item[]
 \end{description}
+
+Explication des points en annexe \ref{points}, p\pageref{points}
 
 \section{Alimentation et régulation du liquide amniotique}
 
@@ -1120,9 +1124,10 @@ On peut par exemple proposer comme plat :
 \begin{itemize}
 \item brochettes de porc marinée au miel et citron
 \item salade de fruits 
+\item[]
 \end{itemize}
 
-Les annexes C récapitulent sous formes de tableaux la nature et la saveur des différents aliments.
+L'annexes \ref{aliments}, p\pageref{aliments} récapitule sous formes de tableaux la nature et la saveur des différents aliments.
 
 %-------------------------------------------------
 
@@ -1474,7 +1479,7 @@ Ainsi, grâce à la \gls{mtc}, à sa patiente inquiète qui se demande lors de l'ann
 %\clearpage{\pagestyle{empty}\cleardoublepage}
 
 \chapter{Tableaux des aliments}
-
+\label{aliments}
 %\pagestyle{empty}
 %\vfill
 
@@ -1486,17 +1491,18 @@ Ainsi, grâce à la \gls{mtc}, à sa patiente inquiète qui se demande lors de l'ann
 \begin{center}
 
 \footnotesize
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\begin{tabular}{|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2cm}|} 
 \hline
 
-& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
+Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
 
-\multirow{6}{1cm}{Nature froide} & Cheval & Foie de lapin & Cheval & Cheval & Escargot \\\cdashline{2-7} 
- & & & Poulpe, coquilles st Jacques & & Crustacés, crabe, moules, encornets, calamar, huitres, coques, algues marines, coquilles st Jacques, palourdes \\\cdashline{2-7} 
- & & & \oe{}ufs & & Fromage \\\cdashline{2-7} 
- & Oseille, Tomate & Rhubarbe, céleri, asperge, endive,  pissenlit, chicorée & Cresson, céleri, tomate, germes de soja & & Sarrasin, pois  \\\cdashline{2-7} 
- & Ananas, citron, pamplemousse, pastèque, tomate, kaki & Rhubarbe & Melon, banane, kaki, pastèque & & \\\cdashline{2-7} 
- & Citronnelle & Verveine, thé, tuocha & Canne à sucre & & Sel, sauce soja \\
+ Cheval & Foie de lapin & Cheval, canard & Cheval & Escargot, canard \\\cdashline{1-6} %animal
+ & & Poulpe, coquilles st Jacques & & Crustacés, crabe, moules, encornets, calamar, huitres, coques, algues marines, coquilles st Jacques, palourdes \\\cdashline{1-6} %poissons
+ & & \oe{}ufs & & Fromage \\\cdashline{1-6} %produit animaux
+ Oseille, Tomate & Céleri, asperge, endive,  pissenlit, chicorée & Cresson, céleri, tomate, germes de soja & & Pois  \\\cdashline{1-6} %legumes
+& & & & Sarrasin,  \\\cdashline{1-6} %céréales
+ Ananas, citron, pamplemousse, pastèque, tomate & Rhubarbe & Melon, banane, kaki, pastèque & Kaki & \\\cdashline{1-6} %fruits
+ Citronnelle & Verveine, thé tuocha & Canne à sucre & Thé tuocha & Sel, sauce soja \\ %autre
 \hline
 
 \end{tabular}
@@ -1515,17 +1521,19 @@ Ainsi, grâce à la \gls{mtc}, à sa patiente inquiète qui se demande lors de l'ann
 \begin{center}
 
 \footnotesize
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\begin{tabular}{|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2cm}|} 
 \hline
 
-& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
+Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
 
-\multirow{6}{1cm}{Nature fraiche} & & Foie, lapin, foie de mouton & Lapin & Lapin & Grenouille \\\cdashline{2-7} %viande
- & & & Blanc d'\oe{}ufs, \oe{}uf de cane, \oe{}uf de caille & & \\\cdashline{2-7}  %poisson
- & Yaourt & & & & \\\cdashline{2-7} %lait 
- & Artichaut, épinard & Blé, laitue, orge, salade, seigle, endives, chou-rave, brocoli & Chou-fleur, chou chinois, radis, blé, orge, sarrasin, haricot, concombre, aubergine, champignon de Paris, épinard, laitue, carotte crue, brocoli, navet, courge d'hiver, blette & Radis, menthe, chou rave, navet & Orge \\\cdashline{2-7} %legumes
- & Mandarine, orange, prune, mangue, pomme, poire, framboise & & Pomme, poire, prune, avocat, mandarine, framboise & & \\\cdashline{2-7}  %fruits
- & & Thé, origan & Thé & Menthe, origan & \\ %autre
+& Foie, lapin, foie de mouton & Lapin & Lapin & Grenouille \\\cdashline{1-6} %viande
+& & Blanc d'\oe{}ufs, \oe{}uf de cane, \oe{}uf de caille & & \\\cdashline{1-6}  %poisson
+Yaourt & & & & \\\cdashline{1-6} %lait 
+Artichaut, épinard & Laitue, salade, endives, chou-rave, brocoli, artichaud & Chou-fleur, chou chinois, radis, haricot, concombre, aubergine, champignon de Paris, épinard, laitue, carotte crue, brocoli, navet, courge d'hiver, blette, potiron, tofu & Radis, chou rave, navet & \\\cdashline{1-6} %legumes
+& Blé, orge, seigle, & Blé, orge, sarrasin, avoine, & & Orge, avoine  \\\cdashline{1-6} %céréales
+Mandarine, orange, prune, mangue, pomme, poire, framboise, fraise & & Pomme, poire, prune, avocat, mandarine, framboise, banane, fraise, mandarine, mangue, melon, mûre & & \\\cdashline{1-6}  %fruits
+ & Origan & & Menthe, origan & \\\cdashline{1-6}  %aromates
+& Thé noir & Thé, huile de sésame &  & Sel, sauce soja \\ %autre
 \hline
 
 \end{tabular}
@@ -1544,17 +1552,18 @@ Ainsi, grâce à la \gls{mtc}, à sa patiente inquiète qui se demande lors de l'ann
 \begin{center}
 
 \footnotesize
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\begin{tabular}{|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2cm}|} 
 \hline
 
-& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
+Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
 
-\multirow{6}{1cm}{Nature stable} & Poule, b\oe{}uf, porc, poulet & Foie de génisse, foie de veau, rognon & B\oe{}uf, caille, canard, porc, veau, poulet, oie, pigeon, sanglier, poule & & Canard, pigeon, porc, sanglier  \\\cdashline{2-7} %viande
- & & & Cabillaud, truite, poisson d'eau douce, maquereau, carpe & & Morue, oursin, sardine   \\\cdashline{2-7} %poisson
- & & & Jaune d'\oe{}uf, \oe{}uf de poule, lait de vache & &  \\\cdashline{2-7} %lait 
- & Igname & Navet & Riz, maïs, polenta, avoine, millet, pomme de terre, pois, fève, haricots verts, chou, carottes, chou-fleur, patate douce, betterave, champignon parfumé, lentille, amande & Navet, avoine &  \\\cdashline{2-7} %legumes
- & Fraise, prune, raisin, pomme, poire & & Figue, papaye, raisin, grenade, prune, fraise & & \\\cdashline{2-7}  %fruits
- & & Fleur d'oranger& Miel, safran, réglisse, camomille, sucre, fleur d'oranger & & Sel de celeri  \\ %autre
+Poule, b\oe{}uf, porc, poulet & Foie de génisse, foie de veau, rognon & B\oe{}uf, caille, canard, porc, veau, poulet, oie, pigeon, sanglier, poule & & Canard, pigeon, porc, sanglier  \\\cdashline{1-6} %viande
+ & & Cabillaud, truite, poisson d'eau douce, maquereau, carpe, sardine & & Morue, oursin, sardine, cabillaud   \\\cdashline{1-6} %poisson
+ & & Jaune d'\oe{}uf, \oe{}uf de poule, lait de vache & &  \\\cdashline{1-6} %lait 
+ Igname & Navet & Polenta, pomme de terre, pois, fève, haricots verts, chou, carottes, chou-fleur, patate douce, betterave, champignon parfumé, lentille, haricot rouge, soja & Navet, choux fleur & Olives  \\\cdashline{1-6} %legumes
+ & Seigle & Riz, maïs, avoine, millet, seigle & & Avoine\\\cdashline{1-6} %céréales
+ Fraise, prune, raisin, pomme, poire, abricot & & Figue, papaye, raisin, grenade, prune, fraise, amande, sésame, noisette, chair de coco, pruneau, arachide & & \\\cdashline{1-6}  %fruits
+ & Fleur d'oranger& Miel, safran, réglisse, camomille, sucre, fleur d'oranger & & Sel de celeri  \\ %autre
  \hline
 
 \end{tabular}
@@ -1572,17 +1581,19 @@ Ainsi, grâce à la \gls{mtc}, à sa patiente inquiète qui se demande lors de l'ann
 \begin{center}
 
 \footnotesize
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\begin{tabular}{|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2cm}|} 
 \hline
 
-& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
+Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
 
-\multirow{6}{1cm}{Nature tiède} & Faisan & Foie de volaille, mouton, foie de porc & Dinde, faisan, b\oe{}uf, mouton, poulet & Jambon & \\\cdashline{2-7} %viande
- & Conserve de poisson, rollmops, moule & & Anguille, crevette, anchois, thon & & Hareng, sardine, crevette, thon, saumon, poisson fumé \\\cdashline{2-7} %poisson
- & Fromage de brebis, fromage de chèvre & & Fromage de vache, lait de brebis & Fromage de chèvre & Fromage \\\cdashline{2-7} %lait 
- & & Asperge, épautre & Fenouil, riz gluant, pleurote, potiron, poireau, épautre & Poireau, fenouil, oignon, échalotte, ail & Avoine \\\cdashline{2-7} %legumes
- & Abricot, pêche, cerise, litchi, arbouse, datte & & Jujube, abricot, pêche, cerise, litchi, arbouse, châtaigne, datte, pignon de pin, coing, noix, noisette & Pêche & Châtaigne, noix \\\cdashline{2-7}  %fruits
- & Vinaigre & Alcool leger, tabac, valériane, café, thym & Badiane, muscade, anis étoilé & Aneth, coriandre, ciboule, ciboulette, tabac, pistache, cumin, moutarde, girofle, gingembre, muscade, cardamome, anis étoilé, carvi, thym & \\ %autre
+ Faisan & Foie de volaille, mouton, foie de porc & Dinde, faisan, b\oe{}uf, mouton, poulet & Jambon & \\\cdashline{1-6} %viande
+Conserve de poisson, rollmops, moule & & Anguille, crevette, anchois, thon & & Hareng, sardine, crevette, thon, saumon, poisson fumé, moule \\\cdashline{1-6} %poisson
+Fromage de brebis, fromage de chèvre, yaourt & & Fromage de vache, lait de brebis & Fromage de chèvre & Fromage \\\cdashline{1-6} %lait 
+& Asperge & Fenouil, pleurote, pois chiche, céleri, citrouille, asperge, oignon cuit, poireau & Poireau, fenouil, oignon cru, échalotte, ail &  \\\cdashline{1-6} %legumes
+& Epautre & Riz gluant, sarasin, épautre & & Avoine  \\\cdashline{1-6} %céréales
+ Abricot, pêche, cerise, litchi, arbouse, datte & & Jujube, abricot, pêche, cerise, litchi, arbouse, châtaigne, datte, pignon de pin, coing, noix, noisette, amande, lait de coco & Pêche & Châtaigne, noix \\\cdashline{1-6}  %fruits
+& Thym& Badiane, muscade, anis étoilé, persil & Aneth, coriandre, ciboule, ciboulette, cumin, moutarde, girofle, gingembre, muscade, cardamome, anis étoilé, carvi, thym, badiane, basilic  &  \\\cdashline{1-6} %aromate
+Vinaigre & Alcool leger, tabac, valériane, café, cacao & & Tabac, pistache,  & \\ %autre
 \hline
 
 \end{tabular}
@@ -1600,17 +1611,17 @@ Ainsi, grâce à la \gls{mtc}, à sa patiente inquiète qui se demande lors de l'ann
 \begin{center}
 
 \footnotesize
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|} 
+\begin{tabular}{|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2,5cm}|m{2cm}|} 
 \hline
 
-& Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
+Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\hline
 
-\multirow{6}{1cm}{Nature chaude} & Agneau & Viande boucanée, faisan & & & Charcuterie, salaison  \\\cdashline{2-7} %viande
- & & & Soja & &  \\\cdashline{2-7} %poisson
- & & & Beurre, graisse animale & Fromage fermenté, roquefort, bleu d'Auvergne & fromage gras  \\\cdashline{2-7} %lait 
- & & & & & \\\cdashline{2-7} %legumes
- & & & & &  \\\cdashline{2-7}  %fruits
- & Vinaigre & Alcool fort, café, fenugrec & Cannelle & Alcool fort, poivre noir, cannelle, piment, gingembre &  \\ %autre
+Agneau & Viande boucanée, faisan & Agneau & & Charcuterie, salaison  \\\cdashline{1-6} %viande
+Truite & & Truite & &  \\\cdashline{1-6} %poisson
+& & Beurre, graisse animale & Fromage fermenté, roquefort, bleu d'Auvergne & fromage gras  \\\cdashline{1-6} %lait 
+& Poivron & Soja, poivron & & \\\cdashline{1-6} %legumes
+& & & &  \\\cdashline{1-6}  %fruits
+Vinaigre & Alcool fort, café, fenugrec & Cannelle & Alcool fort, poivre noir, cannelle, piment, gingembre &  \\ %autre
 \hline
 
 \end{tabular}
@@ -1625,7 +1636,7 @@ Ainsi, grâce à la \gls{mtc}, à sa patiente inquiète qui se demande lors de l'ann
 \pagestyle{empty}
 
 \chapter{Explication de points}
-
+\label{points}
 \pagestyle{empty}
 \vfill
 
@@ -2371,7 +2382,26 @@ Il est utilisé en cas de vide de \textsc{sang} du \textsc{foie}, de montée du \t
 \end{itemize}
 Il est utilisé en cas de montée du \textsc{yang} du \textsc{foie} et vent du \textsc{foie}.
 
-%%%%%%
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.2\textwidth]{schema/points-face.png}
+\caption{Points d'acupuncture, face antérieure du corps}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.2\textwidth]{schema/points-dos.png}
+\caption{Points d'acupuncture, face postérieure du corps}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.2\textwidth]{schema/points-cote.png}
+\caption{Points d'acupuncture, face latérale du corps}
+\end{center}
+\end{figure}
 
 %\end{appendices}
 
