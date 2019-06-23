@@ -1,4 +1,4 @@
-\documentclass[6pt,a4paper]{report} 
+\documentclass[6pt,a4paper,twoside, openright]{report} 
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
@@ -97,6 +97,29 @@
 \newacronym{rm}{RM}{Réchauffeur Moyen}
 \newacronym{rs}{RS}{Réchauffeur Supérieur}
 
+\usepackage[inner=3cm,outer=2cm]{geometry}
+
+%
+%\addtolength{\topmargin}{-1in}          
+%\addtolength{\topmargin}{+1.5cm}
+%\setlength{\headheight}{0.25cm}   
+\setlength{\headwidth}{15cm}             
+\setlength{\headsep}{1.5cm}
+%\setlength{\topskip}{0.5cm}               
+\setlength{\textheight}{23cm}
+%\setlength{\footskip}{1.0cm}
+%
+%
+%
+%
+%
+% \addtolength{\oddsidemargin}{-1in}
+% \addtolength{\oddsidemargin}{+2.3cm}
+% \addtolength{\evensidemargin}{-1in}
+% \addtolength{\evensidemargin}{+0.5cm} 
+% \setlength{\marginparsep}{0.5cm}
+% \setlength{\marginparwidth}{0.5cm} 
+% \setlength{\textwidth}{15cm}
 
 
 \begin{document}
@@ -145,8 +168,9 @@ J'en oublie sans doute et si vous vous reconnaissez, je vous remercie également.
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \tableofcontents
-
 \clearpage{\pagestyle{empty}\cleardoublepage}
+
+%\clearpage{\pagestyle{empty}\cleardoublepage}
 %\chapter*{Introduction}
 \chapter*{Introduction\markboth{Introduction}{}}
 \thispagestyle{empty}
@@ -1534,6 +1558,7 @@ Saveur acide & Saveur amère & Saveur douce & Saveur piquante & Saveur salée  \\\
 \caption{Tableaux des aliments de nature froide}
 \end{figure}
 
+\vfill
 
 \section{Nature fraiche}
 
@@ -1624,6 +1649,7 @@ Vinaigre & Alcool leger, tabac, valériane, café, cacao & & Tabac, pistache,  & \
 \end{center}
 \caption{Tableaux des aliments de nature tiède}
 \end{figure}
+\vfill
 
 \section{Nature chaude}
 
@@ -1653,6 +1679,9 @@ Vinaigre & Alcool fort, café, fenugrec & Cannelle & Alcool fort, poivre noir, ca
 \caption{Tableaux des aliments de nature chaude}
 \end{figure}
 %%%%%
+\vfill
+
+
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
 \pagestyle{empty}
@@ -2406,21 +2435,21 @@ Il est utilisé en cas de montée du \textsc{yang} du \textsc{foie} et vent du \te
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=1.2\textwidth]{schema/points-face.png}
+\includegraphics[width=1.\textwidth]{schema/points-face.png}
 \caption{Points d'acupuncture, face antérieure du corps}
 \end{center}
 \end{figure}
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=1.2\textwidth]{schema/points-dos.png}
+\includegraphics[width=1.\textwidth]{schema/points-dos.png}
 \caption{Points d'acupuncture, face postérieure du corps}
 \end{center}
 \end{figure}
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=1.2\textwidth]{schema/points-cote.png}
+\includegraphics[width=1.\textwidth]{schema/points-cote.png}
 \caption{Points d'acupuncture, face latérale du corps}
 \end{center}
 \end{figure}
